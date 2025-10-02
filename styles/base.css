@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+body {
+  color: #262626; /* Textfärg för hela sidan */
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Klassen container styr sidans maxbredd. */
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+/* ---------- Styling för bakgrundsfärg ---------- */
+.bg-green-dark {
+  background-color: #13360a;
+}
+
+.bg-green-mid {
+  background-color: #b3d6aa;
+}
+
+/* ---------- Text styling ---------- */
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 600;
+  letter-spacing: normal; /* nollställer body’s letter-spacing */
+  line-height: 1.2;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+h4 {
+  font-size: 1rem;
+}
+/* Styling för h1 på hero-bild */
+.hero h1 {
+  font-size: 5rem;
+  margin-bottom: 2.5rem;
+}
+/* Klasser för centrerad och vit text*/
+.center {
+  text-align: center;
+}
+
+.white {
+  color: white;
+}
+
+/* ---------- Styling knappar ---------- */
+.btn-primary {
+  background-color: #13360a;
+  color: #f4f3e9;
+}
+
+.btn-primary:hover {
+  background-color: #14bf71;
+}
+
+.btn-primary-outline {
+  border: 2px solid #13360a;
+  background-color: transparent;
+  color: #13360a;
+}
+.btn-primary-outline:hover {
+  background-color: #14bf71;
+}
+/* Styling som ska gälla alla knappar (a-taggar) */
+.button {
+  /* Sätter fast höjd på knappar och justerar in med flex, så vet man att alla knappat alltid är lika stora. */
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 0 2.5rem; /* Enbart padding i sidled */
+  transition: background-color 0.3s;
+}
+.button:hover {
+  cursor: pointer;
+}
+
+/* ---------- Styling element / Block ---------- */
+.logotype {
+  width: 180px; /* Sätter maxbredd för säkerhets skull */
+}
+
+/* Navigering header DESKTOP med grön bakgrund */
+header nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5rem 0;
+}
+/* Jag vill nå ul i header */
+header nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+header ul li {
+  list-style: none;
+}
+header li a {
+  text-decoration: none;
+  color: #13360a;
+  font-weight: 600;
+}
+header li a:hover,
+header li a.current {
+  text-decoration: underline; /* Det här kan vi ändra sen till vilken hover-effekt vi vill ha */
+}
+
+/* Den här stylingen gäller startsidan, får flyttas till "rätt" css fil efterhand. */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: plum; /* Färg och höjd för att man ska se något nu.*/
+  height: 400px;
+  margin-bottom: 5rem;
+}
+.btn-wrapper {
+  display: flex;
+  gap: 1rem;
+}

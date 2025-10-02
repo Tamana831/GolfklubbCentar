@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design element</title>
+    <!-- base.css måste ligga överst då vi vill att den ska läsas in först -->
+    <link rel="stylesheet" href="styles/base.css" />
+  </head>
+  <body>
+    <header>
+      <div class="bg-green-mid">
+        <nav class="container">
+          <a href="#"
+            ><img
+              src="images/centar_logotype_primary_dark.svg"
+              alt="Centar logotype"
+              class="logotype"
+          /></a>
+          <ul>
+            <li><a href="#">Spela Golf</a></li>
+            <li><a href="#">Medlem</a></li>
+            <li><a href="#">Klubben</a></li>
+            <li><a href="#">Tävlingar</a></li>
+            <li><a href="#">Företag</a></li>
+            <li><a href="#">Restaurang</a></li>
+            <li><a href="#">Golfshop</a></li>
+            <li><a href="#">Kontakt</a></li>
+          </ul>
+          <a href="#" class="button btn-primary-outline">Logga in</a>
+        </nav>
+      </div>
+      <div class="hero">
+        <h1 class="center white">Heading Display</h1>
+        <div class="btn-wrapper">
+          <!-- Klasser för knappar -->
+          <a href="#" class="button btn-primary">Boka starttid</a>
+          <a href="#" class="button btn-primary">Greenfee</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- Här sätter jag en klass som sätter bakgrundsfärg på hela section. Detta element tar upp hela sidans bredd, dvs bakgrundsfärgen går hela vägen ut. -->
+      <section class="bg-green-mid">
+        <!-- Klassen container styr innehållets maxbredd -->
+        <div class="container">
+          <!-- Text styles -->
+          <h2>Heading M</h2>
+          <h3>Heading S</h3>
+        </div>
+      </section>
+      <div class="container">
+        <h4>Subheading</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolor
+          necessitatibus numquam, adipisci odit id, libero quam ut ab, facilis
+          iusto mollitia! Maiores asperiores earum atque inventore voluptatum,
+          dignissimos eum quia cupiditate aut accusantium necessitatibus dolorem
+          voluptatem doloribus dolor consequatur.
+        </p>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>
