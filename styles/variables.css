@@ -1,0 +1,17 @@
+/* Variabler. I och med att vi lägger det i root så går dessa att nå i alla css-filer.*/
+:root {
+  /* FÄRGER */
+  --color-green-dark: #13360a;
+  --color-green-mid: #b3d6aa;
+  --color-green-light: #ecf6e9;
+  --color-green-cta: #14bf71;
+
+  --color-blue-mid: #c8e0e8;
+  --color-blue-light: #e4f0f4;
+  --color-beige-light: #f4f3e9;
+
+  --color-text-black: #262626;
+  --color-text-white: #ffffff;
+
+  /* SPACING  (sm md lg */
+}

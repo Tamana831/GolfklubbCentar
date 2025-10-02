@@ -8,7 +8,7 @@
 }
 
 body {
-  color: #262626; /* Textfärg för hela sidan */
+  color: var(--color-text-black); /* Textfärg för hela sidan */
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   letter-spacing: 0.6px;
@@ -24,14 +24,18 @@ body {
 
 /* ---------- Styling för bakgrundsfärg ---------- */
 .bg-green-dark {
-  background-color: #13360a;
+  /* Definerar färg med hex. */
+  /* background-color: #13360a; */
+  /* Definerar färg med variabel, samma resultat som ovan. */
+  background-color: var(--color-green-dark);
 }
 
 .bg-green-mid {
-  background-color: #b3d6aa;
+  background-color: var(--color-green-mid);
 }
 
 /* ---------- Text styling ---------- */
+/* Ska vi lägga styling på H eller styra med klasser? font-xl, font-lg etc... */
 h1,
 h2,
 h3,
@@ -58,7 +62,7 @@ h4 {
   font-size: 5rem;
   margin-bottom: 2.5rem;
 }
-/* Klasser för centrerad och vit text*/
+/* Klasser för centrerad text och/eller vit text*/
 .center {
   text-align: center;
 }
@@ -69,7 +73,7 @@ h4 {
 
 /* ---------- Styling knappar ---------- */
 .btn-primary {
-  background-color: #13360a;
+  background-color: var(--color-green-dark);
   color: #f4f3e9;
 }
 
@@ -78,7 +82,7 @@ h4 {
 }
 
 .btn-primary-outline {
-  border: 2px solid #13360a;
+  border: 2px solid var(--color-green-dark);
   background-color: transparent;
   color: #13360a;
 }
