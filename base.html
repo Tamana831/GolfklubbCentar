@@ -10,29 +10,33 @@
   </head>
   <body>
     <header>
+      <!-- Nedan div för att sätta färg hela vägen ut -->
       <div class="bg-green-mid">
-        <nav class="container">
-          <a href="#"
-            ><img
-              src="images/centar_logotype_primary_dark.svg"
-              alt="Centar logotype"
-              class="logotype"
-          /></a>
-          <ul>
-            <li><a href="#">Spela Golf</a></li>
-            <li><a href="#">Medlem</a></li>
-            <li><a href="#">Klubben</a></li>
-            <li><a href="#">Tävlingar</a></li>
-            <li><a href="#">Företag</a></li>
-            <li><a href="#">Restaurang</a></li>
-            <li><a href="#">Golfshop</a></li>
-            <li><a href="#">Kontakt</a></li>
-          </ul>
-          <a href="#" class="button btn-primary-outline">Logga in</a>
-        </nav>
+        <!-- Nedan div för att sätta maxbredd på sidan -->
+        <div class="container">
+          <nav>
+            <a href="#"
+              ><img
+                src="images/centar_logotype_primary_dark.svg"
+                alt="Centar logotype"
+                class="logotype"
+            /></a>
+            <ul>
+              <li><a href="#">Spela Golf</a></li>
+              <li><a href="#">Medlem</a></li>
+              <li><a href="#">Klubben</a></li>
+              <li><a href="#">Tävlingar</a></li>
+              <li><a href="#">Företag</a></li>
+              <li><a href="#">Restaurang</a></li>
+              <li><a href="#">Golfshop</a></li>
+              <li><a href="#">Kontakt</a></li>
+            </ul>
+            <a href="#" class="button btn-primary-outline">Logga in</a>
+          </nav>
+        </div>
       </div>
       <div class="hero">
-        <h1 class="center white">Heading Display</h1>
+        <h1 class="text-xxl text-center text-white">Heading Display</h1>
         <div class="btn-wrapper">
           <!-- Klasser för knappar -->
           <a href="#" class="button btn-primary">Boka starttid</a>
@@ -42,25 +46,48 @@
     </header>
     <main>
       <!-- Här sätter jag en klass som sätter bakgrundsfärg på hela section. Detta element tar upp hela sidans bredd, dvs bakgrundsfärgen går hela vägen ut. -->
-      <section class="bg-green-mid">
+      <section class="bg-blue-light">
         <!-- Klassen container styr innehållets maxbredd -->
         <div class="container">
-          <!-- Text styles -->
-          <h2>Heading M</h2>
-          <h3>Heading S</h3>
+          <h2 class="text-xl">Olika storlek på rubriker</h2>
+          <h3 class="text-lg">Hej hej på dej!</h3>
+          <h4 class="text-md">Air Force Nine</h4>
+          <p class="body-lg">
+            Ingress ingress tristess. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Dicta dolor necessitatibus numquam, adipisci odit
+            id, libero quam ut ab, facilis iusto mollitia! Maiores asperiores
+            earum atque inventore voluptatum, dignissimos eum quia cupiditate
+            aut accusantium necessitatibus dolorem voluptatem doloribus dolor
+            consequatur.
+          </p>
         </div>
       </section>
-      <div class="container">
-        <h4>Subheading</h4>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolor
-          necessitatibus numquam, adipisci odit id, libero quam ut ab, facilis
-          iusto mollitia! Maiores asperiores earum atque inventore voluptatum,
-          dignissimos eum quia cupiditate aut accusantium necessitatibus dolorem
-          voluptatem doloribus dolor consequatur.
-        </p>
-      </div>
+      <section class="container">
+        <h3 class="text-lg text-center">Nyheter</h3>
+        <div class="news-wrapper">
+          <article class="news-card">
+            <h4 class="text-md">Mellanrubrik</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+              dolor necessitatibus numquam, adipisci odit id, libero quam ut ab,
+              facilis iusto mollitia! Maiores asperiores earum atque inventore
+              voluptatum, dignissimos eum quia cupiditate aut accusantium
+              necessitatibus dolorem voluptatem doloribus dolor consequatur.
+            </p>
+          </article>
+          <article class="news-card">
+            <h4 class="text-sm">En mindre mellanrubrik</h4>
+            <p class="body-sm">
+              Mindre brödtext var det här tjoheeeeej! Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Dicta dolor necessitatibus numquam,
+              adipisci odit id, libero quam ut ab, facilis iusto mollitia!
+              Maiores asperiores earum atque inventore voluptatum, dignissimos
+              eum quia cupiditate aut accusantium necessitatibus dolorem
+              voluptatem doloribus dolor consequatur.
+            </p>
+          </article>
+        </div>
+      </section>
     </main>
-    <footer></footer>
   </body>
 </html>

@@ -1,10 +1,10 @@
-/* Variabler. I och med att vi lägger det i root så går dessa att nå i alla css-filer.*/
+/* Variabler. I och med att vi lägger det i root så går de att nå i alla css-filer.*/
 :root {
   /* FÄRGER */
   --color-green-dark: #13360a;
   --color-green-mid: #b3d6aa;
   --color-green-light: #ecf6e9;
-  --color-green-cta: #14bf71;
+  --color-green-accent: #14bf71;
 
   --color-blue-mid: #c8e0e8;
   --color-blue-light: #e4f0f4;
@@ -13,5 +13,12 @@
   --color-text-black: #262626;
   --color-text-white: #ffffff;
 
-  /* SPACING  (sm md lg */
+  /* SPACING */
+  --space-xxs: 0.5rem; /* 8px, minsta avstånd, typ ikoner, små knappar*/
+  --space-xs: 1rem; /* 16px, litet avstånd, tex mellan text och knapp  */
+  --space-sm: 1.5rem; /* 24px, lite större, ofta mellan rubrik och text */
+  --space-md: 2.5rem; /* 40px, ännu lite större, ofta mellan större rubrik och text */
+  --space-lg: 3.5rem; /* 56px */
+  --space-xl: 5rem; /* 80px, större block, typ mellan sektioner*/
+  --space-xxl: 7.5rem; /* 120px, stort avstånd mellan sektioner */
 }
