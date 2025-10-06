@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Design element</title>
+    <title>Logga in</title>
     <!-- variables.css och base.css måste ligga överst då vi vill att den ska läsas in först -->
     <link rel="stylesheet" href="styles/variables.css" />
-    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="loggain.css" />
   </head>
   <body>
     <header>
@@ -14,7 +14,7 @@
       <div class="bg-green-mid">
         <!-- Nedan div för att sätta maxbredd på sidan -->
         <div class="container">
-          <!-- <nav>
+          <nav>
             <a href="#"
               ><img
                 src="images/centar_logotype_primary_dark.svg"
@@ -32,15 +32,7 @@
               <li><a href="#">Kontakt</a></li>
             </ul>
             <a href="#" class="button btn-primary-outline">Logga in</a>
-          </nav> -->
-        </div>
-      </div>
-      <div class="hero">
-        <h1 class="text-xxl text-center text-white">Heading Display</h1>
-        <div class="btn-wrapper">
-          <!-- Klasser för knappar -->
-          <a href="#" class="button btn-primary">Boka starttid</a>
-          <a href="#" class="button btn-primary">Greenfee</a>
+          </nav>
         </div>
       </div>
     </header>
@@ -49,17 +41,16 @@
       <section class="bg-blue-light">
         <!-- Klassen container styr innehållets maxbredd -->
         <div class="container">
-          <h2 class="text-xl">Olika storlek på rubriker</h2>
-          <h3 class="text-lg">Hej hej på dej!</h3>
-          <h4 class="text-md">Air Force Nine</h4>
-          <p class="body-lg">
-            Ingress ingress tristess. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Dicta dolor necessitatibus numquam, adipisci odit
-            id, libero quam ut ab, facilis iusto mollitia! Maiores asperiores
-            earum atque inventore voluptatum, dignissimos eum quia cupiditate
-            aut accusantium necessitatibus dolorem voluptatem doloribus dolor
-            consequatur.
-          </p>
+          <form action="/action_page.php" id="inloggform">
+            <h1>Logga in med ditt Golf-id och lösenord nedan.</h1><br>
+              <div id="inloggruta">
+                <label for="text">Golf-ID</label>
+                <input type="text" id="golf-id" name="golf-id" placeholder="********-****"><br><br>
+                <label for="password">Lösenord</label>
+                <input type="text" id="password" name="password" placeholder="Ditt lösenord här"><br><br>
+                <input type="submit" value="Logga in" class="button">
+              </div>  
+          </form>
         </div>
       </section>
       <section class="container">
