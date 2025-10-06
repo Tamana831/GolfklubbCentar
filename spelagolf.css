@@ -198,3 +198,274 @@
   font-weight: 700;
 }
 /* Greenfee-tabell inuti .news-card SLUTAR */
+
+/* BANGUID-sektionen börjar */
+.banguiden {
+  padding: var(--space-lg) var(--space-sm);
+}
+
+.banguiden_card {
+  background-color: var(--color-green-light);
+  border-radius: 16px;
+  padding: var(--space-lg);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+/* Bild */
+.banguiden_img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Textdel */
+.banguiden_title {
+  color: var(--color-text-black);
+  font-size: 2rem;                 
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+}
+
+.banguiden .overline {
+  color: var(--color-green-dark);
+  opacity: 0.9;
+  margin-bottom: var(--space-xs);
+}
+
+.banguiden_content .body {
+  margin-bottom: var(--space-md);
+  max-width: 44ch;                 
+}
+
+.banguiden_cta {
+  align-self: flex-start;
+  border-radius: 999px;
+  padding: 0 1.75rem;
+}
+
+@media (max-width: 900px) {
+  .banguiden_card {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .banguiden_content .body {
+    max-width: none;
+  }
+}
+/* BANGUID-sektionen SLUTAR */
+
+/* Lunch & Shop-sektionen Börjar */
+
+.promo-duo {
+  padding: 0 var(--space-sm) var(--space-lg);
+}
+
+.promo-duo_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+}
+
+.promo-duo .news-card:not(.promo-card) {
+  border-radius: 16px;
+  padding: var(--space-md) var(--space-md);
+}
+
+.lunch-card {
+  background-color: var(--color-beige-light);
+  text-align: center;
+  display: grid;
+  gap: var(--space-sm);
+  align-content: center;
+}
+
+.lunch-card_title {
+  color: var(--color-green-dark);
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.lunch-card_underline {
+  width: 72px;
+  height: 4px;
+  background-color: var(--color-green-accent);
+  border-radius: 999px;
+  margin: 0 auto;
+}
+
+.lunch-card_date {
+  color: var(--color-green-dark);
+  opacity: .8;
+  font-size: 1rem;
+}
+
+.lunch-card_menu {
+  list-style: none;
+  display: grid;
+  gap: var(--space-sm);
+  padding: 0;
+  margin: 0 0 var(--space-md) 0;
+  max-width: 48ch;
+  justify-self: center;
+}
+
+.lunch-card_cta {
+  justify-self: center;
+  border-radius: 999px;
+  padding: 0 var(--space-lg);
+}
+
+.promo-card {
+  background: transparent;       
+  padding: 0;
+  border-radius: 16px;           
+  overflow: hidden;              
+  min-height: 520px;             
+}
+
+.promo-card_figure {
+  position: relative;
+  margin: 0;
+  height: 100%;
+}
+
+.promo-card_img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;            
+}
+
+.promo-card_overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0.20) 0%,
+    rgba(0,0,0,0.35) 100%
+  );
+}
+
+.promo-card_title {
+  color: var(--color-text-white);
+  font-size: clamp(2rem, 1.2rem + 2.2vw, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+.btn-accent {
+  background-color: var(--color-green-accent);
+  color: var(--color-text-white);
+}
+
+.btn-accent:hover {
+  filter: brightness(0.95);
+}
+
+.promo-card_cta {
+  border-radius: 999px;
+  padding: 0 var(--space-lg);
+}
+
+@media (max-width: 900px) {
+  .promo-duo_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .promo-card_img {
+    min-height: 380px;
+  }
+
+  .promo-duo .news-card {
+    padding: var(--space-lg);
+  }
+}
+/* Lunch & Shop-sektionen SLUTAR */
+
+/* Bli medlemsektionen börjar */
+.membership {
+  background-color: var(--color-blue-light); /* ljusblå bakgrund över hela bredden, går ju att byta */
+  padding: var(--space-xl) var(--space-sm);
+  margin-top: var(--space-lg);   
+}
+
+.membership .container {
+  text-align: center;
+}
+
+.membership_cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.membership_card {
+  background-color: color-mix(in srgb, var(--color-blue-light) 60%, white);
+  border-radius: var(--radius, 12px);
+  padding: var(--space-lg);
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.membership_card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.membership_title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text-black);
+  margin-bottom: var(--space-xs);
+}
+
+.membership_card p {
+  color: var(--color-text-black);
+  opacity: 0.9;
+  margin-bottom: var(--space-xs);
+}
+
+.membership_price {
+  font-weight: 700;
+  margin-top: var(--space-sm);
+}
+
+.membership_cta {
+  text-align: center;
+}
+
+.membership_cta .button {
+  background-color: var(--color-green-accent);
+  color: var(--color-text-white);
+  border-radius: 999px;
+  padding: 0 var(--space-lg);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.membership_cta .button:hover {
+  background-color: color-mix(in srgb, var(--color-green-accent) 85%, black);
+  transform: scale(1.03);
+}
+
+@media (max-width: 700px) {
+  .membership_cards {
+    grid-template-columns: 1fr;
+  }
+}
+/* Bli medlemsektionen SLUTAR */
