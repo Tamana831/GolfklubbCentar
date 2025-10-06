@@ -288,3 +288,7 @@ address {
   font-size: 0.75rem;
   padding-top: var(--space-sm);
 }
+input{
+    border-radius: 50px;
+    text-align: center;
+}

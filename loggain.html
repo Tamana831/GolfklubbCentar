@@ -6,7 +6,7 @@
     <title>Logga in</title>
     <!-- variables.css och base.css måste ligga överst då vi vill att den ska läsas in först -->
     <link rel="stylesheet" href="styles/variables.css" />
-    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="loggain.css" />
   </head>
   <body>
     <header>
@@ -41,13 +41,15 @@
       <section class="bg-blue-light">
         <!-- Klassen container styr innehållets maxbredd -->
         <div class="container">
-          <form action="/action_page.php">
-            <h1>Logga in med ditt Golf-id och lösenord nedan.</h1>
-            <label for="text">Golf-ID</label>
-            <input type="text" id="gold-id" name="golf-id" placeholder="********-****"><br>
-            <label for="password">Lösenord</label>
-            <input type="text" id="password" name="password" placeholder="Ditt lösenord här"><br><br>
-            <input type="submit" value="Logga in">
+          <form action="/action_page.php" id="inloggform">
+            <h1>Logga in med ditt Golf-id och lösenord nedan.</h1><br>
+              <div id="inloggruta">
+                <label for="text">Golf-ID</label>
+                <input type="text" id="golf-id" name="golf-id" placeholder="********-****"><br><br>
+                <label for="password">Lösenord</label>
+                <input type="text" id="password" name="password" placeholder="Ditt lösenord här"><br><br>
+                <input type="submit" value="Logga in" class="button">
+              </div>  
           </form>
         </div>
       </section>
