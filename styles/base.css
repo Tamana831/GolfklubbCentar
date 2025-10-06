@@ -94,6 +94,7 @@ body {
 
 .overline {
   font-size: 1rem; /* 16px */
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -198,4 +199,92 @@ header li a.current {
   background-color: var(--color-beige-light);
   border-radius: 12px;
   padding: var(--space-md);
+}
+
+/* FOOTER */
+/* Contrainer klassen styr padding i sidled så sätter top och bottom här. */
+.footer-wrapper {
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-md);
+}
+
+.nav-wrapper {
+  display: flex;
+  flex-direction: column; /* Staplad layout från start */
+  gap: var(--space-md); /* Mellanrum mellan sektioner */
+  margin-bottom: var(--space-md);
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .nav-wrapper {
+    flex-direction: row; /* Nav-items hamnar på rad */
+    flex-wrap: wrap;
+  }
+
+  .nav-item:first-child {
+    flex: 100%; /* loggan på egen rad */
+  }
+
+  .nav-item {
+    flex: 1 1 45%; /* två kolumner för nav-items */
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  .nav-wrapper {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* gap: var(--space-xl); */
+    margin-bottom: var(--space-xl);
+  }
+
+  .nav-item {
+    flex: 1;
+  }
+
+  .nav-item:first-child {
+    /* Verkar behöva sätta flex:1 på first-child för att flex:100% inte ska trumfa. */
+    flex: 1;
+  }
+}
+
+footer .logo-wordmark {
+  width: 112px;
+}
+
+footer .overline {
+  margin-bottom: var(--space-xxs);
+}
+
+.nav-item a,
+p,
+address {
+  margin-bottom: var(--space-xxs);
+  font-style: normal;
+}
+
+.nav-item li {
+  list-style: none;
+}
+
+.nav-item a {
+  display: block;
+  text-decoration: none;
+  color: var(--color-text-white);
+}
+
+.nav-item a:hover {
+  text-decoration: underline;
+}
+
+.byline-wrapper {
+  border-top: 0.5px solid var(--color-beige-light);
+}
+
+.byline-wrapper p {
+  font-size: 0.75rem;
+  padding-top: var(--space-sm);
 }
