@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logga in</title>
+    <!-- variables.css och base.css måste ligga överst då vi vill att den ska läsas in först -->
+    <link rel="stylesheet" href="styles/variables.css" />
+    <link rel="stylesheet" href="loggain.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Nedan div för att sätta färg hela vägen ut -->
+      <div class="bg-green-mid">
+        <!-- Nedan div för att sätta maxbredd på sidan -->
+        <div class="container">
+          <nav>
+            <a href="#"
+              ><img
+                src="images/centar_logotype_primary_dark.svg"
+                alt="Centar logotype"
+                class="logotype"
+            /></a>
+            <ul>
+              <li><a href="#">Spela Golf</a></li>
+              <li><a href="#">Medlem</a></li>
+              <li><a href="#">Klubben</a></li>
+              <li><a href="#">Tävlingar</a></li>
+              <li><a href="#">Företag</a></li>
+              <li><a href="#">Restaurang</a></li>
+              <li><a href="#">Golfshop</a></li>
+              <li><a href="#">Kontakt</a></li>
+            </ul>
+            <a href="#" class="button btn-primary-outline">Logga in</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- Här sätter jag en klass som sätter bakgrundsfärg på hela section. Detta element tar upp hela sidans bredd, dvs bakgrundsfärgen går hela vägen ut. -->
+      <section class="bg-blue-light">
+        <!-- Klassen container styr innehållets maxbredd -->
+        <div class="container">
+          <form action="/action_page.php" id="inloggform">
+            <h1>Logga in med ditt Golf-id och lösenord nedan.</h1><br>
+              <div id="inloggruta">
+                <label for="text">Golf-ID</label>
+                <input type="text" id="golf-id" name="golf-id" placeholder="********-****"><br><br>
+                <label for="password">Lösenord</label>
+                <input type="text" id="password" name="password" placeholder="Ditt lösenord här"><br><br>
+                <input type="submit" value="Logga in" class="button">
+              </div>  
+          </form>
+        </div>
+      </section>
+      <section class="container">
+        <h3 class="text-lg text-center">Nyheter</h3>
+        <div class="news-wrapper">
+          <article class="news-card">
+            <h4 class="text-md">Mellanrubrik</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+              dolor necessitatibus numquam, adipisci odit id, libero quam ut ab,
+              facilis iusto mollitia! Maiores asperiores earum atque inventore
+              voluptatum, dignissimos eum quia cupiditate aut accusantium
+              necessitatibus dolorem voluptatem doloribus dolor consequatur.
+            </p>
+          </article>
+          <article class="news-card">
+            <h4 class="text-sm">En mindre mellanrubrik</h4>
+            <p class="body-sm">
+              Mindre brödtext var det här tjoheeeeej! Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Dicta dolor necessitatibus numquam,
+              adipisci odit id, libero quam ut ab, facilis iusto mollitia!
+              Maiores asperiores earum atque inventore voluptatum, dignissimos
+              eum quia cupiditate aut accusantium necessitatibus dolorem
+              voluptatem doloribus dolor consequatur.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-green-dark">
+      <div class="container text-white footer-wrapper">
+        <nav class="nav-wrapper body-sm">
+          <div class="nav-item">
+            <a href="#"
+              ><img
+                src="/images/centar_logo_wordmark_neg.svg"
+                alt="Centar logotype negative"
+                class="logo-wordmark"
+            /></a>
+          </div>
+          <section class="nav-item">
+            <h5 class="overline">Navigera</h5>
+            <ul>
+              <li><a href="#">Om klubben</a></li>
+              <li><a href="#">Banan</a></li>
+              <li><a href="#">Företag & Partners</a></li>
+              <li><a href="#">Träna Golf</a></li>
+              <li><a href="#">Gäst</a></li>
+            </ul>
+          </section>
+          <section class="nav-item">
+            <h5 class="overline">Öppettider</h5>
+            <p>Måndag – Lördag: 7.30-17.00</p>
+            <p>Söndag: 7.30–16.00</p>
+          </section>
+          <section class="nav-item">
+            <h5 class="overline">Kontakt</h5>
+            <a href="mailto:centar@info.se">info@centragolfklubb.se</a>
+            <a href="tel:+123456789">012-345 678</a>
+            <address>Bergkvarn<br />700 88 Örebro</address>
+          </section>
+          <section class="nav-item">
+            <h5 class="overline">Följ oss</h5>
+            <ul>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">LinkedIn</a></li>
+            </ul>
+          </section>
+        </nav>
+        <div class="byline-wrapper">
+          <p>
+            &copy; 2025 | Designad och utvecklad av Emma Golander, Josefin
+            Holgersson, Tim Hugdahl, Tamana Mohammadi  | webd25jon TUC | HTML
+            och CSS med agila utvecklingsmetoder
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
