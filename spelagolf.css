@@ -41,7 +41,7 @@
     border-radius: 8px;
     background-color: #ffffff;
     color: var(--color-text-black);
-    box-shadow:#ffffff
+    box-shadow:#ffffff;
     cursor: pointer;
     transition: border-color 0.2s, box-shadow 0.2s;
 }
