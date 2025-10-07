@@ -9,47 +9,50 @@
     <link rel="stylesheet" href="styles/base.css" />
   </head>
   <body>
-    <header>
-      <!-- Nedan div för att sätta färg hela vägen ut -->
-      <div class="bg-green-mid">
-        <!-- Nedan div för att sätta maxbredd på sidan -->
-        <div class="container">
-          <!-- <nav>
-            <a href="#"
-              ><img
-                src="images/centar_logotype_primary_dark.svg"
-                alt="Centar logotype"
-                class="logotype"
-            /></a>
-            <ul>
-              <li><a href="#">Spela Golf</a></li>
-              <li><a href="#">Medlem</a></li>
-              <li><a href="#">Klubben</a></li>
-              <li><a href="#">Tävlingar</a></li>
-              <li><a href="#">Företag</a></li>
-              <li><a href="#">Restaurang</a></li>
-              <li><a href="#">Golfshop</a></li>
-              <li><a href="#">Kontakt</a></li>
-            </ul>
-            <a href="#" class="button btn-primary-outline">Logga in</a>
-          </nav> -->
+    <!-- Sätter färg hela vägen ut -->
+    <header class="bg-green-mid">
+      <!-- Nedan div för att sätta maxbredd på sidan -->
+      <nav class="container main-nav-wrapper">
+        <a href="#"
+          ><img
+            src="images/centar_logotype_primary_dark.svg"
+            alt="Centar logotype"
+            class="logotype"
+        /></a>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-button-container">
+          <span class="menu-button"></span>
+          <!--inline-->
+        </label>
+        <div class="menu-wrapper">
+          <ul>
+            <li><a href="spelagolf.html">Spela Golf</a></li>
+            <li><a href="#">Medlem</a></li>
+            <li><a href="#">Klubben</a></li>
+            <li><a href="#">Tävlingar</a></li>
+            <li><a href="#">Företag</a></li>
+            <li><a href="#">Restaurang</a></li>
+            <li><a href="#">Golfshop</a></li>
+            <li><a href="#">Kontakt</a></li>
+          </ul>
+          <a href="#" class="button btn-primary-outline">Logga in</a>
         </div>
-      </div>
-      <div class="hero">
-        <h1 class="text-xxl text-center text-white">Heading Display</h1>
-        <div class="btn-wrapper">
-          <!-- Klasser för knappar -->
-          <a href="#" class="button btn-primary">Boka starttid</a>
-          <a href="#" class="button btn-primary">Greenfee</a>
-        </div>
-      </div>
+      </nav>
     </header>
+    <div class="hero">
+      <h1 class="text-xxl text-center text-white">Välkommen till Centar Golfklubb</h1>
+      <div class="btn-wrapper">
+        <!-- Klasser för knappar -->
+        <a href="#" class="button btn-primary">Boka starttid</a>
+        <a href="#" class="button btn-primary">Greenfee</a>
+      </div>
+    </div>
     <main>
       <!-- Här sätter jag en klass som sätter bakgrundsfärg på hela section. Detta element tar upp hela sidans bredd, dvs bakgrundsfärgen går hela vägen ut. -->
       <section class="bg-blue-light">
         <!-- Klassen container styr innehållets maxbredd -->
         <div class="container">
-          <h2 class="text-xl">Olika storlek på rubriker</h2>
+          <h2 class="text-xl">Här kommer exempel på lite olika textstorlekar.</h2>
           <h3 class="text-lg">Hej hej på dej!</h3>
           <h4 class="text-md">Air Force Nine</h4>
           <p class="body-lg">
@@ -91,8 +94,8 @@
     </main>
     <footer class="bg-green-dark">
       <div class="container text-white footer-wrapper">
-        <nav class="nav-wrapper body-sm">
-          <div class="nav-item">
+        <nav class="foot-nav-wrapper body-sm">
+          <div class="foot-nav-item foot-logo-wrapper">
             <a href="#"
               ><img
                 src="/images/centar_logo_wordmark_neg.svg"
@@ -100,7 +103,7 @@
                 class="logo-wordmark"
             /></a>
           </div>
-          <section class="nav-item">
+          <section class="foot-nav-item">
             <h5 class="overline">Navigera</h5>
             <ul>
               <li><a href="#">Om klubben</a></li>
@@ -110,18 +113,18 @@
               <li><a href="#">Gäst</a></li>
             </ul>
           </section>
-          <section class="nav-item">
+          <section class="foot-nav-item">
             <h5 class="overline">Öppettider</h5>
             <p>Måndag – Lördag: 7.30-17.00</p>
             <p>Söndag: 7.30–16.00</p>
           </section>
-          <section class="nav-item">
+          <section class="foot-nav-item">
             <h5 class="overline">Kontakt</h5>
-            <a href="mailto:centar@info.se">info@centragolfklubb.se</a>
+            <a href="mailto:centar@info.se">info@centargolfklubb.se</a>
             <a href="tel:+123456789">012-345 678</a>
             <address>Bergkvarn<br />700 88 Örebro</address>
           </section>
-          <section class="nav-item">
+          <section class="foot-nav-item">
             <h5 class="overline">Följ oss</h5>
             <ul>
               <li><a href="#">Instagram</a></li>
@@ -130,7 +133,7 @@
             </ul>
           </section>
         </nav>
-        <div class="byline-wrapper">
+        <div class="byline-wrapper text-center">
           <p>
             &copy; 2025 | Designad och utvecklad av Emma Golander, Josefin
             Holgersson, Tim Hugdahl, Tamana Mohammadi  | webd25jon TUC | HTML
