@@ -290,5 +290,8 @@ address {
 }
 input{
     border-radius: 50px;
-    text-align: center;
+    text-align: center;   
+}
+#inloggform{
+  padding: 58px 0;
 }
