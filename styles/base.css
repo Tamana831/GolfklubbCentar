@@ -20,10 +20,11 @@ body {
 .container {
   margin: 0 auto;
   max-width: 1280px;
-  padding: 0 var(--space-sm);
+  padding-left: var(--space-sm);
+  padding-right: var(--space-sm);
 }
 
-/* ---------- Styling för bakgrundsfärg ---------- */
+/* ---------- BAKGRUNDSFÄRG styling  ---------- */
 /* Gör vad som känns enklast, antingen med klass på html-elmentet eller med hjälp av css direkt på elementet. */
 .bg-green-dark {
   background-color: var(--color-green-dark);
@@ -45,6 +46,7 @@ body {
 }
 
 /* ---------- TEXT styling ---------- */
+/* Utgår från mobil och skalar upp, se media queries */
 /* text- för rubriker */
 .text-xxl,
 .text-xl,
@@ -56,72 +58,77 @@ body {
   line-height: 1.2;
 }
 .text-xxl {
-  font-size: 4rem; /* 64px */
+  font-size: 2.5rem; /* 40px mobil, 64px desktop */
 }
-
 .text-xl {
-  font-size: 3rem; /* 48px */
+  font-size: 2rem; /* 32px mobil, 48px desktop */
   margin-bottom: var(--space-md);
 }
-
 .text-lg {
-  font-size: 2rem; /* 32px */
+  font-size: 1.75rem; /* 28px mobil, 32px desktop */
   margin-bottom: var(--space-sm);
 }
-
 .text-md {
-  font-size: 1.5rem; /* 24px */
+  font-size: 1.25rem; /* 20px mobil, 24px desktop */
   margin-bottom: var(--space-xs);
 }
-
 .text-sm {
   font-size: 1rem; /* 16px */
   margin-bottom: var(--space-xs);
 }
-
 /* body- för brödtext och ingress */
 .body-sm {
   font-size: 0.875rem; /* 14px */
 }
-
 .body {
   font-size: 1rem; /* 16px */
 }
-
 .body-lg {
   font-size: 1.25rem; /* 20px */
 }
-
 .overline {
   font-size: 1rem; /* 16px */
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-
+/* Större px-storlek från tablet och uppåt */
+@media (min-width: 768px) {
+  .text-xxl {
+  font-size: 4rem; /* 64px */
+}
+.text-xl {
+  font-size: 3rem; /* 48px */
+  margin-bottom: var(--space-md);
+}
+.text-lg {
+  font-size: 2rem; /* 32px */
+  margin-bottom: var(--space-sm);
+}
+.text-md {
+  font-size: 1.5rem; /* 24px */
+  margin-bottom: var(--space-xs);
+}
+}
 /* Hjälpklasser */
 .text-center {
   text-align: center;
 }
-
 .text-white {
   color: var(--color-text-white);
 }
-
 /* Styling för h1 på hero-bild */
 .hero .text-xxl {
   margin-bottom: var(--space-md);
 }
-/* ---------- Styling KNAPPAR ---------- */
+/* ----------  BUTTONS ---------- */
 .btn-primary {
   background-color: var(--color-green-dark);
   color: var(--color-beige-light);
 }
-
 .btn-primary:hover {
   background-color: var(--color-green-accent);
 }
-
 .btn-primary-outline {
   border: 2px solid var(--color-green-dark);
   background-color: transparent;
@@ -135,6 +142,7 @@ body {
   /* Sätter fast höjd på knappar och justerar in med flex, så vet man att alla knappat alltid är lika stora. */
   height: 42px;
   display: flex;
+  width: fit-content;
   justify-content: center;
   align-items: center;
   text-decoration: none;
@@ -147,32 +155,155 @@ body {
   cursor: pointer;
 }
 
-/* Navigering DESKTOP header med grön bakgrund */
-header nav {
+/* ---------- NAVIGATION ---------- */
+.main-nav-wrapper {
   display: flex;
   justify-content: space-between;
-  padding: var(--space-md) 0;
+  align-items: center;
+  position: relative;
+  padding-top: var(--space-sm);
+  padding-bottom: var(--space-sm);
 }
 .logotype {
-  width: 180px; /* Sätter maxbredd för säkerhets skull */
+  width: 140px;
+  /* Tar bort margin i botten på bild */
+  display: block;
 }
-/* Jag vill nå ul i header */
-header nav ul {
+.menu-wrapper {
+  position: absolute;
+  top: 100%; /* lägger meny precis under nav */
+  left: 0;
+  right: 0;
+  background-color: var(--color-green-mid);
+  border-top: 1px solid var(--color-green-dark);
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.08);
   display: flex;
-  align-items: center;
-  gap: var(--space-sm);
+  flex-direction: column;
+  padding: var(--space-sm);
+  gap: var(--space-xs); /* Avstånd mellan meny och knapp */
+  /* Animerar opaciteten */
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 700ms cubic-bezier(0.23, 1, 0.32, 1);
 }
-header ul li {
+.menu-wrapper li {
   list-style: none;
+  font-size: 1.25rem;
+  margin-bottom: var(--space-xs);
 }
-header li a {
+.menu-wrapper a {
   text-decoration: none;
   color: var(--color-green-dark);
   font-weight: 600;
+  transition: background-color 0.5s;
 }
-header li a:hover,
-header li a.current {
-  text-decoration: underline; /* Det här kan vi ändra sen till vilken hover-effekt vi vill ha */
+.menu-wrapper li a:hover,
+.menu-wrapper li a.current {
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--color-green-dark) ;
+}
+/* Styling hamburgerikon */
+.menu-button-container {
+  height: 100%;
+  width: 32px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* Döljer själva checkboxen*/
+#menu-toggle {
+  display: none;
+}
+/* Checkbox (hamburgermenyn) kryssad, menyn visas */ #menu-toggle:checked ~ .menu-wrapper { 
+  max-height: 600px; 
+  opacity: 1; }
+/* Hamburgerikonens transformation till ett "X" */
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0;
+  transform: rotate(45deg);
+}
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: transparent;
+}
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0;
+  transform: rotate(-45deg);
+}
+/* Stylar "strecken" i hamburgermenyn  */
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: var(--color-green-dark);
+  position: absolute;
+  height: 3px;
+  width: 30px;
+  border-radius: 2px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.menu-button::before {
+  content: "";
+  margin-top: -8px;
+}
+.menu-button::after {
+  content: "";
+  margin-top: 8px;
+}
+/* Desktop */
+@media (min-width: 1024px) {
+  .main-nav-wrapper {
+    align-items:flex-start;
+    padding-top: var(--space-md);
+    padding-bottom: var(--space-md);
+  }
+  .logotype {
+    width: 200px;
+    padding-right: var(--space-md);
+  }
+  .menu-button-container {
+    display: none; /* Döljer hamburgarikon */
+  }
+  .menu-wrapper {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+    padding: 0;
+    gap: var(--space-md); /* Avstånd mellan meny och knapp */
+    box-shadow: none;
+    border-top: none;
+    /* Återställer styling för animering */
+    max-height: none;
+    opacity: 1;
+    overflow: visible;
+    transition: none;
+  }
+  .menu-wrapper ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: var(--space-sm);
+  row-gap: var(--space-xs);
+  }
+  .menu-wrapper li {
+  margin-bottom: 0;
+  font-size: 1rem;
+  }
+  .menu-wrapper .button {
+    min-width: 160px; /* Måste sätta bredd annars vill texten hamna på två rader */
+  }
+}
+@media (min-width: 1200px) {
+  .main-nav-wrapper {
+    align-items: center;
+  }
+  .menu-wrapper {
+    align-items:center;
+  }
 }
 
 /* Exempel-styling */
@@ -182,7 +313,7 @@ header li a.current {
   justify-content: center;
   align-items: center;
   background-color: plum; /* Färg och höjd för att man ska se något nu.*/
-  height: 400px;
+  height: 500px;
   margin-bottom: var(--space-xl);
 }
 .btn-wrapper {
@@ -201,90 +332,63 @@ header li a.current {
   padding: var(--space-md);
 }
 
-/* FOOTER */
-/* Contrainer klassen styr padding i sidled så sätter top och bottom här. */
+/* ----------  FOOTER ---------- */
+/* Container-klassen styr padding i sidled så sätter top och bottom här. */
 .footer-wrapper {
   padding-top: var(--space-xl);
   padding-bottom: var(--space-md);
 }
-
-.nav-wrapper {
-  display: flex;
-  flex-direction: column; /* Staplad layout från start */
+.foot-nav-wrapper {
+  display: grid; /* Grid aktiverad från start */
+  grid-template-columns: 1fr;
   gap: var(--space-md); /* Mellanrum mellan sektioner */
   margin-bottom: var(--space-md);
 }
-
-/* Tablet */
-@media (min-width: 768px) {
-  .nav-wrapper {
-    flex-direction: row; /* Nav-items hamnar på rad */
-    flex-wrap: wrap;
-  }
-
-  .nav-item:first-child {
-    flex: 100%; /* loggan på egen rad */
-  }
-
-  .nav-item {
-    flex: 1 1 45%; /* två kolumner för nav-items */
-  }
-}
-
-/* Desktop */
-@media (min-width: 1200px) {
-  .nav-wrapper {
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    /* gap: var(--space-xl); */
-    margin-bottom: var(--space-xl);
-  }
-
-  .nav-item {
-    flex: 1;
-  }
-
-  .nav-item:first-child {
-    /* Verkar behöva sätta flex:1 på first-child för att flex:100% inte ska trumfa. */
-    flex: 1;
-  }
-}
-
 footer .logo-wordmark {
-  width: 112px;
+  width: 100px;
 }
-
 footer .overline {
   margin-bottom: var(--space-xxs);
 }
-
-.nav-item a,
+.foot-nav-item a,
 p,
 address {
   margin-bottom: var(--space-xxs);
   font-style: normal;
 }
-
-.nav-item li {
+.foot-nav-item li {
   list-style: none;
 }
-
-.nav-item a {
+.foot-nav-item a {
   display: block;
   text-decoration: none;
   color: var(--color-text-white);
 }
-
-.nav-item a:hover {
+.foot-nav-item a:hover {
   text-decoration: underline;
 }
-
 .byline-wrapper {
   border-top: 0.5px solid var(--color-beige-light);
 }
-
 .byline-wrapper p {
   font-size: 0.75rem;
   padding-top: var(--space-sm);
+}
+/* Tablet */
+@media (min-width: 768px) {
+  .foot-nav-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .foot-logo-wrapper {
+    grid-column: span 3;
+  }
+}
+/* Desktop */
+@media (min-width: 1200px) {
+  .foot-nav-wrapper {
+    grid-template-columns: repeat(5, 1fr);
+  }
+   .foot-logo-wrapper {
+    grid-column: span 1;
+  }
 }
