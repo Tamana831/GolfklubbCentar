@@ -1,0 +1,80 @@
+/* Add your CSS rules below. Example: */
+
+body {
+  background-color: #f5f5dc;
+  font-family: Arial, sans-serif;
+}
+
+.header, .footer {
+  background-color: #006400;
+  color: #fff;
+}
+
+.hero {
+  background: #333;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.button.btn-primary {
+  background: #006400;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.button.btn-primary-outline {
+  background: transparent;
+  color: #006400;
+  border: 2px solid #006400;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.news-card {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo-wordmark {
+  height: 40px;
+}
+
+.text-xxl {
+  font-size: 2.5rem;
+}
+
+.text-lg {
+  font-size: 1.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.bg-green-dark {
+  background-color: #006400;
+}
+
+.bg-beige-light {
+  background-color: #f5f5dc;
+}
