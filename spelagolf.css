@@ -1,49 +1,49 @@
-/* Boka speltid med fields */
-.booking{
-    background-color: #ffffff;
-    color: var(--color-text-black);
-    font-family: "Raleway", sans-serif;
-    padding: var(--space-lg) 0;
+/* Boka speltid */
+.booking {
+  background-color: #ffffff;
+  color: var(--color-text-black);
+  font-family: "Raleway", sans-serif;
+  padding: var(--space-lg) 0;
 }
 
-.spela_golf{
-  margin-top: var(--space-lg); 
-  margin-bottom: var(--space-lg);   
+.spela_golf {
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-lg);
 }
 
-.booking_intro{
-  margin-bottom: var(--space-xxs);    
+.booking_intro {
+  margin-bottom: var(--space-xxs);
 }
 
-.booking_controls{
-    display: inline-flex;
-    flex-direction: column;
-    gap: var(--space-xxs);
-    margin: var(--space-md) 0 var(--space-sm);
+.booking_controls {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--space-xxs);
+  margin: var(--space-md) 0 var(--space-sm);
 }
 
-.booking_label{
-    font-size: 0.9rem;
-    color: var(--color-green-dark);
+.booking_label {
+  font-size: 0.9rem;
+  color: var(--color-green-dark);
 }
 
-.booking_select{
-    position: relative;
-    width: 160px;
+.booking_select {
+  position: relative;
+  width: 160px;
 }
 
-.booking_select select{
-    -webkit-appearance: none;
-    appearance: none;
-    width: 100%;
-    padding: var(--space-xxs) 2.5rem var(--space-xxs) var(--space-xxs);
-    border: 1px solid var(--color-green-mid);
-    border-radius: 8px;
-    background-color: #ffffff;
-    color: var(--color-text-black);
-    box-shadow:#ffffff;
-    cursor: pointer;
-    transition: border-color 0.2s, box-shadow 0.2s;
+.booking_select select {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  padding: var(--space-xxs) 2.5rem var(--space-xxs) var(--space-xxs);
+  border: 1px solid var(--color-green-mid);
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: var(--color-text-black);
+  box-shadow: none;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .booking_select::after {
@@ -63,7 +63,6 @@
   border-color: var(--color-green-mid);
 }
 
-
 .booking_grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -71,7 +70,6 @@
   margin-top: var(--space-sm);
   border: none;
   padding: var(--space-sm) 0 0 0;
-  margin: 0;
 }
 
 .booking_grid input[type="radio"] {
@@ -81,6 +79,7 @@
 }
 
 .booking_grid label.slot {
+  min-width: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -114,7 +113,7 @@
   box-shadow: none;
 }
 
-/* Skärmläsardold, valfritt moderniserad */
+/* Skärmläsardold - borde läggas in på alla css?*/
 .sr-only {
   position: absolute !important;
   width: 1px; height: 1px;
@@ -125,96 +124,169 @@
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-@media (max-width: 1100px) {
-  .booking_grid { grid-template-columns: repeat(5, 1fr); }
+@media (max-width: 1100px) { .booking_grid { grid-template-columns: repeat(5, 1fr); } }
+@media (max-width: 900px)  { .booking_grid { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 700px)  { .booking_grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 520px)  {
+  .booking_grid { grid-template-columns: repeat(2, 1fr); }
+  .booking_select { width: 100%; }
+  .booking_controls { margin-bottom: var(--space-sm); }
 }
-
-@media (max-width: 900px) {
-  .booking_grid { grid-template-columns: repeat(4, 1fr); }
+/* bokningsregler & greenfee */
+.spelagolf-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-md);
+  max-width: 1280px;               
+  margin-inline: auto;
+  
 }
 
 @media (max-width: 700px) {
-  .booking_grid { grid-template-columns: repeat(3, 1fr); }
+  .spelagolf-wrapper:last-of-type {
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-lg);
+  }
 }
 
-@media (max-width: 520px) {
-  .booking_grid { grid-template-columns: repeat(2, 1fr); }
-  .booking_select { width: 100%; }
+.spelagolf-card {
+  flex: 1 1 calc(50% - var(--space-md) / 2);
+  min-width: 280px;
+  background: var(--color-beige-light);
+  border-radius: 12px;
+  padding: var(--space-lg);
+  margin-block: var(--space-md);
 }
-/* Boka speltid med fields SLUTAR*/
 
-/* Greenfee-tabell inuti .news-card */
-.greenfee-table {
-  width: 100%;
-  border-collapse: collapse; 
-  margin-top: var(--space-xs);
-  margin-bottom: var(--space-md);
-  font-size: 1rem;
-  text-align: left;
+/* Greenfee */
+.greenfee { display: grid; gap: var(--space-sm); }
+
+.greenfee__row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-sm);
+}
+
+.greenfee__col {
+  background: var(--color-green-light);
+  border: 1px solid var(--color-green-mid);
   border-radius: 10px;
-  overflow: hidden; 
+  padding: var(--space-sm);
 }
 
-.greenfee-table thead th {
-  background-color: var(--color-green-light);
-  color: var(--color-text-black);
-  font-weight: 700;
-  padding: var(--space-xxs) var(--space-sm);
-  border-bottom: 1px solid var(--color-green-mid);
-  width: 50%;
-}
-
-.greenfee-table thead th:nth-child(2) {
+/* Lågsäsong = ljusblå */
+.greenfee__row > .greenfee__col:nth-of-type(2) {
   background-color: var(--color-blue-light);
 }
 
-
-.greenfee-table td {
-  padding: var(--space-xxs) var(--space-sm);
-  border-top: 1px solid var(--color-green-mid);
-  border-right: 1px solid var(--color-green-mid);
-  background-color: var(--color-green-light);
-  color: var(--color-text-black);
-  white-space: nowrap;
-}
-
-.greenfee-table td:last-child {
-  border-right: none;
-}
-
-.greenfee-table td:nth-child(2) {
-  background-color: var(--color-blue-light);
-}
-
-.greenfee-table .days {
-  display: inline;
-  font-weight: 600;
-  color: var(--color-text-black);
-  margin-right: 4px;
-}
-
-.greenfee-table .price {
-  display: inline;
+.greenfee__heading {
   font-weight: 700;
-}
-/* Greenfee-tabell inuti .news-card SLUTAR */
-
-/* BANGUID-sektionen börjar */
-.banguiden {
-  padding: var(--space-lg) var(--space-sm);
+  margin-bottom: var(--space-xs);
+  color: var(--color-green-dark);
 }
 
+.greenfee__list {
+  list-style: none;
+  display: grid;
+  gap: var(--space-xxs);
+  padding: 0;
+  margin: 0;
+}
+
+.greenfee__list li {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px dashed var(--color-green-mid);
+  padding-top: 6px;
+}
+
+.greenfee__days  { font-weight: 600; }
+.greenfee__price { font-weight: 700; }
+
+
+@media (max-width: 700px) {
+  .spelagolf-wrapper {
+    padding-inline: 0;                   
+  }
+  .spelagolf-card {
+    flex: 1 1 100%;
+    margin: 0;                           
+    padding: var(--space-md) var(--space-sm); 
+  }
+}
+
+@media (max-width: 620px) {
+  .greenfee__row {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+}
+
+/* Bli medlem */
+.membership {
+  background-color: var(--color-blue-light);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%); /* gör bakgrunden fullbredd om jag ska ha kvar container*/
+  padding: var(--space-xl) 0;
+}
+
+/* Behåll .container för inre breddlinjering */
+.membership .container { text-align: center; }
+
+.membership_cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-md);
+  margin-block: var(--space-lg);
+}
+
+.membership_card {
+  background-color: color-mix(in srgb, var(--color-blue-light) 60%, white);
+  border-radius: var(--radius, 12px);
+  padding: var(--space-lg);
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.membership_card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.membership_title { font-size: 1.25rem; font-weight: 700; margin-bottom: var(--space-xs); }
+.membership_card p { opacity: 0.9; margin-bottom: var(--space-xs); }
+.membership_price { font-weight: 700; margin-top: var(--space-sm); }
+
+.membership_cta { display: flex; justify-content: center; }
+.membership_cta .button {
+  background-color: var(--color-green-accent);
+  color: var(--color-text-white);
+  border-radius: 999px;
+  padding: 0 var(--space-lg);
+}
+
+/* Litet mellanrum mellan blå och grön sektion på små skärmar */
+@media (max-width: 700px) {
+  .membership { margin-top: var(--space-md); }
+  .membership_cards { grid-template-columns: 1fr; }
+}
+
+/* banguid */
 .banguiden_card {
   background-color: var(--color-green-light);
   border-radius: 16px;
+  margin-top: var(--space-md);
   padding: var(--space-lg);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-lg);
   align-items: center;
+  max-width: 1280px;              
+  margin-inline: auto;
+  padding-inline: var(--space-sm); 
 }
 
-/* Bild */
 .banguiden_img {
   width: 100%;
   height: auto;
@@ -222,10 +294,9 @@
   border-radius: 12px;
 }
 
-/* Textdel */
 .banguiden_title {
   color: var(--color-text-black);
-  font-size: 2rem;                 
+  font-size: 2rem;
   font-weight: 700;
   margin-bottom: var(--space-sm);
 }
@@ -238,7 +309,7 @@
 
 .banguiden_content .body {
   margin-bottom: var(--space-md);
-  max-width: 44ch;                 
+  max-width: 44ch;
 }
 
 .banguiden_cta {
@@ -246,6 +317,7 @@
   border-radius: 999px;
   padding: 0 1.75rem;
 }
+
 
 @media (max-width: 900px) {
   .banguiden_card {
@@ -257,25 +329,16 @@
     max-width: none;
   }
 }
-/* BANGUID-sektionen SLUTAR */
 
-/* Lunch & Shop-sektionen Börjar */
-
-.promo-duo {
-  padding: 0 var(--space-sm) var(--space-lg);
+@media (max-width: 700px) {
+  .banguiden_card {
+    padding: var(--space-md) var(--space-sm); 
+  }
 }
 
-.promo-duo_grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-sm);
-}
+/* Lunch & Webshop */
 
-.promo-duo .news-card:not(.promo-card) {
-  border-radius: 16px;
-  padding: var(--space-md) var(--space-md);
-}
-
+/* Lunchkortet */
 .lunch-card {
   background-color: var(--color-beige-light);
   text-align: center;
@@ -286,7 +349,7 @@
 
 .lunch-card_title {
   color: var(--color-green-dark);
-  font-size: 3rem;
+  font-size: clamp(1.75rem, 1.2rem + 2.4vw, 3rem);
   font-weight: 700;
   line-height: 1.1;
 }
@@ -321,12 +384,15 @@
   padding: 0 var(--space-lg);
 }
 
+/* Webshop-kortet */
 .promo-card {
-  background: transparent;       
+  
   padding: 0;
-  border-radius: 16px;           
-  overflow: hidden;              
-  min-height: 520px;             
+  background: transparent;
+  border-radius: 16px;
+  overflow: hidden;           
+  display: grid;
+  min-height: 520px;          
 }
 
 .promo-card_figure {
@@ -339,7 +405,8 @@
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;            
+  object-fit: cover;         
+ 
 }
 
 .promo-card_overlay {
@@ -351,6 +418,7 @@
   gap: var(--space-md);
   padding: var(--space-lg);
   text-align: center;
+  border-radius:inherit;
   background: linear-gradient(
     180deg,
     rgba(0,0,0,0.20) 0%,
@@ -380,92 +448,23 @@
   padding: 0 var(--space-lg);
 }
 
+
 @media (max-width: 900px) {
-  .promo-duo_grid {
-    grid-template-columns: 1fr;
-  }
-
-  .promo-card_img {
-    min-height: 380px;
-  }
-
-  .promo-duo .news-card {
-    padding: var(--space-lg);
+  .promo-card {
+    min-height: 380px;        
   }
 }
-/* Lunch & Shop-sektionen SLUTAR */
 
-/* Bli medlemsektionen börjar */
-.membership {
-  background-color: var(--color-blue-light); /* ljusblå bakgrund över hela bredden, går ju att byta */
-  padding: var(--space-xl) var(--space-sm);
-  margin-top: var(--space-lg);   
-}
-
-.membership .container {
-  text-align: center;
-}
-
-.membership_cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-md);
-  margin-top: var(--space-lg);
-  margin-bottom: var(--space-lg);
-}
-
-.membership_card {
-  background-color: color-mix(in srgb, var(--color-blue-light) 60%, white);
-  border-radius: var(--radius, 12px);
-  padding: var(--space-lg);
-  text-align: left;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.membership_card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.membership_title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--color-text-black);
-  margin-bottom: var(--space-xs);
-}
-
-.membership_card p {
-  color: var(--color-text-black);
-  opacity: 0.9;
-  margin-bottom: var(--space-xs);
-}
-
-.membership_price {
-  font-weight: 700;
-  margin-top: var(--space-sm);
-}
-
-.membership_cta {
-  text-align: center;
-}
-
-.membership_cta .button {
-  background-color: var(--color-green-accent);
-  color: var(--color-text-white);
-  border-radius: 999px;
-  padding: 0 var(--space-lg);
-  transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-.membership_cta .button:hover {
-  background-color: color-mix(in srgb, var(--color-green-accent) 85%, black);
-  transform: scale(1.03);
-}
-
-@media (max-width: 700px) {
-  .membership_cards {
-    grid-template-columns: 1fr;
+@media (max-width: 520px) {
+  .promo-card {
+    min-height: 320px;        
   }
 }
-/* Bli medlemsektionen SLUTAR */
+
+@media (min-width: 900px) {
+  .lunch-card,
+  .promo-card {
+    min-height: 520px;
+  }
+}
+
