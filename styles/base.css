@@ -162,6 +162,15 @@ body {
   cursor: pointer;
   transform: scale(1.03);
 }
+@media (max-width: 420px) {
+  .button {
+    height: auto;
+    min-height: 42px;
+    padding: 0.5rem var(--space-md);
+    white-space: normal;
+    line-height: 1.2;
+  }
+}
 
 /* ---------- NAVIGATION ---------- */
 .main-nav-wrapper {
@@ -329,16 +338,6 @@ body {
   gap: var(--space-xs);
 }
 
-.news-wrapper {
-  display: flex;
-  gap: var(--space-sm);
-}
-
-.news-card {
-  background-color: var(--color-beige-light);
-  border-radius: 12px;
-  padding: var(--space-md);
-}
 
 /* ----------  FOOTER ---------- */
 /* Container-klassen styr padding i sidled så sätter top och bottom här. */
