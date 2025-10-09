@@ -3,5 +3,10 @@ input{
     text-align: center;   
 }
 #inloggform{
-  padding: 58px 0;
+  padding: 40px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
