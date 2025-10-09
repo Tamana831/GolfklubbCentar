@@ -122,20 +122,27 @@ body {
   margin-bottom: var(--space-md);
 }
 /* ----------  BUTTONS ---------- */
-.btn-primary {
+.btn-primary { /* Mörkgrön */
   background-color: var(--color-green-dark);
   color: var(--color-beige-light);
 }
 .btn-primary:hover {
-  background-color: var(--color-green-accent);
+  background-color: color-mix(in srgb, var(--color-green-accent) 85%, black);
 }
-.btn-primary-outline {
+.btn-cta {
+  background-color: var(--color-green-accent);
+  color: var(--color-text-white);
+}
+.btn-cta:hover {
+  background-color: color-mix(in srgb, var(--color-green-accent) 85%, black);
+}
+.btn-primary-outline { /* Mörkgrön outline */
   border: 2px solid var(--color-green-dark);
   background-color: transparent;
-  color: #13360a;
+  color: var(--color-green-dark);
 }
 .btn-primary-outline:hover {
-  background-color: var(--color-green-accent);
+  background-color: color-mix(in srgb, var(--color-green-accent) 85%, black);
 }
 /* Styling som ska gälla alla knappar (a-taggar) */
 .button {
@@ -147,12 +154,13 @@ body {
   align-items: center;
   text-decoration: none;
   font-weight: 600;
-  border-radius: 50px;
+  border-radius: 999px;
   padding: 0 var(--space-md); /* Enbart padding i sidled */
-  transition: background-color 0.3s;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 .button:hover {
   cursor: pointer;
+  transform: scale(1.03);
 }
 
 /* ---------- NAVIGATION ---------- */
