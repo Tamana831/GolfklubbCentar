@@ -1,80 +1,145 @@
-/* Add your CSS rules below. Example: */
-
-body {
-  background-color: #f5f5dc;
-  font-family: Arial, sans-serif;
-}
-
-.header, .footer {
-  background-color: #006400;
-  color: #fff;
-}
-
+/* Hero-sektionen högst upp */
 .hero {
-  background: #333;
-  color: #fff;
-  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('../images/hero-bg.jpg') center/cover no-repeat;
+  padding: 120px 0;
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+/* Sektionen med medlemsförmåner */
+.benefits-section {
+  background-color: #f5f5dc; /* beige */
+  border: 2px solid #13360A;
+  border-radius: 10px;
+  padding: 40px 20px;
+  margin: 60px auto;
+  max-width: 1000px;
   text-align: center;
 }
 
-.button.btn-primary {
-  background: #006400;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  margin-right: 10px;
-  border-radius: 4px;
-  text-decoration: none;
+.benefits-section h2 {
+  color: #13360A;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
 }
 
-.button.btn-primary-outline {
-  background: transparent;
-  color: #006400;
-  border: 2px solid #006400;
-  padding: 10px 20px;
-  border-radius: 4px;
-  text-decoration: none;
+.benefits-section p {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+/* Kort (för nyheter, info eller förmåner) */
+.news-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
 .news-card {
-  background: #fff;
-  border: 1px solid #eee;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 250px;
   padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 4px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
 }
 
-.footer-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
+.news-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.logo-wordmark {
-  height: 40px;
+.news-card h3 {
+  color: #13360A;
+  margin-bottom: 8px;
 }
 
-.text-xxl {
-  font-size: 2.5rem;
+.news-card p {
+  font-size: 0.9rem;
+  color: #333;
 }
 
-.text-lg {
-  font-size: 1.5rem;
+/* FORMULÄR-STIL – samma som login */
+.bg-blue-light {
+  background-color: var(--color-blue-light);
+  padding: 4rem 0;
 }
 
-.text-center {
+#ansokform {
   text-align: center;
 }
 
-.text-white {
-  color: #fff;
+#ansokruta {
+  background-color: white;
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 2rem 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: left;
 }
 
-.bg-green-dark {
-  background-color: #006400;
+#ansokruta label {
+  font-weight: 600;
+  color: var(--color-dark);
 }
 
-.bg-beige-light {
-  background-color: #f5f5dc;
+#ansokruta input,
+#ansokruta select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
 }
+
+#ansokruta input:focus,
+#ansokruta select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 4px var(--color-primary);
+}
+
+#ansokruta .button {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#ansokruta .button:hover {
+  background-color: var(--color-primary-dark);
+}
+
+
+/* Gör sidan snygg även på mobil */
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .news-card {
+    width: 90%;
+  }
+}
+
+
+
