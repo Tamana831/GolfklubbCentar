@@ -1,0 +1,186 @@
+/* Img reset
+Det blir ett liten margin på alla bilder men genom att sätta dipslay block tar jag bort det. */
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* ---------- HEADER PÅ STARTSIDAN ---------- */
+.header-start {
+  position: absolute; /* Ligger ovanpå hero-bilden */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(236, 246, 233, 0.3);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px); /* För Safari */
+  z-index: 200; /* Högre än hero-overlay */
+}
+/* Bakgrundsfärg på navigering i mobil */
+.header-start .menu-wrapper {
+  background-color: var(--color-green-light);
+}
+/* Tar bort bakgrundsfärg */
+@media (min-width: 1024px) {
+  .header-start .menu-wrapper {
+    background-color: transparent;
+  }
+}
+/* ---------- HERO SECTION ---------- */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 480px;
+  padding-top: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+.hero-img {
+  background-image: url("/images/golf-green.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+/* Overlay på bilden för att mörka ner */
+.hero-img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-text-black);
+  mix-blend-mode: multiply;
+  opacity: 0.3;
+  z-index: 1;
+}
+/* Ändrar z-index för att text och knappar inte ska hamna under. */
+.hero-img > * {
+  z-index: 100;
+}
+.btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xxs);
+}
+.btn-wrapper a {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    height: 600px;
+    /* padding-top: var(--space-xl); */
+  }
+  .btn-wrapper {
+    flex-direction: row;
+    gap: var(--space-xs);
+  }
+}
+@media (min-width: 1280px) {
+  .hero {
+    height: 740px;
+    padding-top: var(--space-xxl);
+  }
+}
+
+/* ---------- NEWS SECTION ---------- */
+.news-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: var(--space-xl);
+}
+/* Aktiverar grid i mobil för att få med gap mellan varje card */
+.news-wrapper {
+  display: grid;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+@media (min-width: 768px) {
+  .news-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-sm);
+  }
+  .btn-wrapper a {
+    width: auto;
+  }
+}
+.news-card {
+  background-color: var(--color-beige-light);
+  /* Flex för att få lika höjd på korten */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* Rundade hörn på card, overflow hidden för att det ska synas */
+  border-radius: 12px;
+  overflow: hidden;
+}
+.news-thumb-img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: center;
+}
+.news-card .text-md {
+  color: var(--color-green-dark);
+}
+.news-card a {
+  text-decoration: none;
+  color: var(--color-text-black);
+}
+.news-text-wrapper {
+  padding: var(--space-sm);
+}
+.news-date,
+.body {
+  margin-bottom: var(--space-xs);
+}
+.read-more {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xxs);
+}
+.read-more .text-sm {
+  margin-bottom: 0;
+}
+.icon {
+  width: 24px;
+}
+/* ---------- LINK SECTION ---------- */
+.link-section {
+  display: grid;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+}
+.link-card {
+  background-color: var(--color-blue-mid);
+  color: var(--color-green-dark);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-md);
+}
+.link-card img {
+  width: 40px;
+}
+.link-card .text-lg {
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .link-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .link-card {
+    padding: var(--space-lg) var(--space-sm) var(--space-lg) var(--space-sm);
+  }
+}
+@media (min-width: 1024px) {
+  .link-section {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

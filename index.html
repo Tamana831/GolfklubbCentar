@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design element</title>
+    <!-- variables.css och base.css måste ligga överst då vi vill att den ska läsas in först -->
+    <link rel="stylesheet" href="styles/variables.css" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/startsida.css" />
+  </head>
+  <body>
+    <!-- Sätter färg hela vägen ut -->
+    <header class="bg-green-mid header-start">
+      <!-- Nedan div för att sätta maxbredd på sidan -->
+      <nav class="container main-nav-wrapper">
+        <a href="index.html"
+          ><img
+            src="images/centar_logotype_primary_dark.svg"
+            alt="Centar logotype"
+            class="logotype"
+        /></a>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-button-container">
+          <span class="menu-button"></span>
+          <!--inline-->
+        </label>
+        <div class="menu-wrapper">
+          <ul>
+            <li><a href="spelagolf.html">Spela Golf</a></li>
+            <li><a href="#">Medlem</a></li>
+            <li><a href="#">Klubben</a></li>
+            <li><a href="#">Tävlingar</a></li>
+            <li><a href="#">Företag</a></li>
+            <li><a href="#">Restaurang</a></li>
+            <li><a href="#">Golfshop</a></li>
+            <li><a href="#">Kontakt</a></li>
+          </ul>
+          <a href="#" class="button btn-primary-outline">Logga in</a>
+        </div>
+      </nav>
+    </header>
+    <div class="hero hero-img">
+      <h1 class="text-xxl text-center text-white">
+        Välkommen till Centar Golfklubb
+      </h1>
+      <div class="btn-wrapper">
+        <!-- Klasser för knappar -->
+        <a href="spelagolf.html" class="button btn-primary">Boka starttid</a>
+        <a href="#" class="button btn-primary">Greenfee</a>
+      </div>
+    </div>
+    <main>
+      <section class="container news-section">
+        <h2 class="text-lg text-center">Nyheter</h2>
+        <div class="news-wrapper">
+          <article class="news-card">
+            <a href="#">
+              <img
+                src="images/golf-green-flag.jpg"
+                alt="Golf green with flag."
+                class="news-thumb-img"
+              />
+              <div class="news-text-wrapper">
+                <div class="news-date body-sm">2025-10-06</div>
+                <h3 class="text-md">Nya förbättringar på banan inför 2026</h3>
+                <p class="body">
+                  Under hösten pågår arbetet med att förbättra hål 7 och 9 för
+                  ännu bättre spelupplevelse nästa säsong...
+                </p>
+                <div class="read-more">
+                  <span class="text-sm">Läs mer</span>
+                  <img
+                    src="images/Designelement/icon_arrow-right.svg"
+                    alt=""
+                    class="icon"
+                  />
+                </div>
+              </div>
+            </a>
+          </article>
+          <article class="news-card">
+            <a href="#">
+              <img
+                src="images/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                alt="Table setting with food at restaurant. Close up, hands holding plate."
+                class="news-thumb-img"
+              />
+              <div class="news-text-wrapper">
+                <div class="news-date body-sm">2025-09-18</div>
+                <h3 class="text-md">Ny meny i vår Restaurang</h3>
+                <p class="body">
+                  Vår restaurang har fått en uppdaterad meny med lokala råvaror
+                  och fräscha rätter. Perfekt för en paus mellan rundorna eller
+                  en fika i solen...
+                </p>
+                <div class="read-more">
+                  <span class="text-sm">Läs mer</span>
+                  <img
+                    src="images/Designelement/icon_arrow-right.svg"
+                    alt=""
+                    class="icon"
+                  />
+                </div>
+              </div>
+            </a>
+          </article>
+          <article class="news-card">
+            <a href="#">
+              <img
+                src="images/golf-tavling.jpg"
+                alt="Blury people in background on golf green, golf flag in focus"
+                class="news-thumb-img"
+              />
+              <div class="news-text-wrapper">
+                <div class="news-date body-sm">2025-09-07</div>
+                <h3 class="text-md">Anmälan öppen till Centar Open 2025</h3>
+                <p class="body">
+                  Nu är anmälan öppen till årets största tävling! Delta i Centar
+                  Open och tävla mot golfare från hela regionen, platserna
+                  brukar gå åt snabbt...
+                </p>
+                <div class="read-more">
+                  <span class="text-sm">Läs mer</span>
+                  <img
+                    src="images/Designelement/icon_arrow-right.svg"
+                    alt=""
+                    class="icon"
+                  />
+                </div>
+              </div>
+            </a>
+          </article>
+        </div>
+        <a href="#" class="button btn-primary-outline">Läs fler nyheter</a>
+      </section>
+      <section class="container link-section">
+        <div class="link-card">
+          <img src="images/Designelement/icon_golf.svg" alt="" />
+          <h3 class="text-lg text-center">Spela golf</h3>
+          <a href="#" class="button btn-primary-outline">Boka starttid</a>
+        </div>
+        <div class="link-card">
+          <img src="images/Designelement/icon_gift-card.svg" alt="" />
+          <h3 class="text-lg text-center">Presentkort</h3>
+          <a href="#" class="button btn-primary-outline">Köp presentkort</a>
+        </div>
+        <div class="link-card">
+          <img src="images/Designelement/icon_calendar.svg" alt="" />
+          <h3 class="text-lg text-center">Eventkalender</h3>
+          <a href="#" class="button btn-primary-outline">Se evenemang</a>
+        </div>
+        <div class="link-card">
+          <img src="images/Designelement/icon_eat.svg" alt="" />
+          <h3 class="text-lg text-center">Restaurang</h3>
+          <a href="#" class="button btn-primary-outline">Boka bord</a>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-green-dark">
+      <div class="container text-white footer-wrapper">
+        <nav class="foot-nav-wrapper body-sm">
+          <div class="foot-nav-item foot-logo-wrapper">
+            <a href="index.html"
+              ><img
+                src="/images/centar_logo_wordmark_neg.svg"
+                alt="Centar logotype negative"
+                class="logo-wordmark"
+            /></a>
+          </div>
+          <section class="foot-nav-item">
+            <h5 class="overline">Navigera</h5>
+            <ul>
+              <li><a href="#">Om klubben</a></li>
+              <li><a href="#">Banan</a></li>
+              <li><a href="#">Företag & Partners</a></li>
+              <li><a href="#">Träna Golf</a></li>
+              <li><a href="#">Gäst</a></li>
+            </ul>
+          </section>
+          <section class="foot-nav-item">
+            <h5 class="overline">Öppettider</h5>
+            <p>Måndag – Lördag: 7.30-17.00</p>
+            <p>Söndag: 7.30–16.00</p>
+          </section>
+          <section class="foot-nav-item">
+            <h5 class="overline">Kontakt</h5>
+            <a href="mailto:centar@info.se">info@centargolfklubb.se</a>
+            <a href="tel:+123456789">012-345 678</a>
+            <address>Bergkvarn<br />700 88 Örebro</address>
+          </section>
+          <section class="foot-nav-item">
+            <h5 class="overline">Följ oss</h5>
+            <ul>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">LinkedIn</a></li>
+            </ul>
+          </section>
+        </nav>
+        <div class="byline-wrapper text-center">
+          <p>
+            &copy; 2025 | Designad och utvecklad av Emma Golander, Josefin
+            Holgersson, Tim Hugdahl, Tamana Mohammadi  | webd25jon TUC | HTML
+            och CSS med agila utvecklingsmetoder
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
