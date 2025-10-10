@@ -363,7 +363,6 @@ body {
   gap: var(--space-xs);
 }
 
-
 /* ----------  FOOTER ---------- */
 /* Container-klassen styr padding i sidled så sätter top och bottom här. */
 .footer-wrapper {
