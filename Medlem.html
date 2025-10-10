@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="sv">
-<head>
-  <meta charset="UTF-8">
-  <title>Medlem | Centar Golf</title>
-  <link rel="stylesheet" href="styles/variables.css">
-  <link rel="stylesheet" href="styles/base.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-  <!-- HEADER -->
-  <header>
-    <div class="bg-green-mid">
-      <div class="container">
-        <nav>
-          <a href="#"><img src="images/centar_logotype_primary_dark.svg" alt="Centar logotype" class="logotype"></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design element</title>
+    <!-- variables.css och base.css måste ligga överst då vi vill att den ska läsas in först -->
+    <link rel="stylesheet" href="styles/variables.css" />
+    <link rel="stylesheet" href="styles/base.css" />
+  </head>
+  <body>
+    <!-- Sätter färg hela vägen ut -->
+    <header class="bg-green-mid">
+      <!-- Nedan div för att sätta maxbredd på sidan -->
+      <nav class="container main-nav-wrapper">
+        <a href="#"
+          ><img
+            src="images/centar_logotype_primary_dark.svg"
+            alt="Centar logotype"
+            class="logotype"
+        /></a>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-button-container">
+          <span class="menu-button"></span>
+          <!--inline-->
+        </label>
+        <div class="menu-wrapper">
           <ul>
-            <li><a href="#">Spela Golf</a></li>
-            <li><a href="#" class="current">Medlem</a></li>
+            <li><a href="spelagolf.html">Spela Golf</a></li>
+            <li><a href="#">Medlem</a></li>
             <li><a href="#">Klubben</a></li>
             <li><a href="#">Tävlingar</a></li>
             <li><a href="#">Företag</a></li>
@@ -26,262 +36,240 @@
             <li><a href="#">Kontakt</a></li>
           </ul>
           <a href="#" class="button btn-primary-outline">Logga in</a>
-        </nav>
-      </div>
-    </div>
+        </div>
+      </nav>
+    </header>
 
-    <!-- Hero för medlem -->
-    <div class="hero bg-green-light">
-      <h1 class="text-xxl text-center text-white">Medlemskap hos Centar Golf</h1>
-    </div>
-  </header>
-
-  <main>
-
-    <!-- Medlemskategorier -->
-    <section class="container" style="margin-top: var(--space-xl); margin-bottom: var(--space-xl);">
-      <h2 class="text-xl text-center">Bli Medlem</h2>
-      <p class="body-lg text-center" style="margin-bottom: var(--space-md);">
-        Våra olika medlemskapskategorier och medlemskapsavgifter för 2025
-      </p>
-
-      <div class="news-wrapper" style="display:flex; flex-wrap:wrap; gap: var(--space-sm); justify-content:center;">
-
-        <!-- Senior 29+ -->
-        <article class="news-card">
-          <h3 class="text-lg">Senior 29+</h3>
-          <p class="body-lg">
-            Medlemsavgift: 1 000 Kr<br>
-            Spelavgift: 6 950 Kr<br>
-            <strong>Total avgift: 7 950 Kr</strong><br>
-            Obegränsad golf
-          </p>
-        </article>
-
-        <!-- Senior 22-28 -->
-        <article class="news-card">
-          <h3 class="text-lg">Senior 22–28 år</h3>
-          <p class="body-lg">
-            Medlemsavgift: 1 000 Kr<br>
-            Spelavgift: 3 750 Kr<br>
-            <strong>Total avgift: 4 750 Kr</strong><br>
-            Obegränsad golf
-          </p>
-        </article>
-
-        <!-- Studerande Högskola -->
-        <article class="news-card">
-          <h3 class="text-lg">Studerande Högskola</h3>
-          <p class="body-lg">
-            Medlemsavgift: 1 000 Kr<br>
-            Spelavgift: 2 495 Kr<br>
-            <strong>Total avgift: 3 495 Kr</strong><br>
-            Obegränsad golf<br>
-            Denna medlemsform kan ej kombineras med Gilla Golf Extra
-          </p>
-        </article>
-
-        <!-- Nybörjarmedlem -->
-        <article class="news-card">
-          <h3 class="text-lg">Nybörjarmedlem</h3>
-          <p class="body-lg">
-            Medlemsavgift: 1 000 Kr<br>
-            Spelavgift: 2 995 Kr<br>
-            <strong>Total avgift: 3 995 Kr</strong><br>
-            Obegränsad golf (HCP 37–99)<br>
-            Denna medlemsform kan ej kombineras med Gilla Golf Extra<br>
-            Gäller endast i samband med nybörjarkurs.
-          </p>
-        </article>
-
-        <!-- Junior 16–21 -->
-        <article class="news-card">
-          <h3 class="text-lg">Junior 16–21 år</h3>
-          <p class="body-lg">
-            Medlemsavgift: 1 000 Kr<br>
-            Spelavgift: 1 950 Kr<br>
-            <strong>Total avgift: 2 950 Kr</strong><br>
-            Obegränsad golf<br>
-            Familjemedlemskap – se egen faktaruta
-          </p>
-        </article>
-
-        <!-- Junior 13–15 -->
-        <article class="news-card">
-          <h3 class="text-lg">Junior 13–15 år</h3>
-          <p class="body-lg">
-            Medlemsavgift: 1 000 Kr<br>
-            Spelavgift: 1 550 Kr<br>
-            <strong>Total avgift: 2 550 Kr</strong><br>
-            Obegränsad golf<br>
-            Familjemedlemskap – se egen faktaruta
-          </p>
-        </article>
-
-        <!-- Junior 0–12 -->
-        <article class="news-card">
-          <h3 class="text-lg">Junior 0–12 år</h3>
-          <p class="body-lg">
-            Medlemsavgift: 500 Kr<br>
-            Spelavgift: 500 Kr<br>
-            <strong>Total avgift: 1 000 Kr</strong><br>
-            Obegränsad golf
-          </p>
-        </article>
-
-      </div>
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Medlemskap på Centar Golfklubb</h1>
+      <p>Bli medlem och ta del av våra erbjudanden och förmåner.</p>
     </section>
 
-    <!-- Medlemsförmåner -->
-    <section class="container" style="margin-top: var(--space-xl); margin-bottom: var(--space-xl);">
-      <h2 class="text-xl text-center">Medlemsförmåner</h2>
-      <p class="body-lg text-center" style="margin-bottom: var(--space-md);">
-        Som medlem hos Centar Golf får du exklusiva förmåner och erbjudanden:
-      </p>
-
-      <div class="news-wrapper" style="display:flex; flex-wrap:wrap; gap: var(--space-sm); justify-content:center;">
-        <article class="news-card">
-          <h3 class="text-lg">Range-kort</h3>
-          <p class="body-lg">Få ett Range-kort laddat med 1000kr/år när du är medlem hos Centar Golf.</p>
-        </article>
-
-        <article class="news-card">
-          <h3 class="text-lg">Gratis lunch</h3>
-          <p class="body-lg">Var tionde lunch är gratis i vår restaurang.</p>
-        </article>
-
-        <article class="news-card">
-          <h3 class="text-lg">Privatlektioner</h3>
-          <p class="body-lg">15% rabatt på privatlektioner med vår Pro.</p>
-        </article>
-
-        <article class="news-card">
-          <h3 class="text-lg">Månadsbrev</h3>
-          <p class="body-lg">Få vårt månadsbrev med nyheter och erbjudanden direkt i din inkorg.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- Medlemsansökan -->
-    <section class="container">
-      <h2 class="text-xl text-center">Ansök om medlemskap</h2>
-      <form action="#" method="post">
-        <div class="form-group">
-          <label for="name">Namn</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">E-post</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-          <label for="phone">Telefonnummer</label>
-          <input type="tel" id="phone" name="phone" required>
-        </div>
-        <div class="form-group">
-          <label for="membership">Typ av medlemskap</label>
-          <select id="membership" name="membership">
-            <option value="full">Fullt medlemskap</option>
-            <option value="weekend">Helgmedlemskap</option>
-          </select>
-        </div>
-        <button type="submit" class="button btn-primary">Skicka ansökan</button>
-      </form>
-    </section>
-
-    <!-- Nyheter -->
-    <section class="container" style="margin-top: var(--space-xl); margin-bottom: var(--space-xl);">
-      <h2 class="text-xl text-center">Nyheter</h2>
-      <p class="body-lg text-center" style="margin-bottom: var(--space-md);">
-        Håll dig uppdaterad med de senaste nyheterna från Centar Golfklubb.
-      </p>
-
-      <div class="news-wrapper" style="display:flex; flex-wrap:wrap; gap: var(--space-sm); justify-content:center;">
-        <!-- Nyhet 1 -->
-        <article class="news-card">
-          <h3 class="text-lg">Tävlingssäsongen startar!</h3>
-          <p class="body">
-            Vårens tävlingar drar igång den 15 april. Alla medlemmar är välkomna att delta — anmäl dig via Min Golf senast 10 april.
-          </p>
-          <p class="body-sm"><em>Publicerad: 3 april 2025</em></p>
-        </article>
-
-        <!-- Nyhet 2 -->
-        <article class="news-card">
-          <h3 class="text-lg">Nya greener på hål 4 och 7</h3>
-          <p class="body">
-            Under vintern har vi renoverat greenerna på hål 4 och 7. De öppnar för spel den 1 maj — välkomna att prova!
-          </p>
-          <p class="body-sm"><em>Publicerad: 25 mars 2025</em></p>
-        </article>
-
-        <!-- Nyhet 3 -->
-        <article class="news-card">
-          <h3 class="text-lg">Golfshoppen får nytt sortiment</h3>
-          <p class="body">
-            Vår golfshop har fått in årets nyheter från Callaway, Titleist och Ping. Kom in och hitta dina favoriter!
-          </p>
-          <p class="body-sm"><em>Publicerad: 18 mars 2025</em></p>
-        </article>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="bg-green-mid" style="color: var(--color-text-white); padding: var(--space-xl) 0; margin-top: var(--space-xl);">
-    <div class="container" style="display: flex; flex-wrap: wrap; gap: var(--space-lg); justify-content: space-between;">
-
-      <!-- Navigation & Om klubben -->
-      <div style="flex:1; min-width:200px;">
-        <h3 class="text-md" style="color: var(--color-text-white); margin-bottom: var(--space-sm);">Navigera</h3>
-        <ul style="list-style:none; padding:0; line-height:2;">
-          <li><a href="#" style="color: var(--color-text-white); text-decoration:none;">Öppettider</a></li>
-          <li><a href="#" style="color: var(--color-text-white); text-decoration:none;">Kontakt</a></li>
-          <li><a href="#" style="color: var(--color-text-white); text-decoration:none;">Följ oss</a></li>
-          <li><a href="#" style="color: var(--color-text-white); text-decoration:none;">Om klubben</a></li>
-          <li><a href="#" style="color: var(--color-text-white); text-decoration:none;">Banan</a></li>
-          <li><a href="#" style="color: var(--color-text-white); text-decoration:none;">Företag & Partners</a></li>
-          <li><a href="#" style="color: var(--color-text-white); text-decoration:none;">Träna Golf</a></li>
-          <li><a href="#" style="color: var(--color-text-white); text-decoration:none;">Gäst</a></li>
-        </ul>
-      </div>
-
-      <!-- Öppettider -->
-      <div style="flex:1; min-width:200px;">
-        <h3 class="text-md" style="color: var(--color-text-white); margin-bottom: var(--space-sm);">Öppettider</h3>
-        <p class="body-lg">Måndag – Lördag: 7.30–17.00<br>Söndag: 7.30–16.00</p>
-      </div>
-
-      <!-- Kontakt -->
-      <div style="flex:1; min-width:200px;">
-        <h3 class="text-md" style="color: var(--color-text-white); margin-bottom: var(--space-sm);">Kontakt</h3>
-        <p class="body-lg">
-          info@centragolfklubb.se<br>
-          012-345 678<br>
-          Bergkvarn<br>
-          700 88 Örebro
+    <main>
+      <!-- BLI MEDLEM -->
+      <section class="container">
+        <h2>Bli Medlem</h2>
+        <p class="intro-text">
+          Våra olika medlemskapskategorier och avgifter för 2025.
         </p>
+
+        <div class="news-wrapper">
+          <article class="news-card">
+            <h3>Senior 29+</h3>
+            <p>
+              Medlemsavgift: 1 000 kr<br />
+              Spelavgift: 6 950 kr<br />
+              <strong>Total: 7 950 kr</strong><br />
+              Obegränsad golf
+            </p>
+          </article>
+
+          <article class="news-card">
+            <h3>Senior 22–28 år</h3>
+            <p>
+              Medlemsavgift: 1 000 kr<br />
+              Spelavgift: 3 750 kr<br />
+              <strong>Total: 4 750 kr</strong><br />
+              Obegränsad golf
+            </p>
+          </article>
+
+          <article class="news-card">
+            <h3>Studerande Högskola</h3>
+            <p>
+              Medlemsavgift: 1 000 kr<br />
+              Spelavgift: 2 495 kr<br />
+              <strong>Total: 3 495 kr</strong><br />
+              Obegränsad golf<br />
+              Ej kombinerbar med Gilla Golf Extra
+            </p>
+          </article>
+
+          <article class="news-card">
+            <h3>Nybörjarmedlem</h3>
+            <p>
+              Medlemsavgift: 1 000 kr<br />
+              Spelavgift: 2 995 kr<br />
+              <strong>Total: 3 995 kr</strong><br />
+              Obegränsad golf (hcp 37–99)
+            </p>
+          </article>
+
+          <article class="news-card">
+            <h3>Junior 16–21 år</h3>
+            <p>
+              Medlemsavgift: 1 000 kr<br />
+              Spelavgift: 1 950 kr<br />
+              <strong>Total: 2 950 kr</strong><br />
+              Familjemedlemskap – se egen info
+            </p>
+          </article>
+
+          <article class="news-card">
+            <h3>Junior 13–15 år</h3>
+            <p>
+              Medlemsavgift: 1 000 kr<br />
+              Spelavgift: 1 550 kr<br />
+              <strong>Total: 2 550 kr</strong>
+            </p>
+          </article>
+
+          <article class="news-card">
+            <h3>Junior 0–12 år</h3>
+            <p>
+              Medlemsavgift: 500 kr<br />
+              Spelavgift: 500 kr<br />
+              <strong>Total: 1 000 kr</strong><br />
+              Obegränsad golf
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- FÖRMÅNER -->
+      <section class="container benefits-section">
+        <h2>Medlemsförmåner</h2>
+        <p>
+          Som medlem hos Centar Golf får du exklusiva förmåner och erbjudanden:
+        </p>
+
+        <div class="news-wrapper">
+          <article class="news-card">
+            <h3>Range-kort</h3>
+            <p>Laddas med 1000 kr varje år för alla medlemmar.</p>
+          </article>
+          <article class="news-card">
+            <h3>Gratis lunch</h3>
+            <p>Var tionde lunch är gratis i restaurangen.</p>
+          </article>
+          <article class="news-card">
+            <h3>Privatlektioner</h3>
+            <p>15% rabatt på privatlektioner med vår Pro.</p>
+          </article>
+          <article class="news-card">
+            <h3>Månadsbrev</h3>
+            <p>Nyheter och erbjudanden direkt till din inkorg.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- FORMULÄR -->
+<section class="bg-blue-light">
+  <div class="container">
+    <form action="#" method="post" id="ansokform">
+      <h1>Ansök om medlemskap</h1>
+      <p>Fyll i dina uppgifter nedan för att bli medlem hos Centar Golfklubb.</p>
+      <br>
+
+      <div id="ansokruta">
+        <label for="name">Namn</label><br>
+        <input type="text" id="name" name="name" placeholder="För- och efternamn" required><br><br>
+
+        <label for="email">E-post</label><br>
+        <input type="email" id="email" name="email" placeholder="namn@example.com" required><br><br>
+
+        <label for="phone">Telefonnummer</label><br>
+        <input type="tel" id="phone" name="phone" placeholder="070-123 45 67" required><br><br>
+
+        <label for="membership">Typ av medlemskap</label><br>
+        <select id="membership" name="membership" required>
+          <option value="">Välj medlemskap</option>
+          <option value="full">Fullt medlemskap</option>
+          <option value="weekend">Helgmedlemskap</option>
+          <option value="junior">Junior</option>
+          <option value="student">Student</option>
+        </select><br><br>
+
+        <input type="submit" value="Skicka ansökan" class="button">
       </div>
+    </form>
+  </div>
+</section>
 
-      <!-- Sociala medier -->
-      <div style="flex:1; min-width:200px;">
-        <h3 class="text-md" style="color: var(--color-text-white); margin-bottom: var(--space-sm);">Följ oss</h3>
-        <ul style="list-style:none; padding:0; line-height:2;">
-          <li><a href="#" style="color: var(--color-text-white); text-decoration:none;">Instagram</a></li>
-          <li><a href="#" style="color: var(--color-text-white); text-decoration:none;">Facebook</a></li>
-          <li><a href="#" style="color: var(--color-text-white); text-decoration:none;">LinkedIn</a></li>
-        </ul>
+
+      <!-- NYHETER -->
+      <section class="container">
+        <h2>Nyheter</h2>
+        <p class="intro-text">
+          Håll dig uppdaterad med de senaste nyheterna från Centar Golfklubb.
+        </p>
+
+        <div class="news-wrapper">
+          <article class="news-card">
+            <h3>Tävlingssäsongen startar!</h3>
+            <p>
+              Vårens tävlingar börjar den 15 april. Anmäl dig via Min Golf senast 10 april.
+            </p>
+            <p><em>Publicerad: 3 april 2025</em></p>
+          </article>
+
+          <article class="news-card">
+            <h3>Nya greener på hål 4 och 7</h3>
+            <p>Renoverade greener öppnar för spel den 1 maj!</p>
+            <p><em>Publicerad: 25 mars 2025</em></p>
+          </article>
+
+          <article class="news-card">
+            <h3>Golfshoppen får nytt sortiment</h3>
+            <p>
+              Nya produkter från Callaway, Titleist och Ping – kom och kika!
+            </p>
+            <p><em>Publicerad: 18 mars 2025</em></p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-green-dark">
+      <div class="container text-white footer-wrapper">
+        <nav class="nav-wrapper body-sm">
+          <div class="nav-item">
+            <a href="#"
+              ><img
+                src="/images/centar_logo_wordmark_neg.svg"
+                alt="Centar logotype negative"
+                class="logo-wordmark"
+            /></a>
+          </div>
+          <section class="nav-item">
+            <h5 class="overline">Navigera</h5>
+            <ul>
+              <li><a href="#">Om klubben</a></li>
+              <li><a href="#">Banan</a></li>
+              <li><a href="#">Företag & Partners</a></li>
+              <li><a href="#">Träna Golf</a></li>
+              <li><a href="#">Gäst</a></li>
+            </ul>
+          </section>
+          <section class="nav-item">
+            <h5 class="overline">Öppettider</h5>
+            <p>Måndag – Lördag: 7.30-17.00</p>
+            <p>Söndag: 7.30–16.00</p>
+          </section>
+          <section class="nav-item">
+            <h5 class="overline">Kontakt</h5>
+            <a href="mailto:centar@info.se">info@centragolfklubb.se</a>
+            <a href="tel:+123456789">012-345 678</a>
+            <address>Bergkvarn<br />700 88 Örebro</address>
+          </section>
+          <section class="nav-item">
+            <h5 class="overline">Följ oss</h5>
+            <ul>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">LinkedIn</a></li>
+            </ul>
+          </section>
+        </nav>
+        <div class="byline-wrapper">
+          <p>
+            &copy; 2025 | Designad och utvecklad av Emma Golander, Josefin
+            Holgersson, Tim Hugdahl, Tamana Mohammadi  | webd25jon TUC | HTML
+            och CSS med agila utvecklingsmetoder
+          </p>
+        </div>
       </div>
-
-    </div>
-
-    <!-- Copyright -->
-    <div class="container" style="text-align:center; margin-top: var(--space-lg); font-size:0.875rem;">
-      Copyright ©2025 | Designad och utvecklad av Emma Golander, Josefin Holgersson,
-      Tim Hugdahl, Tamana Mohammadi | webd25jon TUC | HTML och CSS med agila utvecklingsmetoder
-    </div>
-  </footer>
-
-</body>
+    </footer>
+  </body>
 </html>
