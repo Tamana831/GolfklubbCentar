@@ -20,8 +20,15 @@ body {
 .container {
   margin: 0 auto;
   max-width: 1280px;
-  padding-left: var(--space-sm);
-  padding-right: var(--space-sm);
+  /* Är det för tight padding i mobil?? */
+  padding-left: var(--space-xs);
+  padding-right: var(--space-xs);
+}
+@media (min-width: 768px) {
+  .container {
+    padding-left: var(--space-sm);
+    padding-right: var(--space-sm);
+  }
 }
 
 /* ---------- BAKGRUNDSFÄRG styling  ---------- */
@@ -95,20 +102,20 @@ body {
 /* Större px-storlek från tablet och uppåt */
 @media (min-width: 768px) {
   .text-xxl {
-  font-size: 4rem; /* 64px */
-}
-.text-xl {
-  font-size: 3rem; /* 48px */
-  margin-bottom: var(--space-md);
-}
-.text-lg {
-  font-size: 2rem; /* 32px */
-  margin-bottom: var(--space-sm);
-}
-.text-md {
-  font-size: 1.5rem; /* 24px */
-  margin-bottom: var(--space-xs);
-}
+    font-size: 4rem; /* 64px */
+  }
+  .text-xl {
+    font-size: 3rem; /* 48px */
+    margin-bottom: var(--space-md);
+  }
+  .text-lg {
+    font-size: 2rem; /* 32px */
+    margin-bottom: var(--space-sm);
+  }
+  .text-md {
+    font-size: 1.5rem; /* 24px */
+    margin-bottom: var(--space-xs);
+  }
 }
 /* Hjälpklasser */
 .text-center {
@@ -122,47 +129,61 @@ body {
   margin-bottom: var(--space-md);
 }
 /* ----------  BUTTONS ---------- */
-.btn-primary { /* Mörkgrön */
+/* Grundstyling som gäller alla knappar (a-taggar och buttons) */
+.button {
+  /* Button reset */
+  appearance: none; /* tar bort systemets knappstil. */
+  -webkit-appearance: none; /* för Safari */
+  -moz-appearance: none; /* för Firefox */
+  border: none;
+  font: inherit; /* Ärver samma font som sidan */
+  /* Sätter fast höjd på knappar och justerar in med flex, så man vet att alla knappat alltid är lika höga. */
+  height: 42px;
+  width: fit-content;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 999px;
+  padding: 0 var(--space-md); /* Enbart padding i sidled pga fast höjd och flex*/
+  cursor: pointer;
+  will-change: transform;
+  transition: background-color 0.25s ease, transform 0.15s ease;
+}
+.button:hover {
+  transform: scale(1.03);
+}
+.btn-primary {
+  /* Mörkgrön */
   background-color: var(--color-green-dark);
   color: var(--color-beige-light);
-}
-.btn-primary:hover {
-  background-color: color-mix(in srgb, var(--color-green-accent) 85%, black);
 }
 .btn-cta {
   background-color: var(--color-green-accent);
   color: var(--color-text-white);
 }
+.btn-primary:hover,
 .btn-cta:hover {
   background-color: color-mix(in srgb, var(--color-green-accent) 85%, black);
 }
-.btn-primary-outline { /* Mörkgrön outline */
+.btn-primary-outline {
+  /* Mörkgrön outline */
   border: 2px solid var(--color-green-dark);
   background-color: transparent;
   color: var(--color-green-dark);
 }
 .btn-primary-outline:hover {
-  background-color: color-mix(in srgb, var(--color-green-accent) 85%, black);
+  background-color: var(--color-green-dark);
+  color: var(--color-beige-light);
 }
-/* Styling som ska gälla alla knappar (a-taggar) */
-.button {
-  /* Sätter fast höjd på knappar och justerar in med flex, så vet man att alla knappat alltid är lika stora. */
-  height: 42px;
-  display: flex;
-  width: fit-content;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 999px;
-  padding: 0 var(--space-md); /* Enbart padding i sidled */
-  transition: background-color 0.2s ease, transform 0.2s ease;
+/* Focus ring t.ex. när man tabbar sig fram */
+.button:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--color-green-accent) 70%, white);
+  outline-offset: 3px;
 }
-.button:hover {
-  cursor: pointer;
-  transform: scale(1.03);
-}
-
 /* ---------- NAVIGATION ---------- */
 .main-nav-wrapper {
   display: flex;
@@ -187,7 +208,7 @@ body {
   box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
-  padding: var(--space-sm);
+  padding: var(--space-sm) var(--space-sm) var(--space-lg) var(--space-sm);
   gap: var(--space-xs); /* Avstånd mellan meny och knapp */
   /* Animerar opaciteten */
   max-height: 0;
@@ -209,7 +230,7 @@ body {
 .menu-wrapper li a:hover,
 .menu-wrapper li a.current {
   padding-bottom: 4px;
-  border-bottom: 2px solid var(--color-green-dark) ;
+  border-bottom: 2px solid var(--color-green-dark);
 }
 /* Styling hamburgerikon */
 .menu-button-container {
@@ -225,9 +246,11 @@ body {
 #menu-toggle {
   display: none;
 }
-/* Checkbox (hamburgermenyn) kryssad, menyn visas */ #menu-toggle:checked ~ .menu-wrapper { 
-  max-height: 600px; 
-  opacity: 1; }
+/* Checkbox (hamburgermenyn) kryssad, menyn visas */
+#menu-toggle:checked ~ .menu-wrapper {
+  max-height: 600px;
+  opacity: 1;
+}
 /* Hamburgerikonens transformation till ett "X" */
 #menu-toggle:checked + .menu-button-container .menu-button::before {
   margin-top: 0;
@@ -263,7 +286,7 @@ body {
 /* Desktop */
 @media (min-width: 1024px) {
   .main-nav-wrapper {
-    align-items:flex-start;
+    align-items: flex-start;
     padding-top: var(--space-md);
     padding-bottom: var(--space-md);
   }
@@ -276,9 +299,10 @@ body {
   }
   .menu-wrapper {
     position: static;
+    background-color: transparent;
     display: flex;
     flex-direction: row;
-    align-items:flex-start;
+    align-items: flex-start;
     padding: 0;
     gap: var(--space-md); /* Avstånd mellan meny och knapp */
     box-shadow: none;
@@ -290,16 +314,16 @@ body {
     transition: none;
   }
   .menu-wrapper ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  column-gap: var(--space-sm);
-  row-gap: var(--space-xs);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: var(--space-sm);
+    row-gap: var(--space-xs);
   }
   .menu-wrapper li {
-  margin-bottom: 0;
-  font-size: 1rem;
+    margin-bottom: 0;
+    font-size: 1rem;
   }
   .menu-wrapper .button {
     min-width: 160px; /* Måste sätta bredd annars vill texten hamna på två rader */
@@ -310,36 +334,9 @@ body {
     align-items: center;
   }
   .menu-wrapper {
-    align-items:center;
+    align-items: center;
   }
 }
-
-/* Exempel-styling */
-.hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: plum; /* Färg och höjd för att man ska se något nu.*/
-  height: 500px;
-  margin-bottom: var(--space-xl);
-}
-.btn-wrapper {
-  display: flex;
-  gap: var(--space-xs);
-}
-
-.news-wrapper {
-  display: flex;
-  gap: var(--space-sm);
-}
-
-.news-card {
-  background-color: var(--color-beige-light);
-  border-radius: 12px;
-  padding: var(--space-md);
-}
-
 /* ----------  FOOTER ---------- */
 /* Container-klassen styr padding i sidled så sätter top och bottom här. */
 .footer-wrapper {
@@ -396,7 +393,20 @@ address {
   .foot-nav-wrapper {
     grid-template-columns: repeat(5, 1fr);
   }
-   .foot-logo-wrapper {
+  .foot-logo-wrapper {
     grid-column: span 1;
   }
 }
+
+/* TA BORT SÅ SMÅNINGOM, BÖRJAR MED ATT KOMMENTERA UT */
+/* Exempel-styling */
+/* .news-wrapper {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.news-card {
+  background-color: var(--color-beige-light);
+  border-radius: 12px;
+  padding: var(--space-md);
+} */
