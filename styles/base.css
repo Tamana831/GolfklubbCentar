@@ -184,6 +184,16 @@ body {
   outline: 3px solid color-mix(in srgb, var(--color-green-accent) 70%, white);
   outline-offset: 3px;
 }
+@media (max-width: 420px) {
+  .button {
+    height: auto;
+    min-height: 42px;
+    padding: 0.5rem var(--space-md);
+    white-space: normal;
+    line-height: 1.2;
+  }
+}
+
 /* ---------- NAVIGATION ---------- */
 .main-nav-wrapper {
   display: flex;
