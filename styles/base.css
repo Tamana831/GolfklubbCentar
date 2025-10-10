@@ -337,6 +337,22 @@ body {
     align-items: center;
   }
 }
+
+/* Exempel-styling */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: plum; /* Färg och höjd för att man ska se något nu.*/
+  height: 500px;
+  margin-bottom: var(--space-xl);
+}
+.btn-wrapper {
+  display: flex;
+  gap: var(--space-xs);
+}
+
 /* ----------  FOOTER ---------- */
 /* Container-klassen styr padding i sidled så sätter top och bottom här. */
 .footer-wrapper {
