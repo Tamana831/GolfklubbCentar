@@ -28,3 +28,13 @@ main{
 #loginbtn{
   width: 266.5px;
 }
+#main-container{
+  padding: 20px 0;
+}
+#member-container{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 20px 0;
+}

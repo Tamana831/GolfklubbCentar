@@ -30,7 +30,7 @@
         <div class="menu-wrapper">
           <ul>
             <li><a href="spelagolf.html">Spela Golf</a></li>
-            <li><a href="#">Medlem</a></li>
+            <li><a href="Medlem.html">Medlem</a></li>
             <li><a href="#">Klubben</a></li>
             <li><a href="#">Tävlingar</a></li>
             <li><a href="#">Företag</a></li>
@@ -38,7 +38,7 @@
             <li><a href="#">Golfshop</a></li>
             <li><a href="#">Kontakt</a></li>
           </ul>
-          <a href="#" class="button btn-primary-outline">Logga in</a>
+          <a href="loggain.html" class="button btn-primary-outline">Logga in</a>
         </div>
       </nav>
         </div>
@@ -48,7 +48,7 @@
       <!-- Här sätter jag en klass som sätter bakgrundsfärg på hela section. Detta element tar upp hela sidans bredd, dvs bakgrundsfärgen går hela vägen ut. -->
       <section class="bg-blue-light">
         <!-- Klassen container styr innehållets maxbredd -->
-        <div class="container">
+        <div class="container" id="main-container">
           <form action="/action_page.php" id="inloggform">
             <h1>Logga in</h1>
             <p>Ange ditt Golf-ID och lösenord nedan.</p><br>
@@ -62,32 +62,49 @@
           </form>
         </div>
       </section>
-      <section class="container">
-        <h3 class="text-lg text-center">Nyheter</h3>
-        <div class="news-wrapper">
-          <article class="news-card">
-            <h4 class="text-md">Mellanrubrik</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-              dolor necessitatibus numquam, adipisci odit id, libero quam ut ab,
-              facilis iusto mollitia! Maiores asperiores earum atque inventore
-              voluptatum, dignissimos eum quia cupiditate aut accusantium
-              necessitatibus dolorem voluptatem doloribus dolor consequatur.
-            </p>
-          </article>
-          <article class="news-card">
-            <h4 class="text-sm">En mindre mellanrubrik</h4>
-            <p class="body-sm">
-              Mindre brödtext var det här tjoheeeeej! Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Dicta dolor necessitatibus numquam,
-              adipisci odit id, libero quam ut ab, facilis iusto mollitia!
-              Maiores asperiores earum atque inventore voluptatum, dignissimos
-              eum quia cupiditate aut accusantium necessitatibus dolorem
-              voluptatem doloribus dolor consequatur.
-            </p>
-          </article>
-        </div>
-      </section>
+      <br>
+      <section class="membership">
+  <div class="container" id="member-container">
+    <h2 class="text-lg text-center">Bli medlem</h2>
+    <p class="text-center body-lg">Våra populäraste medlemskap</p>
+
+    <div class="membership_cards">
+      <article class="membership_card">
+        <h3 class="membership_title">Guld</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          unc ac nisl a nisl lobortis maximus. Proin dolor lorem, 
+          faucibus id placerat a, pharetra id nibh. Duis a ante 
+          ac dolor consectetur iaculis. Sed eu leo quis lacus vehicula 
+          luctus. Nunc vestibulum ullamcorper diam a condimentum. </p>
+        <p class="membership_price">7500 kr</p>
+      </article>
+
+      <article class="membership_card">
+        <h3 class="membership_title">Silver</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          unc ac nisl a nisl lobortis maximus. Proin dolor lorem, 
+          faucibus id placerat a, pharetra id nibh. Duis a ante 
+          ac dolor consectetur iaculis. Sed eu leo quis lacus vehicula 
+          luctus. Nunc vestibulum ullamcorper diam a condimentum.</p>
+        <p class="membership_price">6000 kr</p>
+      </article>
+
+      <article class="membership_card">
+        <h3 class="membership_title">Senior</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          unc ac nisl a nisl lobortis maximus. Proin dolor lorem, 
+          faucibus id placerat a, pharetra id nibh. Duis a ante 
+          ac dolor consectetur iaculis. Sed eu leo quis lacus vehicula 
+          luctus. Nunc vestibulum ullamcorper diam a condimentum.</p>
+        <p class="membership_price">4900 kr</p>
+      </article>
+    </div>
+
+    <div class="membership_cta">
+      <a href="Medlem.html" class="button btn-primary">Bli medlem</a>
+    </div>
+  </div>
+</section>
     </main>
     <footer class="bg-green-dark">
       <div class="container text-white footer-wrapper">
