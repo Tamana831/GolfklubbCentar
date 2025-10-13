@@ -1,18 +1,25 @@
 input{
-    border-radius: 50px;
+    border-radius: 8px;
     text-align: center;  
     background-color: var(--color-text-white);
-    padding: 0 var(--space-md);
+    padding: 15px 16px;
     font-weight: 600;
+    height: 54px;
+    border: 1px solid var(--Dark-green, #13360A);
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
 }
 #inloggform{
   padding: 20px 0;
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 50px;
+  border-radius: 16px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   width: 350px;
   margin: auto;
 }
@@ -26,7 +33,8 @@ main{
   flex: 1;
 }
 #loginbtn{
-  width: 266.5px;
+  display: block;
+  margin: 0 auto;
 }
 #main-container{
   padding: 20px 0;
@@ -37,4 +45,68 @@ main{
   display: flex;
   flex-direction: column;
   padding: 0 0 20px 0;
+}
+/* bli medlem */
+.blimedlem_card {
+  background-color: var(--color-green-light);
+  border-radius: 16px;
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-md);
+  padding: var(--space-lg);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  align-items: center;
+  max-width: 1280px;              
+  margin-inline: auto;
+  padding-inline: var(--space-sm); 
+}
+
+.blimedlem_img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.blimedlem_title {
+  color: var(--color-text-black);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+}
+
+.blimedlem .overline {
+  color: var(--color-green-dark);
+  opacity: 0.9;
+  margin-bottom: var(--space-xs);
+}
+
+.blimedlem_content .body {
+  margin-bottom: var(--space-md);
+  max-width: 44ch;
+}
+
+.blimedlem_cta {
+  align-self: flex-start;
+  border-radius: 999px;
+  padding: 0 1.75rem;
+}
+
+
+@media (max-width: 900px) {
+  .blimedlem_card {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .blimedlem_content .body {
+    max-width: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .blimedlem_card {
+    padding: var(--space-md) var(--space-sm); 
+  }
 }
