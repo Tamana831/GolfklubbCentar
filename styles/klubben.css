@@ -1,0 +1,368 @@
+/* Img reset
+Det blir ett liten margin på alla bilder men genom att sätta dipslay block tar jag bort det. */
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- NEWS SECTION ---------- */
+.top-header {
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+.news-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: var(--space-xl);
+}
+
+.news-wrapper {
+  display: grid;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+@media (min-width: 768px) {
+  .news-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-sm);
+  }
+  .btn-wrapper a {
+    width: auto;
+  }
+}
+.news-card {
+  background-color: var(--color-beige-light);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.news-thumb-img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: center;
+}
+.news-card .text-md {
+  color: var(--color-green-dark);
+}
+.news-card a {
+  text-decoration: none;
+  color: var(--color-text-black);
+}
+.news-text-wrapper {
+  padding: var(--space-sm);
+}
+.news-date,
+.body {
+  margin-bottom: var(--space-xs);
+}
+.read-more {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xxs);
+}
+.read-more .text-sm {
+  margin-bottom: 0;
+}
+.icon {
+  width: 24px;
+}
+
+.vision{
+    padding-top: var(--space-lg);
+}
+.visionen{
+    padding-bottom:var(--space-lg)
+}
+
+/* styrelsen */
+.styrelsen_card {
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-sm);
+  align-items: start;
+  max-width: 1280px;
+  margin-inline: auto;
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-md);
+  padding: var(--space-lg) var(--space-sm);
+}
+
+
+.styrelsen_heading {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: var(--space-sm);
+  color: var(--color-text-black);
+  font-size: clamp(1.75rem, 1.2rem + 1.2vw, 2.25rem);
+  font-weight: 700;
+}
+
+
+.styrelsen_item {
+  display: grid;
+  gap: var(--space-xxs);
+}
+
+.styrelsen_item img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 5;        
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+
+.styrelsen_caption {
+  display: grid;
+  gap: 2px;                  
+  text-align: center;
+  line-height: 1.3;
+}
+
+.styrelsen_role {
+  font-style: italic;         
+  color: var(--color-green-dark);
+  opacity: .9;
+}
+
+.styrelsen_name {
+  font-weight: 700;          
+  color: var(--color-text-black);
+}
+
+
+.styrelsen_subheading {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: var(--space-md);     
+  margin-bottom: var(--space-xxs);  
+  color: var(--color-text-black);
+  font-weight: 700;
+}
+
+
+.styrelsen_history {
+  grid-column: 1 / -1;
+  max-width: 120ch;
+  margin-inline: auto;
+  text-align: left;
+  line-height: 1.6;
+  color: var(--color-text-black);
+}
+
+
+@media (max-width: 900px) {
+  .styrelsen_card {
+    grid-template-columns: repeat(2, 1fr);
+    padding: var(--space-lg) var(--space-sm);
+  }
+}
+
+
+@media (max-width: 520px) {
+  .styrelsen_card {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+}
+
+/* banguid */
+.banguiden_card {
+  background-color: var(--color-green-light);
+  border-radius: 16px;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-lg);
+  padding: var(--space-lg);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  align-items: center;
+  max-width: 1280px;              
+  margin-inline: auto;
+  padding-block: var(--space-lg);
+  padding-inline: clamp(var(--space-md), 6vw, var(--space-xl)); 
+}
+
+.banguiden_img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.banguiden_title {
+  color: var(--color-text-black);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+}
+
+.banguiden .overline {
+  color: var(--color-green-dark);
+  opacity: 0.9;
+  margin-bottom: var(--space-xs);
+}
+
+.banguiden_content .body {
+  margin-bottom: var(--space-md);
+  max-width: 44ch;
+}
+
+.banguiden_cta {
+  align-self: flex-start;
+  border-radius: 999px;
+  padding: 0 1.75rem;
+}
+
+
+@media (max-width: 900px) {
+  .banguiden_card {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .banguiden_content .body {
+    max-width: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .banguiden_card {
+    padding: var(--space-md) var(--space-sm); 
+  }
+}
+
+/* feciliteter */
+
+
+.faciliteter {
+  background-color: #fff; 
+  padding: var(--space-md) 0;
+}
+
+.faciliteter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+
+.facility-card {
+  background-color: var(--color-beige-light); 
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+
+.facility-img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+}
+
+.facility-content {
+  padding: var(--space-sm);
+  display: grid;
+  gap: var(--space-xs);
+  flex-grow: 1;
+}
+
+.facility-title {
+  font-weight: 700;
+  color: var(--color-green-dark);
+  margin-bottom: var(--space-xxs);
+}
+.facility-content .body {
+  margin-bottom: var(--space-xs);
+}
+
+.facility-content .button {
+  margin-top: auto; 
+}
+
+/* Bli medlem */
+
+
+.blimedlem_card {
+  background-color: var(--color-green-light);
+  border-radius: 16px;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-lg);
+  padding: var(--space-lg);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  align-items: center;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-block: var(--space-lg);
+  padding-inline: clamp(var(--space-md), 6vw, var(--space-xl));
+}
+
+.blimedlem_content {
+  order: 1; /* Texten till vänster */
+}
+
+.blimedlem_media {
+  order: 2; /* Bilden till höger */
+}
+
+.blimedlem_img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.blimedlem_title {
+  color: var(--color-text-black);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+}
+
+
+.blimedlem_content .body {
+  margin-bottom: var(--space-md);
+  max-width: 48ch;
+}
+
+.blimedlem_cta {
+  align-self: flex-start;
+  border-radius: 999px;
+  padding: 0 1.75rem;
+}
+
+/* Responsiv layout */
+@media (max-width: 900px) {
+  .blimedlem_card {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .blimedlem_media {
+    order: -1; /* Bilden överst på mindre skärmar */
+  }
+
+  .blimedlem_content .body {
+    max-width: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .blimedlem_card {
+    padding: var(--space-md) var(--space-sm);
+  }
+}
