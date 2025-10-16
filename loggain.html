@@ -16,7 +16,7 @@
         <!-- Nedan div för att sätta maxbredd på sidan -->
         <div class="container">
           <nav class="container main-nav-wrapper">
-        <a href="#"
+        <a href="index.html"
           ><img
             src="images/centar_logotype_primary_dark.svg"
             alt="Centar logotype"
@@ -30,15 +30,15 @@
         <div class="menu-wrapper">
           <ul>
             <li><a href="spelagolf.html">Spela Golf</a></li>
-            <li><a href="#">Medlem</a></li>
-            <li><a href="#">Klubben</a></li>
-            <li><a href="#">Tävlingar</a></li>
-            <li><a href="#">Företag</a></li>
-            <li><a href="#">Restaurang</a></li>
-            <li><a href="#">Golfshop</a></li>
-            <li><a href="#">Kontakt</a></li>
+            <li><a href="medlem.html">Medlem</a></li>
+            <li><a href="klubben.html">Klubben</a></li>
+            <li><a href="tavling.html">Tävlingar</a></li>
+            <li><a href="foretag.html">Företag</a></li>
+            <li><a href="restaurang.html">Restaurang</a></li>
+            <li><a href="golfshop.html">Golfshop</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
           </ul>
-          <a href="#" class="button btn-primary-outline">Logga in</a>
+          <a href="loggain.html" class="button btn-primary-outline">Logga in</a>
         </div>
       </nav>
         </div>
@@ -48,46 +48,41 @@
       <!-- Här sätter jag en klass som sätter bakgrundsfärg på hela section. Detta element tar upp hela sidans bredd, dvs bakgrundsfärgen går hela vägen ut. -->
       <section class="bg-blue-light">
         <!-- Klassen container styr innehållets maxbredd -->
-        <div class="container">
+        <div class="container" id="main-container">
           <form action="/action_page.php" id="inloggform">
             <h1>Logga in</h1>
             <p>Ange ditt Golf-ID och lösenord nedan.</p><br>
               <div id="inloggruta">
                 <label for="text">Golf-ID</label><br>
-                <input type="text" id="golf-id" name="golf-id" placeholder="******-****"><br><br>
+                <input type="text" id="golf-id" class="input-field" name="golf-id" placeholder="******-****"><br><br>
                 <label for="password">Lösenord</label><br>
-                <input type="password" id="password" name="password" placeholder="Ditt lösenord här"><br><br>
+                <input type="password" id="password" class="input-field" name="password" placeholder="Ditt lösenord här"><br><br>
                 <button type="submit" class="btn-cta button" id="loginbtn">Logga In</button>
+              </div>
+              <div id="password-reset">
+                <p>Glömt ditt lösenord? Klicka <a href="#">här</a> för att återställa.</p>
               </div>  
           </form>
         </div>
       </section>
-      <section class="container">
-        <h3 class="text-lg text-center">Nyheter</h3>
-        <div class="news-wrapper">
-          <article class="news-card">
-            <h4 class="text-md">Mellanrubrik</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-              dolor necessitatibus numquam, adipisci odit id, libero quam ut ab,
-              facilis iusto mollitia! Maiores asperiores earum atque inventore
-              voluptatum, dignissimos eum quia cupiditate aut accusantium
-              necessitatibus dolorem voluptatem doloribus dolor consequatur.
-            </p>
-          </article>
-          <article class="news-card">
-            <h4 class="text-sm">En mindre mellanrubrik</h4>
-            <p class="body-sm">
-              Mindre brödtext var det här tjoheeeeej! Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Dicta dolor necessitatibus numquam,
-              adipisci odit id, libero quam ut ab, facilis iusto mollitia!
-              Maiores asperiores earum atque inventore voluptatum, dignissimos
-              eum quia cupiditate aut accusantium necessitatibus dolorem
-              voluptatem doloribus dolor consequatur.
-            </p>
-          </article>
-        </div>
-      </section>
+      <!-- bli medlem -->
+        <section class="container">
+
+          <div class="blimedlem_card">
+            <div class="blimedlem_media">
+              <img src="/images/klubben-bli-medlem.jpg"
+                alt="Golfare som slår ut på fairway"
+                class="blimedlem_img">
+            </div>
+
+            <div class="blimedlem_content">
+              <p class="overline">Bli medlem?</p>
+              <h2 class="blimedlem_title">Allt du behöver veta</h2>
+              <p class="body">Här hittar du allt du behöver veta om våra medlemskap. Upptäck förmåner, evenemang och exklusiva erbjudanden – oavsett om du är nybörjare eller proffs på banan.</p>
+              <a href="#" class="button btn-primary blimedlem_cta">Se våra medlemskap</a>
+            </div>
+          </div>
+        </section>
     </main>
     <footer class="bg-green-dark">
       <div class="container text-white footer-wrapper">
