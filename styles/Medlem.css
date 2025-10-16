@@ -1,145 +1,212 @@
-/* Hero-sektionen högst upp */
-.hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: url('../images/hero-bg.jpg') center/cover no-repeat;
-  padding: 120px 0;
-  text-align: center;
-  margin-bottom: var(--space-xl);
+/* styles.css */
+:root{
+  --green-100: #eaf3e9;
+  --green-200: #cfe6cf;
+  --green-500: #91b67f;
+  --accent: #4a7a53;
+  --muted: #6b6b6b;
+  --card-bg: #ffffff;
+  --radius: 12px;
+  --container-max: 1100px;
+  font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
-/* Sektionen med medlemsförmåner */
-.benefits-section {
-  background-color: #f5f5dc; /* beige */
-  border: 2px solid #13360A;
-  border-radius: 10px;
-  padding: 40px 20px;
-  margin: 60px auto;
-  max-width: 1000px;
-  text-align: center;
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  color:#222;
+  background: linear-gradient(180deg, #f7fbfb 0%, #f0f6f3 100%);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
 }
 
-.benefits-section h2 {
-  color: #13360A;
-  font-size: 1.8rem;
-  margin-bottom: 15px;
+/* container */
+.container{
+  width:90%;
+  max-width:var(--container-max);
+  margin:0 auto;
 }
 
-.benefits-section p {
-  font-size: 1rem;
-  margin-bottom: 25px;
-  color: #222;
+/* Header */
+.site-header{
+  background:var(--green-200);
+  padding:18px 0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
 }
 
-/* Kort (för nyheter, info eller förmåner) */
-.news-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
 
-.news-card {
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  width: 250px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: 0.2s;
+.logo{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+.logo-mark{
+  width:44px;height:44px;border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--green-500);color:white;font-weight:700;
+  font-size:18px;
+}
+.logo-text .brand{font-weight:700;letter-spacing:0.2px}
+.logo-text .sub{font-size:12px;color:var(--muted);margin-top:2px}
+
+/* nav */
+.main-nav{
+  display:flex;
+  gap:18px;
+  align-items:center;
+}
+.main-nav a{
+  text-decoration:none;
+  color:var(--muted);
+  font-weight:500;
+  padding:6px 8px;
+}
+.btn-cta{
+  background:white;
+  border:1px solid rgba(0,0,0,0.06);
+  padding:8px 14px;
+  border-radius:999px;
+  cursor:pointer;
+  font-weight:600;
 }
 
-.news-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+/* Hero */
+.hero{
+  padding:44px 0 30px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.85), rgba(248,252,249,0.9));
+}
+.page-title{
+  margin:0 0 6px;
+  font-size:36px;
+  text-align:center;
+  font-weight:700;
+}
+.subtitle{
+  text-align:center;
+  color:var(--muted);
+  margin-top:6px;
 }
 
-.news-card h3 {
-  color: #13360A;
-  margin-bottom: 8px;
+/* Memberships */
+.memberships{
+  padding:30px 0;
+  background:var(--green-100);
+}
+.cards-grid{
+  display:grid;
+  gap:18px;
+  margin:14px 0;
+}
+.cards-grid-top{
+  grid-template-columns: repeat(3, 1fr);
+}
+.cards-grid-bottom{
+  grid-template-columns: repeat(4, 1fr);
 }
 
-.news-card p {
-  font-size: 0.9rem;
-  color: #333;
+/* Card */
+.card{
+  background:var(--card-bg);
+  border-radius:var(--radius);
+  padding:18px;
+  box-shadow: 0 6px 18px rgba(20,20,20,0.05);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+.card h3, .card h4{
+  margin:0 0 8px;
+  font-size:18px;
+}
+.card .card-text{
+  color:var(--muted);
+  font-size:14px;
+  margin-bottom:12px;
+}
+.price{
+  font-weight:700;
+  color:var(--accent);
+  font-size:16px;
 }
 
-/* FORMULÄR-STIL – samma som login */
-.bg-blue-light {
-  background-color: var(--color-blue-light);
-  padding: 4rem 0;
+/* small cards slightly different padding */
+.card.small{padding:14px}
+
+/* CTA center */
+.center-cta{
+  display:flex;
+  justify-content:center;
+  margin-top:18px;
+}
+.btn-outline{
+  display:inline-block;
+  padding:10px 18px;
+  border-radius:999px;
+  border:2px solid var(--accent);
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:600;
 }
 
-#ansokform {
-  text-align: center;
+/* Benefits (image + text) */
+.benefits{
+  padding:36px 0 80px;
+}
+.benefits-inner{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:28px;
+  align-items:center;
+  background:transparent;
+}
+.image-wrap img{
+  width:100%;
+  height:auto;
+  border-radius:16px;
+  display:block;
+  box-shadow: 0 10px 30px rgba(10,10,10,0.06);
+}
+.benefits-text h2{
+  margin-top:0;
+  font-size:26px;
+}
+.benefits-text ul{
+  padding-left:18px;
+  color:var(--muted);
+  margin-top:12px;
+}
+.benefits-text li{
+  margin-bottom:10px;
 }
 
-#ansokruta {
-  background-color: white;
-  max-width: 450px;
-  margin: 0 auto;
-  padding: 2rem 2.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  text-align: left;
+/* Footer */
+.site-footer{
+  padding:20px 0;
+  border-top:1px solid rgba(0,0,0,0.04);
+  background:transparent;
+}
+.footer-inner{display:flex;justify-content:center;color:var(--muted);font-size:14px}
+
+/* Responsive */
+@media (max-width: 992px){
+  .cards-grid-top{grid-template-columns: repeat(2, 1fr);}
+  .cards-grid-bottom{grid-template-columns: repeat(2, 1fr);}
+  .benefits-inner{grid-template-columns:1fr;}
+  .page-title{font-size:30px}
 }
 
-#ansokruta label {
-  font-weight: 600;
-  color: var(--color-dark);
+@media (max-width: 640px){
+  .main-nav{display:none}
+  .header-inner{padding:0 4px}
+  .cards-grid-top{grid-template-columns:1fr;}
+  .cards-grid-bottom{grid-template-columns:1fr;}
+  .page-title{font-size:24px}
+  .hero{padding:26px 0}
+  .logo-mark{width:40px;height:40px}
+  .benefits{padding:20px 0}
 }
-
-#ansokruta input,
-#ansokruta select {
-  width: 100%;
-  padding: 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-#ansokruta input:focus,
-#ansokruta select:focus {
-  outline: none;
-  border-color: var(--color-primary);
-  box-shadow: 0 0 4px var(--color-primary);
-}
-
-#ansokruta .button {
-  display: block;
-  width: 100%;
-  margin-top: 1rem;
-  background-color: var(--color-primary);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 0.8rem;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-#ansokruta .button:hover {
-  background-color: var(--color-primary-dark);
-}
-
-
-/* Gör sidan snygg även på mobil */
-@media (max-width: 768px) {
-  .hero {
-    padding: 60px 20px;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .news-card {
-    width: 90%;
-  }
-}
-
-
-
