@@ -3,16 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Design element</title>
-    <!-- variables.css och base.css måste ligga överst då vi vill att den ska läsas in först -->
+    <title>Centar Golfklubb</title>
     <link rel="stylesheet" href="styles/variables.css" />
     <link rel="stylesheet" href="styles/base.css" />
     <link rel="stylesheet" href="styles/startsida.css" />
   </head>
   <body>
-    <!-- Sätter färg hela vägen ut -->
     <header class="bg-green-mid header-start">
-      <!-- Nedan div för att sätta maxbredd på sidan -->
       <nav class="container main-nav-wrapper">
         <a href="index.html"
           ><img
@@ -23,20 +20,19 @@
         <input type="checkbox" id="menu-toggle" />
         <label for="menu-toggle" class="menu-button-container">
           <span class="menu-button"></span>
-          <!--inline-->
         </label>
         <div class="menu-wrapper">
           <ul>
             <li><a href="spelagolf.html">Spela Golf</a></li>
-            <li><a href="#">Medlem</a></li>
-            <li><a href="#">Klubben</a></li>
-            <li><a href="#">Tävlingar</a></li>
-            <li><a href="#">Företag</a></li>
-            <li><a href="#">Restaurang</a></li>
-            <li><a href="#">Golfshop</a></li>
-            <li><a href="#">Kontakt</a></li>
+            <li><a href="Medlem.html">Medlem</a></li>
+            <li><a href="klubben.html">Klubben</a></li>
+            <li><a href="tavling.html">Tävlingar</a></li>
+            <li><a href="foretag.html">Företag</a></li>
+            <li><a href="restaurang.html">Restaurang</a></li>
+            <li><a href="golfshop.html">Golfshop</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
           </ul>
-          <a href="#" class="button btn-primary-outline">Logga in</a>
+          <a href="loggain.html" class="button btn-primary-outline">Logga in</a>
         </div>
       </nav>
     </header>
@@ -45,14 +41,14 @@
         Välkommen till Centar Golfklubb
       </h1>
       <div class="btn-wrapper">
-        <!-- Klasser för knappar -->
         <a href="spelagolf.html" class="button btn-primary">Boka starttid</a>
-        <a href="#" class="button btn-primary">Greenfee</a>
+        <a href="spelagolf.html" class="button btn-primary">Greenfee</a>
       </div>
     </div>
     <main>
+      <!-- NEWS SECTION -->
       <section class="container news-section">
-        <h2 class="text-lg text-center">Nyheter</h2>
+        <h2 class="text-lg text-center">Senaste nytt från Centar Golfklubb</h2>
         <div class="news-wrapper">
           <article class="news-card">
             <a href="#">
@@ -134,6 +130,334 @@
         </div>
         <a href="#" class="button btn-primary-outline">Läs fler nyheter</a>
       </section>
+      <!-- BLI MEDLEM -->
+      <section class="membership">
+        <div class="container">
+          <h2 class="text-lg text-center">Bli medlem</h2>
+          <p class="body-lg text-center">Våra populäraste medlemskap</p>
+
+          <div class="membership_cards">
+            <article class="membership_card">
+              <h3 class="text-md">Guld</h3>
+              <p class="body">
+                Som Guldmedlem får du full tillgång till alla banor och
+                faciliteter året runt, obegränsad spelrätt, prioritet vid
+                bokning av starttider samt rabatter på greenfee för gäster. Du
+                kan delta i alla klubbens tävlingar och sociala evenemang, och
+                får exklusiva erbjudanden i vår klubbshop och restaurang.
+              </p>
+              <p class="bold">7500 kr</p>
+            </article>
+
+            <article class="membership_card">
+              <h3 class="text-md">Silver</h3>
+              <p class="body">
+                Silvermedlemskapet passar dig som spelar regelbundet. Du får
+                tillgång till banan under ordinarie tider, rabatterad greenfee,
+                möjlighet att delta i klubbens tävlingar och sociala
+                aktiviteter, samt erbjudanden i klubbshop och restaurang.
+              </p>
+              <p class="bold">6000 kr</p>
+            </article>
+
+            <article class="membership_card">
+              <h3 class="text-md">Senior</h3>
+              <p class="body">
+                Som Seniormedlem njuter du av golf med reducerad medlemsavgift
+                och flexibla speltider. Du får tillgång till banan och klubbens
+                faciliteter, kan delta i seniortävlingar och sociala
+                aktiviteter, och ta del av specialerbjudanden anpassade för våra
+                seniorer.
+              </p>
+              <p class="bold">4900 kr</p>
+            </article>
+          </div>
+
+          <div class="membership_cta">
+            <a href="Medlem.html" class="button btn-cta">Bli medlem</a>
+          </div>
+        </div>
+      </section>
+      <!-- BOKA GOLFTID -->
+      <section id="bokning" class="container booking">
+        <h2 class="text-lg text-center">Spela Golf</h2>
+        <div class="booking_intro">
+          <h3 class="text-md">Boka Starttid</h3>
+          <p class="body-lg">
+            Här kan du enkelt boka starttid på Centar Golfklubb.
+          </p>
+        </div>
+
+        <form class="booking_form" action="#" method="get">
+          <div class="booking_controls">
+            <label for="players" class="booking_label">Antal spelare</label>
+            <div class="booking_select">
+              <select id="players" name="players">
+                <option value="1">1 Spelare</option>
+                <option value="2">2 Spelare</option>
+                <option value="3">3 Spelare</option>
+                <option value="4">4 Spelare</option>
+              </select>
+            </div>
+          </div>
+
+          <fieldset class="booking_grid">
+            <legend class="sr-only">Tillgängliga starttider</legend>
+
+            <input type="radio" id="t0900" name="time" /><label
+              for="t0900"
+              class="slot"
+              >09:00</label
+            >
+            <input type="radio" id="t0910" name="time" disabled /><label
+              for="t0910"
+              class="slot"
+              >09:10</label
+            >
+            <input type="radio" id="t0920" name="time" /><label
+              for="t0920"
+              class="slot"
+              >09:20</label
+            >
+            <input type="radio" id="t0930" name="time" /><label
+              for="t0930"
+              class="slot"
+              >09:30</label
+            >
+            <input type="radio" id="t0940" name="time" /><label
+              for="t0940"
+              class="slot"
+              >09:40</label
+            >
+            <input type="radio" id="t0950" name="time" /><label
+              for="t0950"
+              class="slot"
+              >09:50</label
+            >
+
+            <input type="radio" id="t1000" name="time" /><label
+              for="t1000"
+              class="slot"
+              >10:00</label
+            >
+            <input type="radio" id="t1010" name="time" /><label
+              for="t1010"
+              class="slot"
+              >10:10</label
+            >
+            <input type="radio" id="t1020" name="time" /><label
+              for="t1020"
+              class="slot"
+              >10:20</label
+            >
+            <input type="radio" id="t1030" name="time" /><label
+              for="t1030"
+              class="slot"
+              >10:30</label
+            >
+            <input type="radio" id="t1040" name="time" /><label
+              for="t1040"
+              class="slot"
+              >10:40</label
+            >
+            <input type="radio" id="t1050" name="time" /><label
+              for="t1050"
+              class="slot"
+              >10:50</label
+            >
+
+            <input type="radio" id="t1100" name="time" /><label
+              for="t1100"
+              class="slot"
+              >11:00</label
+            >
+            <input type="radio" id="t1110" name="time" /><label
+              for="t1110"
+              class="slot"
+              >11:10</label
+            >
+            <input type="radio" id="t1120" name="time" /><label
+              for="t1120"
+              class="slot"
+              >11:20</label
+            >
+            <input type="radio" id="t1130" name="time" disabled /><label
+              for="t1130"
+              class="slot"
+              >11:30</label
+            >
+            <input type="radio" id="t1140" name="time" /><label
+              for="t1140"
+              class="slot"
+              >11:40</label
+            >
+            <input type="radio" id="t1150" name="time" /><label
+              for="t1150"
+              class="slot"
+              >11:50</label
+            >
+
+            <input type="radio" id="t1200" name="time" /><label
+              for="t1200"
+              class="slot"
+              >12:00</label
+            >
+            <input type="radio" id="t1210" name="time" /><label
+              for="t1210"
+              class="slot"
+              >12:10</label
+            >
+            <input type="radio" id="t1220" name="time" /><label
+              for="t1220"
+              class="slot"
+              >12:20</label
+            >
+            <input type="radio" id="t1230" name="time" /><label
+              for="t1230"
+              class="slot"
+              >12:30</label
+            >
+            <input type="radio" id="t1240" name="time" /><label
+              for="t1240"
+              class="slot"
+              >12:40</label
+            >
+            <input type="radio" id="t1250" name="time" disabled /><label
+              for="t1250"
+              class="slot"
+              >12:50</label
+            >
+
+            <input type="radio" id="t1300" name="time" /><label
+              for="t1300"
+              class="slot"
+              >13:00</label
+            >
+            <input type="radio" id="t1310" name="time" disabled /><label
+              for="t1310"
+              class="slot"
+              >13:10</label
+            >
+            <input type="radio" id="t1320" name="time" disabled /><label
+              for="t1320"
+              class="slot"
+              >13:20</label
+            >
+            <input type="radio" id="t1330" name="time" /><label
+              for="t1330"
+              class="slot"
+              >13:30</label
+            >
+            <input type="radio" id="t1340" name="time" /><label
+              for="t1340"
+              class="slot"
+              >13:40</label
+            >
+            <input type="radio" id="t1350" name="time" /><label
+              for="t1350"
+              class="slot"
+              >13:50</label
+            >
+
+            <input type="radio" id="t1400" name="time" /><label
+              for="t1400"
+              class="slot"
+              >14:00</label
+            >
+            <input type="radio" id="t1410" name="time" /><label
+              for="t1410"
+              class="slot"
+              >14:10</label
+            >
+            <input type="radio" id="t1420" name="time" /><label
+              for="t1420"
+              class="slot"
+              >14:20</label
+            >
+            <input type="radio" id="t1430" name="time" /><label
+              for="t1430"
+              class="slot"
+              >14:30</label
+            >
+            <input type="radio" id="t1440" name="time" /><label
+              for="t1440"
+              class="slot"
+              >14:40</label
+            >
+            <input type="radio" id="t1450" name="time" /><label
+              for="t1450"
+              class="slot"
+              >14:50</label
+            >
+
+            <input type="radio" id="t1500" name="time" /><label
+              for="t1500"
+              class="slot"
+              >15:00</label
+            >
+            <input type="radio" id="t1510" name="time" /><label
+              for="t1510"
+              class="slot"
+              >15:10</label
+            >
+            <input type="radio" id="t1520" name="time" /><label
+              for="t1520"
+              class="slot"
+              >15:20</label
+            >
+            <input type="radio" id="t1530" name="time" /><label
+              for="t1530"
+              class="slot"
+              >15:30</label
+            >
+            <input type="radio" id="t1540" name="time" /><label
+              for="t1540"
+              class="slot"
+              >15:40</label
+            >
+            <input type="radio" id="t1550" name="time" /><label
+              for="t1550"
+              class="slot"
+              >15:50</label
+            >
+          </fieldset>
+        </form>
+      </section>
+      <!-- LUNCH OCH SHOP -->
+      <div class="container promo-wrapper">
+        <article class="promo-card lunch-card">
+          <p class="overline text-center">Centar Restaurang</p>
+          <h3 class="text-xl bold text-center">Dagens lunch</h3>
+          <!-- <span class="lunch-card_underline"></span> -->
+          <p class="body text-center lunch-card_date">Måndag 29 september</p>
+          <p class="body text-center">
+            Ugnsbakad kyckling i dragon- och citronvelouté
+          </p>
+          <p class="body text-center">Fish &amp; Chips</p>
+          <p class="body text-center">
+            Bönbiff med fetaost, grekiska grönsaker och tzatziki
+          </p>
+          <a href="restaurang.html" class="button btn-primary"
+            >Centar restaurang</a
+          >
+        </article>
+        <article class="promo-card shop-card">
+          <div class="shop-card_image-wrapper">
+            <img
+              class="shop-card_img"
+              src="/images/Shop-bild.jpg"
+              alt="Kampanjbild för golfutrustning"
+            />
+            <div class="shop-card_overlay">
+              <h3 class="text-xl bold text-center">
+                20% rabatt på <br />Taylor Made
+              </h3>
+              <a href="golfshop.html" class="button btn-cta">Webshoppen</a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <!-- LINK SECTION -->
       <section class="container link-section">
         <div class="link-card">
           <img src="images/Designelement/icon_golf.svg" alt="" />
