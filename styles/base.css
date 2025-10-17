@@ -21,15 +21,15 @@ body {
   margin: 0 auto;
   max-width: 1280px;
   /* Är det för tight padding i mobil?? */
-  padding-left: var(--space-xs);
-  padding-right: var(--space-xs);
+  padding-left: var(--space-sm);
+  padding-right: var(--space-sm);
 }
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .container {
     padding-left: var(--space-sm);
     padding-right: var(--space-sm);
   }
-}
+} */
 
 /* ---------- BAKGRUNDSFÄRG styling  ---------- */
 /* Gör vad som känns enklast, antingen med klass på html-elmentet eller med hjälp av css direkt på elementet. */
@@ -91,7 +91,7 @@ body {
   font-size: 1rem; /* 16px */
 }
 .body-lg {
-  font-size: 1.25rem; /* 20px */
+  font-size: 1rem; /* 16px mobil, 20px desktop */
 }
 .overline {
   font-size: 1rem; /* 16px */
@@ -106,15 +106,15 @@ body {
   }
   .text-xl {
     font-size: 3rem; /* 48px */
-    margin-bottom: var(--space-md);
   }
   .text-lg {
     font-size: 2rem; /* 32px */
-    margin-bottom: var(--space-sm);
   }
   .text-md {
     font-size: 1.5rem; /* 24px */
-    margin-bottom: var(--space-xs);
+  }
+  .body-lg {
+    font-size: 1.25rem; /* 20px */
   }
 }
 /* Hjälpklasser */
@@ -124,9 +124,8 @@ body {
 .text-white {
   color: var(--color-text-white);
 }
-/* Styling för h1 på hero-bild */
-.hero .text-xxl {
-  margin-bottom: var(--space-md);
+.bold {
+  font-weight: 700;
 }
 /* ----------  BUTTONS ---------- */
 /* Grundstyling som gäller alla knappar (a-taggar och buttons) */
@@ -382,8 +381,8 @@ footer .overline {
   margin-bottom: var(--space-xxs);
 }
 .foot-nav-item a,
-p,
-address {
+.foot-nav-item p,
+.foot-nav-item address {
   margin-bottom: var(--space-xxs);
   font-style: normal;
 }
@@ -423,16 +422,3 @@ address {
     grid-column: span 1;
   }
 }
-
-/* TA BORT SÅ SMÅNINGOM, BÖRJAR MED ATT KOMMENTERA UT */
-/* Exempel-styling */
-/* .news-wrapper {
-  display: flex;
-  gap: var(--space-sm);
-}
-
-.news-card {
-  background-color: var(--color-beige-light);
-  border-radius: 12px;
-  padding: var(--space-md);
-} */

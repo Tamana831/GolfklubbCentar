@@ -1,21 +1,18 @@
+kontakt.html
+@@ -0,0 +1,108 @@
 <!DOCTYPE html>
 <html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Logga in</title>
-    <!-- variables.css och base.css måste ligga överst då vi vill att den ska läsas in först -->
+    <title>Centar Golfklubb</title>
     <link rel="stylesheet" href="styles/variables.css" />
     <link rel="stylesheet" href="styles/base.css" />
-    <link rel="stylesheet" href="styles/loggain.css" />
+    <link rel="stylesheet" href="styles/startsida.css" />
   </head>
   <body>
-    <header>
-      <!-- Nedan div för att sätta färg hela vägen ut -->
-      <div class="bg-green-mid">
-        <!-- Nedan div för att sätta maxbredd på sidan -->
-        <div class="container">
-          <nav class="container main-nav-wrapper">
+    <header class="bg-green-mid header-start">
+      <nav class="container main-nav-wrapper">
         <a href="index.html"
           ><img
             src="images/centar_logotype_primary_dark.svg"
@@ -25,12 +22,11 @@
         <input type="checkbox" id="menu-toggle" />
         <label for="menu-toggle" class="menu-button-container">
           <span class="menu-button"></span>
-          <!--inline-->
         </label>
         <div class="menu-wrapper">
           <ul>
             <li><a href="spelagolf.html">Spela Golf</a></li>
-            <li><a href="medlem.html">Medlem</a></li>
+            <li><a href="Medlem.html">Medlem</a></li>
             <li><a href="klubben.html">Klubben</a></li>
             <li><a href="tavling.html">Tävlingar</a></li>
             <li><a href="foretag.html">Företag</a></li>
@@ -41,54 +37,30 @@
           <a href="loggain.html" class="button btn-primary-outline">Logga in</a>
         </div>
       </nav>
-        </div>
-      </div>
-    </header>
-    <main>
-      <!-- Här sätter jag en klass som sätter bakgrundsfärg på hela section. Detta element tar upp hela sidans bredd, dvs bakgrundsfärgen går hela vägen ut. -->
-      <section class="bg-blue-light">
-        <!-- Klassen container styr innehållets maxbredd -->
-        <div class="container" id="main-container">
-          <form action="/action_page.php" id="inloggform">
-            <h1>Logga in</h1>
-            <p>Ange ditt Golf-ID och lösenord nedan.</p><br>
-              <div id="inloggruta">
-                <label for="text">Golf-ID</label><br>
-                <input type="text" id="golf-id" class="input-field" name="golf-id" placeholder="******-****"><br><br>
-                <label for="password">Lösenord</label><br>
-                <input type="password" id="password" class="input-field" name="password" placeholder="Ditt lösenord här"><br><br>
-                <button type="submit" class="btn-cta button" id="loginbtn">Logga In</button>
-              </div>
-              <div id="password-reset">
-                <p>Glömt ditt lösenord? Klicka <a href="#">här</a> för att återställa.</p>
-              </div>  
-          </form>
-        </div>
-      </section>
-      <!-- bli medlem -->
-        <section class="container">
+      <section class="form-image-wrapper contact-wrapper">
+  <div class="card contact-card">
+    <h2>Adress</h2>
+    <p>Centar Golfklubb<br>Golfvägen 123<br>111 22 Stockholm</p>
+  </div>
 
-          <div class="blimedlem_card">
-            <div class="blimedlem_media">
-              <img src="/images/klubben-bli-medlem.jpg"
-                alt="Golfare som slår ut på fairway"
-                class="blimedlem_img">
-            </div>
+  <div class="card contact-card">
+    <h2>Öppettider</h2>
+    <p>Måndag – Fredag: 09:00–17:00<br>
+       Lördag – Söndag: 10:00–15:00</p>
+  </div>
 
-            <div class="blimedlem_content">
-              <p class="overline">Bli medlem?</p>
-              <h2 class="blimedlem_title">Allt du behöver veta</h2>
-              <p class="body">Här hittar du allt du behöver veta om våra medlemskap. Upptäck förmåner, evenemang och exklusiva erbjudanden – oavsett om du är nybörjare eller proffs på banan.</p>
-              <a href="#" class="button btn-primary blimedlem_cta">Se våra medlemskap</a>
-            </div>
-          </div>
-        </section>
-    </main>
-    <footer class="bg-green-dark">
+  <div class="card contact-card">
+    <h2>Kontakt</h2>
+    <p>Telefon: +46 70 123 45 67<br>
+       E-post: info@centargk.se</p>
+  </div>
+</section>
+
+    </header>  <footer class="bg-green-dark">
       <div class="container text-white footer-wrapper">
         <nav class="foot-nav-wrapper body-sm">
           <div class="foot-nav-item foot-logo-wrapper">
-            <a href="#"
+            <a href="index.html"
               ><img
                 src="/images/centar_logo_wordmark_neg.svg"
                 alt="Centar logotype negative"
@@ -127,8 +99,8 @@
         </nav>
         <div class="byline-wrapper text-center">
           <p>
-            &copy; 2025 | Designad och utvecklad av Emma Golander, Josefin
-            Holgersson, Tim Hugdahl, Tamana Mohammadi  | webd25jon TUC | HTML
+            &copy; 2025 | Designad och utvecklad av Emma Golander, Josefin
+            Holgersson, Tim Hugdahl, Tamana Mohammadi  | webd25jon TUC | HTML
             och CSS med agila utvecklingsmetoder
           </p>
         </div>

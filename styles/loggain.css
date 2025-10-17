@@ -1,4 +1,4 @@
-input{
+.input-field{
     border-radius: 8px;
     text-align: center;  
     background-color: var(--color-text-white);
@@ -46,6 +46,11 @@ main{
   flex-direction: column;
   padding: 0 0 20px 0;
 }
+#password-reset{
+  text-align: center;
+  padding-top: 20px;
+  font-size: 12px;
+}
 /* bli medlem */
 .blimedlem_card {
   background-color: var(--color-green-light);
@@ -59,7 +64,8 @@ main{
   align-items: center;
   max-width: 1280px;              
   margin-inline: auto;
-  padding-inline: var(--space-sm); 
+  padding-block: var(--space-lg);
+  padding-inline: clamp(var(--space-md), 6vw, var(--space-xl));
 }
 
 .blimedlem_img {
