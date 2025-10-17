@@ -15,19 +15,8 @@
 }
 
 .contact-card {
-  flex: 1; /* gör dem lika breda */
   text-align: center;
   background: #F4F3E9; /* färg för varje liten box */
-  border-radius: 12px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* centrerar innehållet vertikalt */
-  align-items: center; /* centrerar innehållet horisontellt */
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease;
-  min-height: 200px; /* så att de alltid har samma bas-höjd */
 }
 
 .contact-card:hover {

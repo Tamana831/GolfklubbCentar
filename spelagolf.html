@@ -7,163 +7,179 @@
     <!-- variables.css och base.css måste ligga överst då vi vill att den ska läsas in först -->
     <link rel="stylesheet" href="styles/variables.css">
     <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="/spelagolf.css">
+    <link rel="stylesheet" href="/styles/spelagolf.css">
   </head>
   <body>
-    <header>
-      <!-- Nedan div för att sätta färg hela vägen ut -->
-      <div class="bg-green-mid">
-        <!-- Nedan div för att sätta maxbredd på sidan -->
-        <div class="container">
-          <nav>
-            <a href="#"><img src="images/centar_logotype_primary_dark.svg" alt="Centar logotype" class="logotype"></a>
-            <ul>
-              <li><a href="#">Spela Golf</a></li>
-              <li><a href="#">Medlem</a></li>
-              <li><a href="#">Klubben</a></li>
-              <li><a href="#">Tävlingar</a></li>
-              <li><a href="#">Företag</a></li>
-              <li><a href="#">Restaurang</a></li>
-              <li><a href="#">Golfshop</a></li>
-              <li><a href="#">Kontakt</a></li>
-            </ul>
-            <a href="#" class="button btn-primary-outline">Logga in</a>
-          </nav>
+    <!-- Sätter färg hela vägen ut -->
+    <header class="bg-green-mid">
+      <!-- Nedan div för att sätta maxbredd på sidan -->
+      <nav class="container main-nav-wrapper">
+        <a href="#"
+          ><img src="images/centar_logotype_primary_dark.svg"
+            alt="Centar logotype"
+            class="logotype"></a>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-button-container">
+          <span class="menu-button"></span>
+          <!--inline-->
+        </label>
+        <div class="menu-wrapper">
+          <ul>
+            <li><a href="spelagolf.html">Spela Golf</a></li>
+            <li><a href="medlem.html">Medlem</a></li>
+            <li><a href="klubben.html">Klubben</a></li>
+            <li><a href="tavling.html">Tävlingar</a></li>
+            <li><a href="foretag.html">Företag</a></li>
+            <li><a href="restaurang.html">Restaurang</a></li>
+            <li><a href="golfshop.html">Golfshop</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+          <a href="#" class="button btn-primary-outline">Logga in</a>
         </div>
-      </div>
+      </nav>
     </header>
-    <main>
 
-      <!-- Boka Golftid -->
+    <main>
+<!-- Boka Golftid -->
 <section class="container">
   <div class="spela_golf text-center"><h3 class="text-lg">Spela Golf</h3></div>
-      <section id="bokning" class="booking">
-          <div class="booking_intro ">
-            <h4 class="text-md">Boka Starttid</h4>
-            <p class="body-lg"> Här kan du enkelt boka starttid på Centar Golfklubb. </p>
-          </div>
-<form class="booking_form" action="#" method="get">
 
-  <div class="booking_controls">
-    <label for="players" class="booking_label">Antal spelare</label>
-    <div class="booking_select">
-      <select id="players" name="players">
-        <option value="1"> 1 Spelare</option>
-        <option value="2"> 2 Spelare</option>
-        <option value="3"> 3 Spelare</option>
-        <option value="4"> 4 Spelare</option>
-      </select>
+  <section id="bokning" class="booking">
+    <div class="booking_intro">
+      <h4 class="text-md">Boka Starttid</h4>
+      <p class="body-lg">Här kan du enkelt boka starttid på Centar Golfklubb.</p>
     </div>
-  </div>
-<fieldset class="booking_grid">
-  <legend class="sr-only">Tillgängliga starttider</legend>
-  <input type="radio" id="t0900" name="time"><label for="t0900" class="slot">09:00</label>
-  <input type="radio" id="t0910" name="time" disabled><label for="t0910" class="slot">09:10</label>
-  <input type="radio" id="t0920" name="time"><label for="t0920" class="slot">09:20</label>
-  <input type="radio" id="t0930" name="time"><label for="t0930" class="slot">09:30</label>
-  <input type="radio" id="t0940" name="time"><label for="t0940" class="slot">09:40</label>
-  <input type="radio" id="t0950" name="time"><label for="t0950" class="slot">09:50</label>
 
-  <input type="radio" id="t1000" name="time"><label for="t1000" class="slot">10:00</label>
-  <input type="radio" id="t1010" name="time"><label for="t1010" class="slot">10:10</label>
-  <input type="radio" id="t1020" name="time"><label for="t1020" class="slot">10:20</label>
-  <input type="radio" id="t1030" name="time"><label for="t1030" class="slot">10:30</label>
-  <input type="radio" id="t1040" name="time"><label for="t1040" class="slot">10:40</label>
-  <input type="radio" id="t1050" name="time"><label for="t1050" class="slot">10:50</label>
-
-  <input type="radio" id="t1100" name="time"><label for="t1100" class="slot">11:00</label>
-  <input type="radio" id="t1110" name="time"><label for="t1110" class="slot">11:10</label>
-  <input type="radio" id="t1120" name="time"><label for="t1120" class="slot">11:20</label>
-  <input type="radio" id="t1130" name="time" disabled><label for="t1130" class="slot">11:30</label>
-  <input type="radio" id="t1140" name="time"><label for="t1140" class="slot">11:40</label>
-  <input type="radio" id="t1150" name="time"><label for="t1150" class="slot">11:50</label>
-
-  <input type="radio" id="t1200" name="time"><label for="t1200" class="slot">12:00</label>
-  <input type="radio" id="t1210" name="time"><label for="t1210" class="slot">12:10</label>
-  <input type="radio" id="t1220" name="time"><label for="t1220" class="slot">12:20</label>
-  <input type="radio" id="t1230" name="time"><label for="t1230" class="slot">12:30</label>
-  <input type="radio" id="t1240" name="time"><label for="t1240" class="slot">12:40</label>
-  <input type="radio" id="t1250" name="time" disabled><label for="t1250" class="slot">12:50</label>
- 
-  <input type="radio" id="t1300" name="time"><label for="t1300" class="slot">13:00</label>
-  <input type="radio" id="t1310" name="time" disabled><label for="t1310" class="slot">13:10</label>
-  <input type="radio" id="t1320" name="time" disabled><label for="t1320" class="slot">13:20</label>
-  <input type="radio" id="t1330" name="time"><label for="t1330" class="slot">13:30</label>
-  <input type="radio" id="t1340" name="time"><label for="t1340" class="slot">13:40</label>
-  <input type="radio" id="t1350" name="time"><label for="t1350" class="slot">13:50</label>
- 
-  <input type="radio" id="t1400" name="time"><label for="t1400" class="slot">14:00</label>
-  <input type="radio" id="t1410" name="time"><label for="t1410" class="slot">14:10</label>
-  <input type="radio" id="t1420" name="time"><label for="t1420" class="slot">14:20</label>
-  <input type="radio" id="t1430" name="time"><label for="t1430" class="slot">14:30</label>
-  <input type="radio" id="t1440" name="time"><label for="t1440" class="slot">14:40</label>
-  <input type="radio" id="t1450" name="time"><label for="t1450" class="slot">14:50</label>
- 
-  <input type="radio" id="t1500" name="time"><label for="t1500" class="slot">15:00</label>
-  <input type="radio" id="t1510" name="time"><label for="t1510" class="slot">15:10</label>
-  <input type="radio" id="t1520" name="time"><label for="t1520" class="slot">15:20</label>
-  <input type="radio" id="t1530" name="time"><label for="t1530" class="slot">15:30</label>
-  <input type="radio" id="t1540" name="time"><label for="t1540" class="slot">15:40</label>
-  <input type="radio" id="t1550" name="time"><label for="t1550" class="slot">15:50</label>
-
-</fieldset>
-</form>
-
-
-</section></section>
- <!-- Bokningsregler & Greenfee -->
-<div class="container">
-        
-        <div class="news-wrapper">
-          <article class="news-card">
-            <h4 class="text-md">Bokningsregler på Centar GK</h4>
-            <p>
-              Vad roligt att vill boka golf på Centar Golfklubb! 
-              Golfklubben har rätt att ändra en starttid för att 
-              frigöra fler tider samt för ett jämnare speltempo. <br><br>
-              Betalning sker vid bokning via min golf eller min golf bokningsApp. 
-              Innan du går ut för spel behöver du ankomst registrera dig. 
-              Vi hoppas också att du är lite extra noga med att hjälpa 
-              banan att återhämta sig genom att laga nedslagsmärken och 
-              lägga tillbaka uppslagen torv. <br> </p>
-              Vi önskar dig en fin dag på golfklubben!<br><br>
-              <h4 class="text-sm">Avbokningsregler</h4>
-              Du är alltid ansvarig att själv avboka din starttid. 
-              Om avbokning sker 24 timmar innan starttid erhålls 100 % av betalningen. 
-              Om avbokning sker senast 4 timmar innan start erhålls 50 % av betalning. 
-              Om avbokning sker senare än så debiteras full avgift.
-            
-          </article>
-         <article class="news-card">
-  <h3 class="text-md">Greenfee</h3>
-
-  <table class="greenfee-table">
-    <thead>
-      <tr>
-        <th scope="col">Högsäsong</th>
-        <th scope="col">Lågsäsong</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="days">Mån–tors</span> <span class="price">650 kr</span></td>
-        <td><span class="days">Mån–tors</span> <span class="price">500 kr</span></td>
-      </tr>
-      <tr>
-        <td><span class="days">Fre–sön</span> <span class="price">850 kr</span></td>
-        <td><span class="days">Fre–sön</span> <span class="price">650 kr</span></td>
-      </tr>
-    </tbody>
-  </table>
-  <h4 class="text-sm">Rabatter</h4>
-  <p> Gäst till medlem : 15% Rabatt</p>
-   <p> Junior (upp till 21 år) : 50% Rabatt</p>
-   Pensionär: 25% Rabatt
-</article>
+    <form class="booking_form" action="#" method="get">
+      <div class="booking_controls">
+        <label for="players" class="booking_label">Antal spelare</label>
+        <div class="booking_select">
+          <select id="players" name="players">
+            <option value="1">1 Spelare</option>
+            <option value="2">2 Spelare</option>
+            <option value="3">3 Spelare</option>
+            <option value="4">4 Spelare</option>
+          </select>
         </div>
       </div>
 
-<!--Bli medlem-->
+      <fieldset class="booking_grid">
+        <legend class="sr-only">Tillgängliga starttider</legend>
+
+        <input type="radio" id="t0900" name="time"><label for="t0900" class="slot">09:00</label>
+        <input type="radio" id="t0910" name="time" disabled><label for="t0910" class="slot">09:10</label>
+        <input type="radio" id="t0920" name="time"><label for="t0920" class="slot">09:20</label>
+        <input type="radio" id="t0930" name="time"><label for="t0930" class="slot">09:30</label>
+        <input type="radio" id="t0940" name="time"><label for="t0940" class="slot">09:40</label>
+        <input type="radio" id="t0950" name="time"><label for="t0950" class="slot">09:50</label>
+
+        <input type="radio" id="t1000" name="time"><label for="t1000" class="slot">10:00</label>
+        <input type="radio" id="t1010" name="time"><label for="t1010" class="slot">10:10</label>
+        <input type="radio" id="t1020" name="time"><label for="t1020" class="slot">10:20</label>
+        <input type="radio" id="t1030" name="time"><label for="t1030" class="slot">10:30</label>
+        <input type="radio" id="t1040" name="time"><label for="t1040" class="slot">10:40</label>
+        <input type="radio" id="t1050" name="time"><label for="t1050" class="slot">10:50</label>
+
+        <input type="radio" id="t1100" name="time"><label for="t1100" class="slot">11:00</label>
+        <input type="radio" id="t1110" name="time"><label for="t1110" class="slot">11:10</label>
+        <input type="radio" id="t1120" name="time"><label for="t1120" class="slot">11:20</label>
+        <input type="radio" id="t1130" name="time" disabled><label for="t1130" class="slot">11:30</label>
+        <input type="radio" id="t1140" name="time"><label for="t1140" class="slot">11:40</label>
+        <input type="radio" id="t1150" name="time"><label for="t1150" class="slot">11:50</label>
+
+        <input type="radio" id="t1200" name="time"><label for="t1200" class="slot">12:00</label>
+        <input type="radio" id="t1210" name="time"><label for="t1210" class="slot">12:10</label>
+        <input type="radio" id="t1220" name="time"><label for="t1220" class="slot">12:20</label>
+        <input type="radio" id="t1230" name="time"><label for="t1230" class="slot">12:30</label>
+        <input type="radio" id="t1240" name="time"><label for="t1240" class="slot">12:40</label>
+        <input type="radio" id="t1250" name="time" disabled><label for="t1250" class="slot">12:50</label>
+
+        <input type="radio" id="t1300" name="time"><label for="t1300" class="slot">13:00</label>
+        <input type="radio" id="t1310" name="time" disabled><label for="t1310" class="slot">13:10</label>
+        <input type="radio" id="t1320" name="time" disabled><label for="t1320" class="slot">13:20</label>
+        <input type="radio" id="t1330" name="time"><label for="t1330" class="slot">13:30</label>
+        <input type="radio" id="t1340" name="time"><label for="t1340" class="slot">13:40</label>
+        <input type="radio" id="t1350" name="time"><label for="t1350" class="slot">13:50</label>
+
+        <input type="radio" id="t1400" name="time"><label for="t1400" class="slot">14:00</label>
+        <input type="radio" id="t1410" name="time"><label for="t1410" class="slot">14:10</label>
+        <input type="radio" id="t1420" name="time"><label for="t1420" class="slot">14:20</label>
+        <input type="radio" id="t1430" name="time"><label for="t1430" class="slot">14:30</label>
+        <input type="radio" id="t1440" name="time"><label for="t1440" class="slot">14:40</label>
+        <input type="radio" id="t1450" name="time"><label for="t1450" class="slot">14:50</label>
+
+        <input type="radio" id="t1500" name="time"><label for="t1500" class="slot">15:00</label>
+        <input type="radio" id="t1510" name="time"><label for="t1510" class="slot">15:10</label>
+        <input type="radio" id="t1520" name="time"><label for="t1520" class="slot">15:20</label>
+        <input type="radio" id="t1530" name="time"><label for="t1530" class="slot">15:30</label>
+        <input type="radio" id="t1540" name="time"><label for="t1540" class="slot">15:40</label>
+        <input type="radio" id="t1550" name="time"><label for="t1550" class="slot">15:50</label>
+      </fieldset>
+    </form>
+  </section> 
+</section>   
+
+
+<!-- Bokningsregler & Greenfee -->
+ <div class="container">
+<div class="spelagolf-wrapper">
+  <article class="spelagolf-card">
+    <h4 class="text-md">Bokningsregler på Centar GK</h4>
+    <p>
+      Vad roligt att vill boka golf på Centar Golfklubb! 
+      Golfklubben har rätt att ändra en starttid för att 
+      frigöra fler tider samt för ett jämnare speltempo. <br><br>
+      Betalning sker vid bokning via min golf eller min golf bokningsApp. 
+      Innan du går ut för spel behöver du ankomst registrera dig. 
+      Vi hoppas också att du är lite extra noga med att hjälpa 
+      banan att återhämta sig genom att laga nedslagsmärken och 
+      lägga tillbaka uppslagen torv.
+    </p>
+    <p>Vi önskar dig en fin dag på golfklubben!</p>
+    <h4 class="text-sm">Avbokningsregler</h4>
+    <p>
+      Du är alltid ansvarig att själv avboka din starttid. 
+      Om avbokning sker 24 timmar innan starttid erhålls 100 % av betalningen. 
+      Om avbokning sker senast 4 timmar innan start erhålls 50 % av betalning. 
+      Om avbokning sker senare än så debiteras full avgift.
+    </p>
+  </article>
+
+  <article class="spelagolf-card">
+    <h3 class="text-md">Greenfee</h3>
+
+    <div class="greenfee">
+      <div class="greenfee__row">
+        <section class="greenfee__col" aria-labelledby="greenfee-high">
+          <h4 id="greenfee-high" class="greenfee__heading">Högsäsong</h4>
+          <ul class="greenfee__list">
+            <li><span class="greenfee__days">Mån–tors</span><span class="greenfee__price">650 kr</span></li>
+            <li><span class="greenfee__days">Fre–sön</span><span class="greenfee__price">850 kr</span></li>
+          </ul>
+        </section>
+
+        <section class="greenfee__col" aria-labelledby="greenfee-low">
+          <h4 id="greenfee-low" class="greenfee__heading">Lågsäsong</h4>
+          <ul class="greenfee__list">
+            <li><span class="greenfee__days">Mån–tors</span><span class="greenfee__price">500 kr</span></li>
+            <li><span class="greenfee__days">Fre–sön</span><span class="greenfee__price">650 kr</span></li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="greenfee__notes">
+        <h5 class="text-sm">Rabatter</h5>
+        <p>Gäst till medlem: 15% rabatt</p>
+        <p>Junior (upp till 21 år): 50% rabatt</p>
+        <p>Pensionär: 25% rabatt</p>
+      </div>
+    </div>
+  </article>
+</div>
+ </div>
+
+<!-- Bli medlem -->
+  
 <section class="membership">
   <div class="container">
     <h2 class="text-lg text-center">Bli medlem</h2>
@@ -172,28 +188,31 @@
     <div class="membership_cards">
       <article class="membership_card">
         <h3 class="membership_title">Guld</h3>
-        <p>
-          Sit doloremque beatae molestiae et et quia. Vel quae nihil maiores rem
-          voluptatum ipsa aperiam error. Omnis suscipit maxime consequatur.
-        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          unc ac nisl a nisl lobortis maximus. Proin dolor lorem, 
+          faucibus id placerat a, pharetra id nibh. Duis a ante 
+          ac dolor consectetur iaculis. Sed eu leo quis lacus vehicula 
+          luctus. Nunc vestibulum ullamcorper diam a condimentum. </p>
         <p class="membership_price">7500 kr</p>
       </article>
 
       <article class="membership_card">
         <h3 class="membership_title">Silver</h3>
-        <p>
-          Sit doloremque beatae molestiae et et quia. Vel quae nihil maiores rem
-          voluptatum ipsa aperiam error. Omnis suscipit maxime consequatur.
-        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          unc ac nisl a nisl lobortis maximus. Proin dolor lorem, 
+          faucibus id placerat a, pharetra id nibh. Duis a ante 
+          ac dolor consectetur iaculis. Sed eu leo quis lacus vehicula 
+          luctus. Nunc vestibulum ullamcorper diam a condimentum.</p>
         <p class="membership_price">6000 kr</p>
       </article>
 
       <article class="membership_card">
         <h3 class="membership_title">Senior</h3>
-        <p>
-          Sit doloremque beatae molestiae et et quia. Vel quae nihil maiores rem
-          voluptatum ipsa aperiam error. Omnis suscipit maxime consequatur.
-        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          unc ac nisl a nisl lobortis maximus. Proin dolor lorem, 
+          faucibus id placerat a, pharetra id nibh. Duis a ante 
+          ac dolor consectetur iaculis. Sed eu leo quis lacus vehicula 
+          luctus. Nunc vestibulum ullamcorper diam a condimentum.</p>
         <p class="membership_price">4900 kr</p>
       </article>
     </div>
@@ -204,94 +223,69 @@
   </div>
 </section>
 
+<!-- Banguide -->
+ <section class="container">
 
- <!-- Banguide -->
-<section class="banguiden">
-  <div class="container">
-    <div class="banguiden_card">
-      <div class="banguiden_media">
-        <img
-          src="/images/banguide.jpg"
-          alt="Golfare som slår ut på fairway"
-          class="banguiden_img"
-        />
-      </div>
-
-      <div class="banguiden_content">
-        <p class="overline">BANGUIDE</p>
-        <h2 class="banguiden_title">Planera alla dina slag i förväg</h2>
-        <p class="body">
-          Välkommen till Centar Golfklubb.
-          Vacker 18 håls semi-seaside bana i härlig miljö. 
-        </p>
-        <p class="body">
-          I vår banguide kan du förbereda din runda. Här ser du alla tee, hål & hinder.
-        </p>
-        <a href="#"
-           class="button btn-primary banguiden_cta">
-          Utforska Centars banguide
-        </a>
-      </div>
+  <div class="banguiden_card">
+    <div class="banguiden_media">
+      <img src="/images/banguide.jpg"
+        alt="Golfare som slår ut på fairway"
+        class="banguiden_img">
     </div>
-  </div>
-</section>  
- <!-- Lunch & Shop -->
-<section class="promo-duo">
-  <div class="container">
-    <div class="news-wrapper promo-duo_grid">
 
-      <article class="news-card lunch-card">
-        <p class="overline">CENTAR Restaurang</p>
-        <h2 class="lunch-card_title">Dagens lunch</h2>
-        <span class="lunch-card_underline" aria-hidden="true"></span>
-        <p class="lunch-card_date">Måndag 29 september</p>
-
-        <ul class="lunch-card_menu">
-          <li>Ugnsbakad kyckling i dragon- och citronvelouté</li>
-          <li>Fish &amp; Chips</li>
-          <li>Bönbiff med fetaost, grekiska grönsaker och tzatziki</li>
-        </ul>
-
-        <a href="#" class="button btn-primary lunch-card_cta">
-          Läs mer om restaurangen
-        </a>
-      </article>
-
-      <article class="news-card promo-card">
-        <figure class="promo-card_figure">
-          <img
-            class="promo-card_img"
-            src="/images/Shop-bild.jpg"
-            alt="Kampanjbild för golfutrustning"
-          >
-          <figcaption class="promo-card_overlay">
-            <h3 class="promo-card_title">20% rabatt på<br>Taylor Made</h3>
-            <a href="#" class="button btn-accent promo-card_cta">
-              Gå till vår webshop
-            </a>
-          </figcaption>
-        </figure>
-      </article>
-
+    <div class="banguiden_content">
+      <p class="overline">BANGUIDE</p>
+      <h2 class="banguiden_title">Planera alla dina slag i förväg</h2>
+      <p class="body">Välkommen till Centar Golfklubb. Vacker 18 håls semi-seaside bana i härlig miljö.</p>
+      <p class="body">I vår banguide kan du förbereda din runda. Här ser du alla tee, hål & hinder.</p>
+      <a href="#" class="button btn-primary banguiden_cta">Utforska Centars banguide</a>
     </div>
   </div>
 </section>
 
+<!-- Lunch & Shop -->
 
+<div class="container lunch-wrapper">
+  <article class="lunch-card">
+    <p class="overline">CENTAR Restaurang</p>
+    <h2 class="lunch-card_title">Dagens lunch</h2>
+    <span class="lunch-card_underline" aria-hidden="true"></span>
+    <p class="lunch-card_date">Måndag 29 september</p>
 
+    <ul class="lunch-card_menu">
+      <li>Ugnsbakad kyckling i dragon- och citronvelouté</li>
+      <li>Fish &amp; Chips</li>
+      <li>Bönbiff med fetaost, grekiska grönsaker och tzatziki</li>
+    </ul>
+
+    <a href="#" class="button btn-primary lunch-card_cta">Läs mer om restaurangen</a>
+  </article>
+
+  <article class="spelagolf-card promo-card">
+    <figure class="promo-card_figure">
+      <img class="promo-card_img" src="/images/Shop-bild.jpg" alt="Kampanjbild för golfutrustning">
+      <figcaption class="promo-card_overlay">
+        <h3 class="promo-card_title">20% rabatt på<br>Taylor Made</h3>
+        <a href="#" class="button btn-accent promo-card_cta">Webshoppen</a>
+      </figcaption>
+    </figure>
+  </article>
+</div>
+ 
  </main>
+
+<!-- Footer -->
   <footer class="bg-green-dark">
       <div class="container text-white footer-wrapper">
-        <nav class="nav-wrapper body-sm">
-          <div class="nav-item">
+        <nav class="foot-nav-wrapper body-sm">
+          <div class="foot-nav-item foot-logo-wrapper">
             <a href="#"
               ><img
                 src="/images/centar_logo_wordmark_neg.svg"
                 alt="Centar logotype negative"
-                class="logo-wordmark"
-            /></a>
+                class="logo-wordmark"></a>
           </div>
-          <section class="nav-item">
+          <section class="foot-nav-item">
             <h5 class="overline">Navigera</h5>
             <ul>
               <li><a href="#">Om klubben</a></li>
@@ -301,18 +295,18 @@
               <li><a href="#">Gäst</a></li>
             </ul>
           </section>
-          <section class="nav-item">
+          <section class="foot-nav-item">
             <h5 class="overline">Öppettider</h5>
             <p>Måndag – Lördag: 7.30-17.00</p>
             <p>Söndag: 7.30–16.00</p>
           </section>
-          <section class="nav-item">
+          <section class="foot-nav-item">
             <h5 class="overline">Kontakt</h5>
-            <a href="mailto:centar@info.se">info@centragolfklubb.se</a>
+            <a href="mailto:centar@info.se">info@centargolfklubb.se</a>
             <a href="tel:+123456789">012-345 678</a>
-            <address>Bergkvarn<br />700 88 Örebro</address>
+            <address>Bergkvarn<br>700 88 Örebro</address>
           </section>
-          <section class="nav-item">
+          <section class="foot-nav-item">
             <h5 class="overline">Följ oss</h5>
             <ul>
               <li><a href="#">Instagram</a></li>
@@ -321,7 +315,7 @@
             </ul>
           </section>
         </nav>
-        <div class="byline-wrapper">
+        <div class="byline-wrapper text-center">
           <p>
             &copy; 2025 | Designad och utvecklad av Emma Golander, Josefin
             Holgersson, Tim Hugdahl, Tamana Mohammadi  | webd25jon TUC | HTML

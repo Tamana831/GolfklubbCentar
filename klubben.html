@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Klubben</title>
+    <!-- variables.css och base.css måste ligga överst då vi vill att den ska läsas in först -->
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="/styles/klubben.css">
+  </head>
+  <body>
+    <!-- Sätter färg hela vägen ut -->
+    <header class="bg-green-mid header-start">
+      <!-- Nedan div för att sätta maxbredd på sidan -->
+      <nav class="container main-nav-wrapper">
+        <a href="index.html"
+          ><img
+            src="images/centar_logotype_primary_dark.svg"
+            alt="Centar logotype"
+            class="logotype"></a>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-button-container">
+          <span class="menu-button"></span>
+          <!--inline-->
+        </label>
+        <div class="menu-wrapper">
+          <ul>
+            <li><a href="spelagolf.html">Spela Golf</a></li>
+            <li><a href="medlem.html">Medlem</a></li>
+            <li><a href="klubben.html">Klubben</a></li>
+            <li><a href="tavling.html">Tävlingar</a></li>
+            <li><a href="foretag.html">Företag</a></li>
+            <li><a href="restaurang.html">Restaurang</a></li>
+            <li><a href="golfshop.html">Golfshop</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+          <a href="#" class="button btn-primary-outline">Logga in</a>
+        </div>
+      </nav>
+    </header>
+   
+    <main>
+      <!-- Faciliteter -->
+<section class="faciliteter">
+  <div class="container">
+    <h2 class="text-lg text-center">Centars Faciliteter</h2>
+     <div class="faciliteter-grid">
+      
+      <!-- Resturang -->
+      <article class="facility-card">
+        <img src="/images/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Restaurang på golfklubben" class="facility-img">
+        <div class="facility-content">
+          <h3 class="facility-title">Restaurangen</h3>
+          <p class="body">I vår restaurang kan du båda äta lunch. fika eller boka bord för
+            a la carte på kvällen. 
+            Vi serverar lunch mellan 11-15.
+          </p>
+          <a href="#" class="button btn-primary-outline">Till Restaurangen</a>
+        </div>
+      </article>
+
+      <!-- Golfshop -->
+      <article class="facility-card">
+        <img src="/images/golfshop.jpg" alt="Golfshop med utrustning" class="facility-img">
+        <div class="facility-content">
+          <h3 class="facility-title">Golfshop</h3>
+          <p class="body">I vår golshop hittar du allt från golfbollar, klubber och kläder. 
+            Vill du provspela en klubba? Välkommen in till shoppen. </p>
+          <a href="#" class="button btn-primary-outline">Till Golfshoppen</a>
+        </div>
+      </article>
+
+      <!-- Övningsområde -->
+      <article class="facility-card">
+        <img src="/images/ovningsomrade.jpg" alt="Driving range på golfklubben" class="facility-img">
+        <div class="facility-content">
+          <h3 class="facility-title">Övningsområde</h3>
+          <p class="body">På vårt övningsområde hittar du två stora greener med 10 flaghål /green. 
+            Perfekt för dig som vill öva på närspelet. Det finns även en tre bunkrar för att kunna 
+            öva på bunkerslag.  
+            På övningsområdet är alla välkomna! </p>
+        </div>
+      </article>
+
+      <!--Kiosk -->
+      <article class="facility-card">
+        <img src="/images/kiosk.jpg" alt="Kiosk vid golfbanan" class="facility-img">
+        <div class="facility-content">
+          <h3 class="facility-title">Kiosk</h3>
+          <p class="body">Behöver ni fylla på med erergi mitt i rundan? Då finns det
+            en kiosk efter hål 10. Här serveras det bland annat mackor, dricka, korv med bröd och kaffe. Detta är
+            en kontantfri kiosk. Betalning sker med kort eller swish.
+          I anslutning till kiosken finns även en toalett. Kioskens öppettider variera och dagens öppettider står på tavlan vid första utslagstee.  </p>
+        </div>
+      </article>
+
+      <!-- Driving Range -->
+      <article class="facility-card">
+        <img src="/images/driningrange.jpg" alt="Driving range" class="facility-img">
+        <div class="facility-content">
+          <h3 class="facility-title">Driving range</h3>
+          <p class="body">Nu tar vi träningen till en helt ny nivå! Med TrackMan Range 
+            kan du följa varje slag med exakt data, spela på olika banor runt om i världen, 
+            spela roliga spel, utmana dina vänner eller finslipa tekniken – oavsett nivå. 
+            Perfekt för både nybörjare och proffs!
+
+          Kom och upplev framtidens golfträning – smart, rolig och utvecklande!</p>
+        </div>
+      </article>
+
+      <!-- Gym & omklädningsrum -->
+      <article class="facility-card">
+        <img src="/images/gym.jpg" alt="Gym och omklädningsrum" class="facility-img">
+        <div class="facility-content">
+          <h3 class="facility-title">Gym & omklädningsrum</h3>
+          <p class="body">Välkommen till vårt stora gym. Här hittar du gymutrustning för 
+            både kondition- och styrketräning. Vi har fyra löpband, tre motionscyklar, 
+            två crosstrainer och en trappmaskin. Vi har flera olika maskiner för styrketräning
+            och ett flertal fria vikter och skivstänger. 
+            I samma byggnad hittar du även omklädningrum och duschar.  </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Vision-->
+      <div class="bg-blue-light">
+        <section class="container"> 
+ 
+    <h3 class="vision text-md text-center">Vår Vision</h3>
+
+    <blockquote class="vision-quote text-lg text-center">
+      <em>“Centar Golfklubb ska vara en klubb för alla, oavsett ålder, kön och spelnivå!”</em>
+    </blockquote>
+
+    <div class="visionen">
+      <p>
+        Centar Golfklubb har i över hundra år varit en mötesplats där gemenskap, 
+        spelglädje och utveckling står i fokus. Här möts människor med olika erfarenheter, 
+        bakgrund och mål – men med samma kärlek till spelet och naturen. 
+        Vi tror på golfen som en sport för livet, där varje slag, varje promenad 
+        och varje möte skapar minnen och stärker banden mellan människor. <br> <br>
+        Vår anläggning utvecklas ständigt för att möta framtidens golfare. 
+        Vi satsar på hållbara lösningar, moderna träningsmöjligheter och en 
+        levande klubbkänsla som sträcker sig långt bortom banan. 
+        Oavsett om du är nybörjare eller elitspelare, ung eller gammal, 
+        vill vi att du ska känna dig hemma här. <br><br> 
+        Centar Golfklubb är mer än bara en bana – det är en plats för gemenskap, 
+        glädje och utveckling. Tillsammans bygger vi vidare på en tradition av 
+        kvalitet, omtanke och stolthet över vår klubb, vår natur och vår framtid.
+      </p>
+    </div>
+ 
+</section>
+      </div>
+
+      
+
+<!-- Bli medlem -->
+<section class="container">
+  <div class="blimedlem_card">
+    <div class="blimedlem_content">
+      <h2 class="blimedlem_title">Bli medlem </h2>
+      <p class="body">
+        Centar Golfklubb erbjuder medlemskap för alla – oavsett ålder, spelnivå eller erfarenhet.
+        Som medlem får du tillgång till vår vackra bana, rabatterade greenfeepriser, fri tillgång
+        till träningsområden och inbjudningar till klubbens tävlingar och evenemang.
+      </p>
+      <p class="body">
+        Här har vi samlat allt som du behöver veta om våra olika medlemsskap. 
+      </p>
+      <a href="#" class="button btn-primary blimedlem_cta">Läs mer om medlemskapen</a>
+    </div>
+
+    <div class="blimedlem_media">
+      <img
+        src="/images/klubben-bli-medlem.jpg"
+        alt="Glada golfare på Centar Golfklubb"
+        class="blimedlem_img"
+      >
+    </div>
+  </div>
+</section>
+<!-- Banguide -->
+ <section class="container">
+
+  <div class="banguiden_card">
+    <div class="banguiden_media">
+      <img src="/images/banguide.jpg"
+        alt="Golfare som slår ut på fairway"
+        class="banguiden_img">
+    </div>
+
+    <div class="banguiden_content">
+      <p class="overline">BANGUIDE</p>
+      <h2 class="banguiden_title">Planera alla dina slag i förväg</h2>
+      <p class="body">Välkommen till Centar Golfklubb. Vacker 18 håls semi-seaside bana i härlig miljö.</p>
+      <p class="body">I vår banguide kan du förbereda din runda. Här ser du alla tee, hål & hinder.</p>
+      <a href="#" class="button btn-primary banguiden_cta">Utforska Centars banguide</a>
+    </div>
+  </div>
+</section>
+
+      <!-- Nyhter -->
+      <section class="container news-section">
+        <h2 class="text-lg text-center top-header ">Nyheter</h2>
+        <div class="news-wrapper">
+          <article class="news-card">
+            <a href="#">
+              <img
+                src="images/golf-green-flag.jpg"
+                alt="Golf green with flag."
+                class="news-thumb-img">
+              <div class="news-text-wrapper">
+                <div class="news-date body-sm">2025-10-06</div>
+                <h3 class="text-md">Nya förbättringar på banan inför 2026</h3>
+                <p class="body">
+                  Under hösten pågår arbetet med att förbättra hål 7 och 9 för
+                  ännu bättre spelupplevelse nästa säsong...
+                </p>
+                <div class="read-more">
+                  <span class="text-sm">Läs mer</span>
+                  <img
+                    src="images/Designelement/icon_arrow-right.svg"
+                    alt=""
+                    class="icon">
+                </div>
+              </div>
+            </a>
+          </article>
+          <article class="news-card">
+            <a href="#">
+              <img
+                src="images/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                alt="Table setting with food at restaurant. Close up, hands holding plate."
+                class="news-thumb-img">
+              <div class="news-text-wrapper">
+                <div class="news-date body-sm">2025-09-18</div>
+                <h3 class="text-md">Ny meny i vår Restaurang</h3>
+                <p class="body">
+                  Vår restaurang har fått en uppdaterad meny med lokala råvaror
+                  och fräscha rätter. Perfekt för en paus mellan rundorna eller
+                  en fika i solen...
+                </p>
+                <div class="read-more">
+                  <span class="text-sm">Läs mer</span>
+                  <img
+                    src="images/Designelement/icon_arrow-right.svg"
+                    alt=""
+                    class="icon">
+                </div>
+              </div>
+            </a>
+          </article>
+          <article class="news-card">
+            <a href="#">
+              <img
+                src="images/golf-tavling.jpg"
+                alt="Blury people in background on golf green, golf flag in focus"
+                class="news-thumb-img">
+              <div class="news-text-wrapper">
+                <div class="news-date body-sm">2025-09-07</div>
+                <h3 class="text-md">Anmälan öppen till Centar Open 2025</h3>
+                <p class="body">
+                  Nu är anmälan öppen till årets största tävling! Delta i Centar
+                  Open och tävla mot golfare från hela regionen, platserna
+                  brukar gå åt snabbt...
+                </p>
+                <div class="read-more">
+                  <span class="text-sm">Läs mer</span>
+                  <img
+                    src="images/Designelement/icon_arrow-right.svg"
+                    alt=""
+                    class="icon">
+                </div>
+              </div>
+            </a>
+          </article>
+        </div>
+        <a href="#" class="button btn-primary-outline">Läs fler nyheter</a>
+      </section>
+     
+      
+
+      
+  
+<!-- Styrelsen & Historia-->
+<div class="container">
+  <section class="styrelsen_card bg-beige-light">
+    <h2 class="styrelsen_heading">Centar Golfklubbs styrelse</h2>
+
+  <!-- 1 -->
+  <figure class="styrelsen_item">
+    <img src="/images/ordforande.jpg" alt="Porträtt av ordföranden">
+    <figcaption class="styrelsen_caption">
+      <em class="styrelsen_role">Ordförande</em>
+      <strong class="styrelsen_name">Anna Andersson</strong>
+    </figcaption>
+  </figure>
+
+  <!-- 2 -->
+  <figure class="styrelsen_item">
+    <img src="/images/vice-ordforande.jpg" alt="Porträtt av vice-ordforande">
+    <figcaption class="styrelsen_caption">
+      <em class="styrelsen_role">Vice Ordförande</em>
+      <strong class="styrelsen_name">Björn Berg</strong>
+    </figcaption>
+  </figure>
+
+  <!-- 3 -->
+  <figure class="styrelsen_item">
+    <img src="/images/ledarmot1.jpg" alt="Porträtt av ledamot">
+    <figcaption class="styrelsen_caption">
+      <em class="styrelsen_role">Ledarmot</em>
+      <strong class="styrelsen_name">Cecilia Carlsson</strong>
+    </figcaption>
+  </figure>
+
+  <!-- 4 -->
+  <figure class="styrelsen_item">
+    <img src="/images/ledarmot2.jpg" alt="Porträtt av ledamot">
+    <figcaption class="styrelsen_caption">
+      <em class="styrelsen_role">Ledamot</em>
+      <strong class="styrelsen_name">David Dahl</strong>
+    </figcaption>
+  </figure>
+
+  <!-- Klubbens historia -->
+  <h3 class="styrelsen_subheading text-md">Klubbens Historia</h3>
+  <p class="styrelsen_history body">
+    Centar Golfklubb grundades 1920 och har sedan dess utvecklats till en av regionens mest uppskattade anläggningar.
+    Vår bana kombinerar utmanande hål med vacker natur, och klubben drivs av stark ideell kraft.
+    Genom åren har både junior- och seniorverksamheten vuxit, med stor fokus på gemenskap, hållbarhet och spelglädje.
+    I dag välkomnar vi såväl medlemmar som gäster till en golfupplevelse där tradition möter nutid. <br><br>
+    Sedan starten har Centar Golfklubb varit en plats där passionen för golf förenar generationer. 
+    Från de tidiga åren med handklippta greener och enkla klubbhus, till dagens moderna anläggning 
+    med välskötta fairways och en levande klubbmiljö, har vår utveckling alltid drivits av engagemanget 
+    hos våra medlemmar. Här har tusentals spelare tagit sina första slag, format vänskaper och byggt 
+    traditioner som lever vidare än i dag. <br> <br>
+    Under 1950- och 60-talet växte klubben i takt med golfens popularitet, och nya hål anlades 
+    för att möta det ökade intresset. 1980-talet blev en milstolpe då Centar GK stod värd för 
+    flera stora tävlingar, vilket satte klubben på kartan som en av regionens främsta banor. 
+    Samtidigt stärktes satsningen på juniorverksamheten – en grund som fortfarande präglar klubbens själ. <br><br>
+    I dag kombinerar vi historisk charm med framtidsfokus. Våra värderingar vilar på gemenskap, 
+    hållbarhet och utveckling, och vi arbetar aktivt för att skapa en inkluderande miljö där alla känner sig välkomna. 
+    Centar Golfklubb är inte bara en plats för golf – det är en plats för möten, minnen och framtida möjligheter.
+  </p>
+</section>
+   </div>
+
+    </main>
+    <footer class="bg-green-dark">
+      <div class="container text-white footer-wrapper">
+        <nav class="foot-nav-wrapper body-sm">
+          <div class="foot-nav-item foot-logo-wrapper">
+            <a href="index.html"
+              ><img
+                src="/images/centar_logo_wordmark_neg.svg"
+                alt="Centar logotype negative"
+                class="logo-wordmark"></a>
+          </div>
+          <section class="foot-nav-item">
+            <h5 class="overline">Navigera</h5>
+            <ul>
+              <li><a href="#">Om klubben</a></li>
+              <li><a href="#">Banan</a></li>
+              <li><a href="#">Företag & Partners</a></li>
+              <li><a href="#">Träna Golf</a></li>
+              <li><a href="#">Gäst</a></li>
+            </ul>
+          </section>
+          <section class="foot-nav-item">
+            <h5 class="overline">Öppettider</h5>
+            <p>Måndag – Lördag: 7.30-17.00</p>
+            <p>Söndag: 7.30–16.00</p>
+          </section>
+          <section class="foot-nav-item">
+            <h5 class="overline">Kontakt</h5>
+            <a href="mailto:centar@info.se">info@centargolfklubb.se</a>
+            <a href="tel:+123456789">012-345 678</a>
+            <address>Bergkvarn<br>700 88 Örebro</address>
+          </section>
+          <section class="foot-nav-item">
+            <h5 class="overline">Följ oss</h5>
+            <ul>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">LinkedIn</a></li>
+            </ul>
+          </section>
+        </nav>
+        <div class="byline-wrapper text-center">
+          <p>
+            &copy; 2025 | Designad och utvecklad av Emma Golander, Josefin
+            Holgersson, Tim Hugdahl, Tamana Mohammadi  | webd25jon TUC | HTML
+            och CSS med agila utvecklingsmetoder
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
