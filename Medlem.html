@@ -8,6 +8,7 @@
     <!-- variables.css och base.css måste ligga överst då vi vill att den ska läsas in först -->
     <link rel="stylesheet" href="styles/variables.css" />
     <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/Medlem.css"/>
   </head>
   <body>
     <!-- Sätter färg hela vägen ut -->
@@ -41,8 +42,8 @@
       </nav>
     </header>
   <main>
-    <!-- Hero / title -->
-    <section class="hero">
+    
+    <section class="Container ">
       <div class="container">
         <h1 class="page-title">Medlemskap på Centar Golfklubb</h1>
         <p class="subtitle">Bli medlem — flera olika medlemskap och förmåner för 2025</p>
@@ -104,7 +105,39 @@
       </div>
     </section>
 
-    <!-- Image + benefits -->
+ 
+  <!-- Medlemsansökan -->
+   <!-- Medlemsansökan -->
+<section class="membership-apply">
+  <div class="apply-box">
+    <h2>Bli medlem idag</h2>
+    <p>Fyll i dina uppgifter så kontaktar vi dig med mer information om medlemskap.</p>
+    
+    <form class="apply-form">
+      <label for="name">Namn*</label>
+      <input type="text" id="name" placeholder="Ditt namn" required>
+
+      <label for="email">E-post*</label>
+      <input type="email" id="email" placeholder="namn@exempel.se" required>
+
+      <label for="phone">Telefonnummer</label>
+      <input type="tel" id="phone" placeholder="070-123 45 67">
+
+      <label for="membership">Välj medlemskap</label>
+      <select id="membership">
+        <option value="">Välj...</option>
+        <option value="guld">Guld</option>
+        <option value="silver">Silver</option>
+        <option value="senior">Senior</option>
+        <option value="junior">Junior</option>
+        <option value="student">Student</option>
+      </select>
+
+      <button type="submit">Skicka ansökan</button>
+    </form>
+  </div>
+</section> 
+ <!-- Image + benefits -->
     <section class="benefits">
       <div class="container benefits-inner">
         <div class="image-wrap">
@@ -124,6 +157,7 @@
       </div>
     </section>
   </main>
+<!-- Footer -->
  <footer class="bg-green-dark">
       <div class="container text-white footer-wrapper">
         <nav class="foot-nav-wrapper body-sm">

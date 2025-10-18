@@ -29,64 +29,16 @@ body{
   margin:0 auto;
 }
 
-/* Header */
-.site-header{
-  background:var(--green-200);
-  padding:18px 0;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
-}
-
-.header-inner{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-
-.logo{
-  display:flex;
-  gap:10px;
-  align-items:center;
-}
-.logo-mark{
-  width:44px;height:44px;border-radius:8px;
-  display:flex;align-items:center;justify-content:center;
-  background:var(--green-500);color:white;font-weight:700;
-  font-size:18px;
-}
-.logo-text .brand{font-weight:700;letter-spacing:0.2px}
-.logo-text .sub{font-size:12px;color:var(--muted);margin-top:2px}
-
-/* nav */
-.main-nav{
-  display:flex;
-  gap:18px;
-  align-items:center;
-}
-.main-nav a{
-  text-decoration:none;
-  color:var(--muted);
-  font-weight:500;
-  padding:6px 8px;
-}
-.btn-cta{
-  background:white;
-  border:1px solid rgba(0,0,0,0.06);
-  padding:8px 14px;
-  border-radius:999px;
-  cursor:pointer;
-  font-weight:600;
-}
-
 /* Hero */
 .hero{
-  padding:44px 0 30px;
+  padding:30px 0 10px;
   background:linear-gradient(180deg, rgba(255,255,255,0.85), rgba(248,252,249,0.9));
 }
 .page-title{
   margin:0 0 6px;
   font-size:36px;
   text-align:center;
-  font-weight:700;
+  font-weight:500;
 }
 .subtitle{
   text-align:center;
@@ -153,7 +105,7 @@ body{
   font-weight:600;
 }
 
-/* Benefits (image + text) */
+/* Benefits (bilder + text) */
 .benefits{
   padding:36px 0 80px;
 }
@@ -182,6 +134,72 @@ body{
 }
 .benefits-text li{
   margin-bottom:10px;
+}
+
+/* -- Medlemsansökan box -- */
+.membership-apply {
+  background: #C8E0E8;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.apply-box {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.apply-box h2 {
+  color: #1f2b28;
+  margin-bottom: 10px;
+}
+
+.apply-box p {
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.apply-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+}
+
+.apply-form label {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.apply-form input,
+.apply-form select {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+.apply-form button {
+  margin-top: 10px;
+  background: #4a7a53;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.apply-form button:hover {
+  background: #3d6848;
 }
 
 /* Footer */
