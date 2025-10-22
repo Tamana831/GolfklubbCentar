@@ -112,6 +112,9 @@ img {
   .btn-wrapper a {
     width: auto;
   }
+  .news-section .text-lg {
+    margin-bottom: var(--space-md);
+  }
 }
 .news-card {
   background-color: var(--color-beige-light);
@@ -158,40 +161,23 @@ img {
 /* ---------- BLI MEDLEM ---------- */
 .membership {
   background-color: var(--color-blue-light);
-  /* Det här behövs inte */
-  /* width: 100vw;
-  margin-left: calc(
-    -50vw + 50%
-  ); */
   padding: var(--space-xl) 0;
   margin-bottom: var(--space-xl);
 }
-
-/* Den här klassen behövs inte, jag ser inte vad den gör ? */
-/* .membership .container {
-  text-align: center;
-} */
 
 .membership_cards {
   /* Utgår från mobil, flyttar gap till media queries. */
   display: grid;
   grid-template-columns: 1fr;
-  /* Grid i mobil för att styra mellanrum mellan card */
-  /* Ändrar till mindre mellanrum */
   gap: var(--space-sm);
-  /*  */
-  /* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-sm); */
   margin-block: var(--space-md);
 }
 
 .membership_card {
   background-color: color-mix(in srgb, var(--color-blue-light) 60%, white);
-  /* Ändrar till bara 12px */
   border-radius: 12px;
   /* Mindre padding i mobil, störra padding i media queries */
   padding: var(--space-sm);
-  /* padding: var(--space-lg); */
   text-align: left;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
   transition: transform 0.2s, box-shadow 0.2s;
@@ -201,40 +187,16 @@ img {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Behövs inte, kan läggas klass i html */
-/* .membership_title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: var(--space-xs);
-} */
-/* Sätter klassen body i html, på så vis kan jag även styra margin-botton på bara body och inte priset. */
 .membership_card .body {
   color: var(--color-text-grey);
-  /* Har gjort en variabel för grå text i stället. */
-  /* opacity: 0.9; */
   margin-bottom: var(--space-md);
 }
-/* Har gjort en klass i base.css för bold, sätter direkt i html. */
-/* .membership_price {
-  font-weight: 700;
-  margin-top: var(--space-sm);
-} */
 
 .membership_cta {
   display: flex;
   justify-content: center;
 }
-/* Nedan behövs inte, finns klass för btn-cta */
-/* .membership_cta .button {
-  background-color: var(--color-green-accent);
-  color: var(--color-text-white);
-  border-radius: 999px;
-  padding: 0 var(--space-lg);
-} */
 
-/* Litet mellanrum mellan blå och grön sektion på små skärmar */
-
-/* Gör om så vi utgår från mobil */
 @media (min-width: 786px) {
   .membership_cards {
     grid-template-columns: repeat(3, 1fr);
@@ -251,22 +213,13 @@ img {
 }
 /* ---------- BLI MEDLEM SLUTAR ---------- */
 
-/* ---------- BOKA SPELTID (Från Emmas kod) ---------- */
+/* ---------- BOKA SPELTID ---------- */
 .booking {
-  /* background-color: #ffffff; */
-  /* color: var(--color-text-black); */
-  /* font-family: "Raleway", sans-serif; */
-  /* padding: var(--space-lg) 0; */
-  /* Tar bort ovan styling, får med dett redan med base. Tar bort padding och styr avstånd till nästa block med margin-bottom. */
   margin-bottom: var(--space-xl);
 }
 .booking .text-lg {
   margin-bottom: var(--space-md);
 }
-/* .spela_golf {
-  margin-top: var(--space-lg);
-  margin-bottom: var(--space-lg);
-} */
 .booking_intro {
   margin-bottom: var(--space-xxs);
 }
