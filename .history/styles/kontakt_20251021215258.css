@@ -1,4 +1,25 @@
-/* KONTAKT-SEKTION – samma stil som medlemssidan */
+/* --- BAKGRUNDSSEKTION (HELA KONTAKTDELEN) --- */
+.contact-section {
+  background-color: ;#C8E0E8
+  padding: 100px;
+  position: relative;
+}
+
+/* Mörk overlay för bättre läsbarhet */
+.contact-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.contact-container,
+.contact-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+/* --- KONTAKT-KORT WRAPPER --- */
 .contact-wrapper {
   display: flex;
   justify-content: space-between;
@@ -9,38 +30,18 @@
   border: 2px solid #fff;
   border-radius: 12px;
   background: #fff;
-<<<<<<< Updated upstream
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  overflow: hidden;
-  padding: 24px;
-  flex-wrap: wrap;
-=======
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 24px;
   flex-wrap: nowrap;
   overflow: hidden;
->>>>>>> Stashed changes
 }
 
 .contact-card {
-  flex: 1;
-  min-width: 260px;
   text-align: center;
   background: #fff;
-<<<<<<< Updated upstream
-  border-radius: 12px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border: 1px solid rgba(0,0,0,0.04);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease;
-=======
   flex: 1;
   padding: 12px;
   transition: 0.2s ease;
->>>>>>> Stashed changes
 }
 
 .contact-card:hover {
@@ -59,12 +60,6 @@
   line-height: 1.5;
 }
 
-<<<<<<< Updated upstream
-/* Responsiv design – staplas på mobil */
-@media (max-width: 768px) {
-  .contact-wrapper {
-    flex-direction: column;
-=======
 /* --- FORMULÄR --- */
 .contact-container {
   max-width: 700px;
@@ -156,79 +151,16 @@
   .contact-wrapper {
     flex-direction: column;
     flex-wrap: wrap;
->>>>>>> Stashed changes
     padding: 20px;
   }
 
   .contact-card {
     width: 100%;
-<<<<<<< Updated upstream
-=======
     min-height: auto;
   }
 
   .contact-container {
     margin: 30px 16px;
     padding: 20px;
->>>>>>> Stashed changes
-  }
-}
-/* KONTAKT-SEKTION – samma stil som medlemssidan */
-.contact-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  gap: 24px;
-  max-width: 944px;
-  margin: 60px auto;
-  border: 2px solid #ccc;
-  border-radius: 12px;
-  background: #fff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  overflow: hidden;
-  padding: 24px;
-  flex-wrap: wrap;
-}
-
-.contact-card {
-  flex: 1;
-  min-width: 260px;
-  text-align: center;
-  background: #fff;
-  border-radius: 12px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border: 1px solid rgba(0,0,0,0.04);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease;
-}
-
-.contact-card:hover {
-  transform: translateY(-3px);
-}
-
-.contact-card h2 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: #1f2b28;
-}
-
-.contact-card p {
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.5;
-}
-
-/* Responsiv design – staplas på mobil */
-@media (max-width: 768px) {
-  .contact-wrapper {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .contact-card {
-    width: 100%;
   }
 }

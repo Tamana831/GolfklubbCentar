@@ -1,0 +1,126 @@
+/* --- BODY --- */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-image: url('golf.jpg');
+}
+
+
+
+/* --- KONTAKT-SEKTION --- */
+.contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* alla boxar lika höga */
+  gap: 24px;
+  max-width: 944px;
+  margin: 60px auto;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  background: #fff; /* bakgrundsfärg för hela kontaktboxen */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  flex-wrap: nowrap; /* boxarna ligger bredvid varandra */
+}
+
+.contact-card {
+  text-align: center;
+  background: #fff; /* färg för varje liten box */
+}
+
+.contact-card:hover {
+  transform: translateY(-3px);
+}
+
+.contact-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #1f2b28;
+}
+
+.contact-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/*--- FORMULÄR ---*/
+.contact-container {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 24px;
+  background: #C8E0E8;  
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-header h1 {
+  font-size: 1.8rem;
+  color: #1f2b28;
+}
+
+.contact-header p {
+  color: #333;
+  font-size: 1rem;
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+  color: #1f2b28;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #fff;
+}
+
+.contact-form button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background: #1f2b28;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background 0.2s ease;
+}
+
+.contact-form button:hover {
+  background: #3a4a46;
+}
+
+/* --- Responsiv design --- */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column; /* staplar boxarna på mobil */
+    padding: 20px;
+  }
+
+  .contact-card {
+    width: 100%;
+    min-height: auto; /* höjd anpassas på mobil */
+  }
+
+  .contact-container {
+    margin: 30px 16px;
+    padding: 20px;
+  }
+}
