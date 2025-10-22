@@ -8,6 +8,7 @@
   margin: 60px auto;
   border: 2px solid #fff;
   border-radius: 12px;
+<<<<<<< Updated upstream
   background: #fff;
 <<<<<<< Updated upstream
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -15,6 +16,10 @@
   padding: 24px;
   flex-wrap: wrap;
 =======
+=======
+ 
+  background: #fff; /* bakgrundsfärg för hela kontaktboxen */
+>>>>>>> Stashed changes
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 24px;
   flex-wrap: nowrap;
@@ -26,6 +31,7 @@
   flex: 1;
   min-width: 260px;
   text-align: center;
+<<<<<<< Updated upstream
   background: #fff;
 <<<<<<< Updated upstream
   border-radius: 12px;
@@ -40,6 +46,9 @@
   flex: 1;
   padding: 12px;
   transition: 0.2s ease;
+>>>>>>> Stashed changes
+=======
+  background: #fff; /* färg för varje liten box */
 >>>>>>> Stashed changes
 }
 
