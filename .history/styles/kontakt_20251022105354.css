@@ -2,11 +2,11 @@
 .contact-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: stretch; /* alla boxar lika höga */
+  align-items: stretch; /*  alla boxar lika höga */
   gap: 24px;
   max-width: 944px;
   margin: 60px auto;
-  border: 2px solid #ccc;
+  border: 2px solid #fff;
   border-radius: 12px;
   background: #C8E0E8; /* bakgrundsfärg för hela kontaktboxen */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -40,7 +40,7 @@
   max-width: 700px;
   margin: 60px auto;
   padding: 24px;
-  background: #fff; /* samma bakgrundsfärg som huvudboxen */
+  background: #C8E0E8; /* samma bakgrundsfärg som huvudboxen */
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
