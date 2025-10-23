@@ -41,5 +41,32 @@ text-align: center;
   list-style-type: none;
 }
 
+.boka h3{
+  text-align: center;
+}
+
+.boka input{
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 300px;
+  
+}
+
+form{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.footer{
+  color: var(--color-text-black); /* Textfärg för hela sidan */
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.6px;
+
+}
+
 
 

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/variables.css" />
   <link rel="stylesheet" href="styles/base.css" />
-  <link rel="stylesheet" href="restaurang.css">
+  <link rel="stylesheet" href="styles/restaurang.css">
   
 
   <title>Restaurang</title>
@@ -13,12 +13,12 @@
 <body>
   <header class="bg-green-mid header-start">
       <nav class="container main-nav-wrapper">
-        <a href="index.html"
-          ><img
+        <a href="index.html">
+          <img
             src="images/centar_logotype_primary_dark.svg"
             alt="Centar logotype"
-            class="logotype"
-        /></a>
+            class="logotype"/>
+          </a>
         <input type="checkbox" id="menu-toggle" />
         <label for="menu-toggle" class="menu-button-container">
           <span class="menu-button"></span>
@@ -30,7 +30,7 @@
             <li><a href="klubben.html">Klubben</a></li>
             <li><a href="tavling.html">Tävlingar</a></li>
             <li><a href="foretag.html">Företag</a></li>
-            <li><a href="restaurang.html">Restaurang</a></li>
+            <li><a href="restaurang.html" class="current">Restaurang</a></li>
             <li><a href="golfshop.html">Golfshop</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
           </ul>
@@ -103,8 +103,36 @@
           <p>Lördag: 12:00-22:00</p><br>
           <p>Söndag: 12:00-20:00</p><br>
         </div>
-    </section>
+        <br>
         
-      
+        <br>
+        <div class="boka">
+          <h3>Vill du boka et bord?</h3>
+          <form action="bokabord">
+            <label for="namn"></label>
+            <input type="text" id="namn" placeholder="Namn">
+
+            <label for="email"></label>
+            <input type="email" id="email" placeholder="E-mail">
+
+            <label for="telefonnummer"></label>
+            <input type="tel" id="telefonnummer" placeholder="Telefonnummer">
+
+            <label for="antal"></label>
+            <input type="number" id="antal" min="1" max="50" value="1">
+
+            <label for="datum"></label>
+            <input type="date" id="datum">
+
+            <input type="submit">
+
+          </form>
+
+        </div>
+    </section>
+        <hr>
+      <footer class="footer">
+        &copy; Peyman Khateri
+      </footer>
 </body>
 </html>
