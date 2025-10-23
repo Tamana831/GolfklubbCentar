@@ -44,29 +44,42 @@ text-align: center;
 .boka h3{
   text-align: center;
 }
-
+/*Lite style till inputsfältet*/
 .boka input{
   display: block;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 4px;
   font-size: 1rem;
   width: 300px;
-  
+  padding: 2px;
+  margin: 2px;
 }
-
+/*Lite style till inputsfältet vid hover*/
+.boka input:hover{
+  cursor: pointer;
+  border-color: aqua;
+}
+/*Bokningsknappen stylas här*/
+.boka .subknapp:hover{
+background-color: var(--color-green-mid);
+font-size: 1.25rem;
+}
+/*Här stylas bokningsformuläret*/
 form{
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+padding-bottom: 50px;
 }
 
 .footer{
   color: var(--color-text-black); /* Textfärg för hela sidan */
   font-family: "Raleway", sans-serif;
   letter-spacing: 0.6px;
-
 }
+
+
 
 
 
