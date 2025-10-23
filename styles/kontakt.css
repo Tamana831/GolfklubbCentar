@@ -21,6 +21,7 @@
   padding: 24px;
   flex-wrap: nowrap;
   overflow: hidden;
+
 }
 
 .contact-card {
@@ -42,6 +43,8 @@
   padding: 12px;
   transition: 0.2s ease;
 
+
+  background: #fff; /* färg för varje liten box */
 
   background: #fff; /* färg för varje liten box */
 
@@ -155,6 +158,11 @@
   .contact-wrapper {
     flex-direction: column;
     flex-wrap: wrap;
+
+/* Responsiv design – staplas på mobil */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
 
     padding: 20px;
   }
