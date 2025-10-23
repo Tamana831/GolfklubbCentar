@@ -285,9 +285,7 @@ footer, .site-footer {
 @media (max-width: 768px) {
   .member-card { padding: 24px; }
   .member-card h2 { font-size: 1.4rem; }
-  .wrap { grid-template-columns: 1fr; }
-}
-<<<<<<< Updated upstream
+  .wrap { grid-template-columns: 1fr; }}
 
 .apply-form input,
 .apply-form select {
@@ -423,8 +421,7 @@ footer, .site-footer {
   .page-title{font-size:24px}
   .hero{padding:26px 0}
   .logo-mark{width:40px;height:40px}
-  .benefits{padding:20px 0}
-=======
+  .benefits{padding:20px 0;}
 @media (max-width: 640px) {
   .main-nav { display: none; }
   .header-inner { padding: 0 4px; }
@@ -432,6 +429,5 @@ footer, .site-footer {
   .page-title { font-size: 24px; }
   .hero { padding: 26px 0; }
   .logo-mark { width: 40px; height: 40px; }
-  .benefits { padding: 20px 0; }
->>>>>>> Stashed changes
+  .benefits { padding: 20px 0;
 }
