@@ -12,6 +12,9 @@
     width: 100%;
     padding-top: 24px;
 }
+.sponsor-img{
+    padding: var(--space-sm);
+}
 .our-sponsors img{
     border-radius: 12px;
 }
@@ -19,13 +22,13 @@
     justify-content: space-evenly;
     align-items: center;
     display: flex;
-    padding: 24px 0;
+    flex-wrap: wrap;
 }
 .lower-div{
     justify-content: space-evenly;
     align-items: center;
     display: flex;
-    padding: 24px 0;
+    flex-wrap: wrap;
 }
 .bli-sponsor{
     padding: 24px 0;
@@ -37,6 +40,7 @@
     padding: 24px 24px;
     justify-content: space-between;
     text-align: start;
+    flex-wrap: wrap;
 }
 .niva{
     width: 30%;
@@ -77,13 +81,12 @@
 }
 .konferens-img{
     order: 2;
+}
+.konferens-img img{
     width: 100%;
     height: auto;
     display: block;
     border-radius: 12px;
-}
-.konferens-img img{
-    width: 573px;
 }
 .foretagsgolf{
     background-color: var(--color-green-light);
@@ -110,14 +113,13 @@
     order: 2;
 }
 .foretags-golf-img{
-    order: 1;
+    order: 1;   
+}
+.foretags-golf-img img{
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 12px;    
-}
-.foretags-golf-img img{
-    width: 573px;
+    border-radius: 12px;
 }
 .sponsorship{
     background-color: var(--color-blue-light);
