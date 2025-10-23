@@ -1,31 +1,30 @@
-kontakt.html
-@@ -0,0 +1,108 @@
 <!DOCTYPE html>
 <html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<<<<<<< Updated upstream
+    <meta name="description" content="Kontakta Centar Golfklubb – öppettider, adress och kontaktuppgifter." />
+    <title>Kontakta oss</title>
+    <!-- Grundstilar -->
     <title>Centar Golfklubb</title>
     <link rel="stylesheet" href="styles/variables.css" />
     <link rel="stylesheet" href="styles/base.css" />
-    <link rel="stylesheet" href="styles/startsida.css" />
+    <link rel="stylesheet" href="styles/kontakt.css" />
   </head>
+
   <body>
-    <header class="bg-green-mid header-start">
-      <nav class="container main-nav-wrapper">
-        <a href="index.html"
-          ><img
-            src="images/centar_logotype_primary_dark.svg"
-            alt="Centar logotype"
-            class="logotype"
-        /></a>
-        <input type="checkbox" id="menu-toggle" />
+    <!-- HEADER -->
+    <header class="bg-green-mid header-start" role="banner">
+      <nav class="container main-nav-wrapper" role="navigation" aria-label="Huvudnavigering">
+        <a href="index.html">
+          <img src="images/centar_logotype_primary_dark.svg" alt="Centar logotype" class="logotype" />
+        </a>
+
+        <input type="checkbox" id="menu-toggle" aria-controls="menu" aria-label="Visa meny" />
         <label for="menu-toggle" class="menu-button-container">
           <span class="menu-button"></span>
         </label>
         <div class="menu-wrapper">
-=======
     <meta name="description" content="Kontakta Centar Golfklubb – öppettider, adress och kontaktuppgifter." />
     <title>Kontakta oss</title>
    <!-- Grundstilar -->
@@ -48,27 +47,21 @@ kontakt.html
         </label>
 
         <div class="menu-wrapper" id="menu">
->>>>>>> Stashed changes
           <ul>
             <li><a href="spelagolf.html">Spela Golf</a></li>
-            <li><a href="Medlem.html">Medlem</a></li>
-            <li><a href="klubben.html">Klubben</a></li>
-            <li><a href="tavling.html">Tävlingar</a></li>
-            <li><a href="foretag.html">Företag</a></li>
-            <li><a href="restaurang.html">Restaurang</a></li>
-            <li><a href="golfshop.html">Golfshop</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="#">Medlem</a></li>
+            <li><a href="#">Klubben</a></li>
+            <li><a href="#">Tävlingar</a></li>
+            <li><a href="#">Företag</a></li>
+            <li><a href="#">Restaurang</a></li>
+            <li><a href="#">Golfshop</a></li>
+            <li><a href="kontakt.html" class="active">Kontakt</a></li>
           </ul>
-          <a href="loggain.html" class="button btn-primary-outline">Logga in</a>
+          <a href="#" class="button btn-primary-outline">Logga in</a>
         </div>
       </nav>
-      <section class="form-image-wrapper contact-wrapper">
-  <div class="card contact-card">
-    <h2>Adress</h2>
-    <p>Centar Golfklubb<br>Golfvägen 123<br>111 22 Stockholm</p>
-  </div>
+    </header>
 
-<<<<<<< Updated upstream
   <div class="card contact-card">
     <h2>Öppettider</h2>
     <p>Måndag – Fredag: 09:00–17:00<br>
@@ -83,7 +76,6 @@ kontakt.html
 </section>
 
     </header>  <footer class="bg-green-dark">
-=======
     <!-- HELA KONTAKTSEKTIONEN MED BAKGRUND -->
     <section class="contact-section" aria-labelledby="kontakt-h1">
       <div class="container">
@@ -146,17 +138,15 @@ kontakt.html
 
     <!-- FOOTER -->
     <footer class="bg-green-dark" role="contentinfo">
->>>>>>> Stashed changes
+
       <div class="container text-white footer-wrapper">
         <nav class="foot-nav-wrapper body-sm" aria-label="Sidfot navigation">
           <div class="foot-nav-item foot-logo-wrapper">
-            <a href="index.html"
-              ><img
-                src="/images/centar_logo_wordmark_neg.svg"
-                alt="Centar logotype negative"
-                class="logo-wordmark"
-            /></a>
+            <a href="index.html">
+              <img src="images/centar_logo_wordmark_neg.svg" alt="Centar logotype negative" class="logo-wordmark" />
+            </a>
           </div>
+
           <section class="foot-nav-item">
             <h5 class="overline">Navigera</h5>
             <ul>
@@ -167,17 +157,20 @@ kontakt.html
               <li><a href="#">Gäst</a></li>
             </ul>
           </section>
+
           <section class="foot-nav-item">
             <h5 class="overline">Öppettider</h5>
-            <p>Måndag – Lördag: 7.30-17.00</p>
+            <p>Måndag – Lördag: 7.30–17.00</p>
             <p>Söndag: 7.30–16.00</p>
           </section>
+
           <section class="foot-nav-item">
             <h5 class="overline">Kontakt</h5>
-            <a href="mailto:centar@info.se">info@centargolfklubb.se</a>
-            <a href="tel:+123456789">012-345 678</a>
+            <a href="mailto:info@centargolfklubb.se">info@centargolfklubb.se</a>
+            <a href="tel:+46123456789">012-345 678</a>
             <address>Bergkvarn<br />700 88 Örebro</address>
           </section>
+
           <section class="foot-nav-item">
             <h5 class="overline">Följ oss</h5>
             <ul>
@@ -187,11 +180,12 @@ kontakt.html
             </ul>
           </section>
         </nav>
+
         <div class="byline-wrapper text-center">
           <p>
             &copy; 2025 | Designad och utvecklad av Emma Golander, Josefin
-            Holgersson, Tim Hugdahl, Tamana Mohammadi  | webd25jon TUC | HTML
-            och CSS med agila utvecklingsmetoder
+            Holgersson, Tim Hugdahl, Tamana Mohammadi | webd25jon TUC |
+            HTML och CSS med agila utvecklingsmetoder
           </p>
         </div>
       </div>
