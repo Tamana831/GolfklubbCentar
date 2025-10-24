@@ -2,38 +2,34 @@
 .contact-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
+  align-items: stretch; /* alla boxar lika höga */
   gap: 24px;
   max-width: 944px;
   margin: 60px auto;
   border: 2px solid #fff;
   border-radius: 12px;
-<<<<<<< Updated upstream
   background: #fff;
-<<<<<<< Updated upstream
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   overflow: hidden;
   padding: 24px;
   flex-wrap: wrap;
-=======
-=======
+
  
   background: #fff; /* bakgrundsfärg för hela kontaktboxen */
->>>>>>> Stashed changes
+
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 24px;
   flex-wrap: nowrap;
   overflow: hidden;
->>>>>>> Stashed changes
+
 }
 
 .contact-card {
   flex: 1;
   min-width: 260px;
   text-align: center;
-<<<<<<< Updated upstream
+
   background: #fff;
-<<<<<<< Updated upstream
   border-radius: 12px;
   padding: 20px;
   display: flex;
@@ -42,14 +38,16 @@
   border: 1px solid rgba(0,0,0,0.04);
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   transition: transform 0.2s ease;
-=======
+
   flex: 1;
   padding: 12px;
   transition: 0.2s ease;
->>>>>>> Stashed changes
-=======
+
+
   background: #fff; /* färg för varje liten box */
->>>>>>> Stashed changes
+
+  background: #fff; /* färg för varje liten box */
+
 }
 
 .contact-card:hover {
@@ -68,18 +66,12 @@
   line-height: 1.5;
 }
 
-<<<<<<< Updated upstream
-/* Responsiv design – staplas på mobil */
-@media (max-width: 768px) {
-  .contact-wrapper {
-    flex-direction: column;
-=======
-/* --- FORMULÄR --- */
+/*--- FORMULÄR ---*/
 .contact-container {
   max-width: 700px;
   margin: 60px auto;
   padding: 24px;
-  background: #C8E0E8;
+  background: #fff; /* samma bakgrundsfärg som huvudboxen */
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
@@ -160,28 +152,25 @@
   text-decoration: none;
 }
 
+ 
 /* --- RESPONSIVT --- */
 @media (max-width: 768px) {
   .contact-wrapper {
     flex-direction: column;
     flex-wrap: wrap;
->>>>>>> Stashed changes
+
+/* Responsiv design – staplas på mobil */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+
     padding: 20px;
   }
 
   .contact-card {
     width: 100%;
-<<<<<<< Updated upstream
-=======
-    min-height: auto;
   }
 
-  .contact-container {
-    margin: 30px 16px;
-    padding: 20px;
->>>>>>> Stashed changes
-  }
-}
 /* KONTAKT-SEKTION – samma stil som medlemssidan */
 .contact-wrapper {
   display: flex;
@@ -229,7 +218,7 @@
   color: #555;
   line-height: 1.5;
 }
-
+}
 /* Responsiv design – staplas på mobil */
 @media (max-width: 768px) {
   .contact-wrapper {
