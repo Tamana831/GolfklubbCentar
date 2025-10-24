@@ -3,7 +3,7 @@
     margin-bottom: var(--space-xl);
     background-color: var(--color-green-light);
     width: 100;
-    border-radius: 0 12px;
+    border-radius: 0 0 12px 12px;
 }
 .our-sponsors{
     width: 100%;
@@ -60,6 +60,9 @@
     text-align: center;
     display: block;
     flex-direction: column;
+}
+.text-center{
+    padding: 0 40px;
 }
 .nivaer{
     display: grid;
