@@ -22,13 +22,28 @@ body {
 .lunch {
 display: block;
 text-align: center;
-
 }
 
 .alacarte{
 display: block;
 text-align: center;
+padding-bottom: 100px;
+}
 
+.pic1 img {
+  flex-direction: column;
+  float: right;
+  display: flex;
+  height: 250px;
+  width: auto;
+}
+
+.pic2 img {
+  flex-direction: column;
+  float: left;
+  display: flex;
+  height: 250px;
+  width: auto;
 }
 
 .öppettider{
