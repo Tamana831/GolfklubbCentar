@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+/* Img reset
+Det blir ett liten margin på alla bilder men genom att sätta dipslay block tar jag bort det. */
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- HERO SECTION ---------- */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 480px;
+  padding-top: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+.hero-img {
+  background-image: url("/images/table-arrangement-luxury-restaurant.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+/* Overlay på bilden för att mörka ner */
+.hero-img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-text-black);
+  mix-blend-mode: multiply;
+  opacity: 0.3;
+  z-index: 1;
+}
+/* Ändrar z-index för att text och knappar inte ska hamna under. */
+.hero-img > * {
+  z-index: 100;
+}
+.hero .text-xxl {
+  margin-bottom: var(--space-md);
+}
+.btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xxs);
+}
+.btn-wrapper a {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    height: 600px;
+    /* padding-top: var(--space-xl); */
+  }
+  .btn-wrapper {
+    flex-direction: row;
+    gap: var(--space-xs);
+  }
+}
+@media (min-width: 1280px) {
+  .hero {
+    height: 740px;
+    padding-top: var(--space-xxl);
+  }
+}
+/* ---------- HERO SLUT ---------- */
+
+
+
+body {
+  color: var(--color-text-black); /* Textfärg för hela sidan */
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.food{
+  background-color: var(--color-blue-light);
+  letter-spacing: 0.9px;
+}
+
+.lunch {
+display: block;
+text-align: center;
+}
+
+.alacarte{
+display: block;
+text-align: center;
+}
+
+.öppettider{
+display: block;
+text-align: center;
+
+}
+
+.lunch li{
+  list-style-type: none;
+}
+
+.boka h3{
+  text-align: center;
+}
+/*Lite style till inputsfältet*/
+.boka input{
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 300px;
+  padding: 2px;
+  margin: 2px;
+}
+/*Lite style till inputsfältet vid hover*/
+.boka input:hover{
+  cursor: pointer;
+  border-color: aqua;
+}
+/*Bokningsknappen stylas här*/
+.boka .subknapp:hover{
+background-color: var(--color-green-mid);
+font-size: 1.25rem;
+}
+/*Här stylas bokningsformuläret*/
+form{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding-bottom: 50px;
+}
+
+.footer{
+  color: var(--color-text-black); /* Textfärg för hela sidan */
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.6px;
+}
+
+
+
+
+
