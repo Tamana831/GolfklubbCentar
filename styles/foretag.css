@@ -7,6 +7,8 @@
     justify-content: center;
     margin-bottom: var(--space-xl);
     background-color: var(--color-green-light);
+    width: 100;
+    border-radius: 0 12px;
 }
 .our-sponsors{
     width: 100%;
@@ -32,24 +34,34 @@
 }
 .bli-sponsor{
     padding: 24px 0;
-    width: 100%;
+    max-width: 1280px;
     text-align: center;
+    display: block;
+    flex-direction: column;
 }
 .nivaer{
-    display: flex;
-    padding: 24px 24px;
-    justify-content: space-between;
-    text-align: start;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+    align-items: start;
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-block: var(--space-lg);
+    padding-inline: clamp(var(--space-md), 6vw, var(--space-xl));
+    border-radius: 16px;
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-md);
+    min-width: 0;
 }
 .niva{
-    width: 30%;
     background-color: color-mix(in srgb, var(--color-blue-light) 60%, white);
     border-radius: 12px;
     padding: var(--space-sm);
     text-align: left;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
     transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;
+    max-width: 100%;
 }
 .niva:hover{
     transform: translateY(-3px);
@@ -88,6 +100,26 @@
     display: block;
     border-radius: 12px;
 }
+.konferens .body {
+  margin-bottom: var(--space-md);
+  max-width: 44ch;
+}
+@media (max-width: 900px) {
+  .konferens {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .konferens .body {
+    max-width: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .konferens {
+    padding: var(--space-md) var(--space-sm); 
+  }
+}
 .foretagsgolf{
     background-color: var(--color-green-light);
     border-radius: 16px;
@@ -120,6 +152,26 @@
     height: auto;
     display: block;
     border-radius: 12px;
+}
+.foretagsgolf .body {
+  margin-bottom: var(--space-md);
+  max-width: 44ch;
+}
+@media (max-width: 900px) {
+  .foretagsgolf {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .foretagsgolf .body {
+    max-width: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .foretagsgolf {
+    padding: var(--space-md) var(--space-sm); 
+  }
 }
 .sponsorship{
     background-color: var(--color-blue-light);
