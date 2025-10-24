@@ -63,6 +63,20 @@
     width: 100%;
     max-width: 100%;
 }
+@media (min-width: 1080px) {
+  .niva {
+    grid-template-columns: repeat(3, 1fr);
+    margin-block: var(--space-lg);
+  }
+  .niva{
+    padding: var(--space-md);
+  }
+}
+@media (min-width: 1200px) {
+  .niva{
+    padding: var(--space-lg);
+  }
+}
 .niva:hover{
     transform: translateY(-3px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
