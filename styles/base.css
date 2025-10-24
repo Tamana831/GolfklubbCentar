@@ -62,7 +62,7 @@ body {
 .text-sm {
   font-weight: 600;
   letter-spacing: normal; /* nollställer letter-spacing som är satt i body */
-  line-height: 1.2;
+  line-height: 1.25;
 }
 .text-xxl {
   font-size: 2.5rem; /* 40px mobil, 64px desktop */
