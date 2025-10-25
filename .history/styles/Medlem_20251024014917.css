@@ -113,95 +113,47 @@
     width: 100%;
   }
 }
+/* ====== MEDLEMSANSÖKAN ====== */
 .membership-apply {
   padding: 60px 20px;
 }
 
+.apply-box {
+  background-color: var(--color-green-light);
+  border-radius: 16px;
+  padding: var(--space-lg);
+  max-width: 1280px;
+  margin: var(--space-lg) auto;
+}
+
+/* layout: form + bild bredvid */
 .apply-grid {
   display: grid;
-  grid-template-columns: 1fr 0.8fr;
-  gap: 3rem;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
   align-items: center;
 }
 
-.apply-form h2 {
-  margin-bottom: 0.4rem;
-  color: var(--color-green-dark);
-}
-
-.apply-form p {
-  margin-bottom: 1.4rem;
-  color: #333;
-  font-size: 0.95rem;
-}
-
-.membership-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.membership-form label {
-  font-weight: 600;
-  margin-bottom: 0.3rem;
-  color: var(--color-green-dark);
-}
-
-.membership-form input,
-.membership-form select {
-  padding: 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 1rem;
-  outline: none;
-  transition: 0.2s;
-}
-
-.membership-form input:focus,
-.membership-form select:focus {
-  border-color: var(--color-green-dark);
-}
-
-.radio-group {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.btn-submit {
-  background: var(--color-green-dark);
-  color: #ECF6E9;
-  padding: 0.9rem 1.6rem;
-  border: none;
-  border-radius: 999px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: 0.3s;
-  width: fit-content;
-}
-
-.btn-submit:hover {
-  background: #1a4b3a;
-}
-
+/* bilden bredvid formuläret */
 .apply-image-side img {
-  width: 100%;
-  border-radius: 12px;
+  width: 50%;
+  max-width: 450px; /* justerbar om du vill mindre bild */
+  border-radius: 14px;
+  display: block;
   object-fit: cover;
+  margin: 0 auto;
 }
 
-/* Mobil */
+/* mobil: bild under formuläret */
 @media (max-width: 768px) {
   .apply-grid {
     grid-template-columns: 1fr;
   }
 
   .apply-image-side img {
-    width: 100%;
+    max-width: 100%;
   }
 }
+
+
+

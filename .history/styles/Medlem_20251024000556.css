@@ -80,128 +80,110 @@
   background: var(--color-green-dark);
   color: white;
 }
-
-/* ====== MEDLEMSFÖRMÅNER ====== */
-.membership-benefits {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  padding: 60px 20px;
-  flex-wrap: wrap; /* gör att den hoppar under på mobil */
-}
-
-.membership-benefits img {
-  width: 40%;
-  max-width: 380px;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-.membership-benefits .container {
-  width: 50%;
-  min-width: 300px;
-}
-
-@media (max-width: 768px) {
-  .membership-benefits {
-    flex-direction: column;
-  }
-
-  .membership-benefits img,
-  .membership-benefits .container {
-    width: 100%;
-  }
-}
+/* ---- ANSÖKAN FORMULÄR ---- */
 .membership-apply {
-  padding: 60px 20px;
+  background:  #ECF6E9;
+  padding: 100px 0;
+  margin-top: 50px;
+}
+
+.apply-box {
+  max-width: 600px;
+  margin: 70 auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.apply-form label {
+  font-weight: 600;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.form-input {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+}
+
+.apply-form input,
+.apply-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fff;
+  font-family: inherit;
+}
+
+.apply-form select {
+  cursor: pointer;
+}  
+.apply-box {
+  background-color: var(--color-green-light);
+  border-radius: 16px;
+  padding: var(--space-lg);
+  max-width: 500px;
+  margin: var(--space-lg) auto;
 }
 
 .apply-grid {
   display: grid;
-  grid-template-columns: 1fr 0.8fr;
-  gap: 3rem;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
   align-items: center;
 }
-
-.apply-form h2 {
-  margin-bottom: 0.4rem;
-  color: var(--color-green-dark);
-}
-
-.apply-form p {
-  margin-bottom: 1.4rem;
-  color: #333;
-  font-size: 0.95rem;
-}
-
-.membership-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.membership-form label {
-  font-weight: 600;
-  margin-bottom: 0.3rem;
-  color: var(--color-green-dark);
-}
-
-.membership-form input,
-.membership-form select {
-  padding: 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 1rem;
-  outline: none;
-  transition: 0.2s;
-}
-
-.membership-form input:focus,
-.membership-form select:focus {
-  border-color: var(--color-green-dark);
+.apply-image-side img {
+  width: 30px;
+  border-radius: 14px;
+  display: block;
 }
 
 .radio-group {
   display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: 20px;
+  padding: 6px 0;
 }
 
-.btn-submit {
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.apply-form button {
+  margin-top: 10px;
   background: var(--color-green-dark);
-  color: #ECF6E9;
-  padding: 0.9rem 1.6rem;
+  color: white;
+  padding: 12px;
   border: none;
   border-radius: 999px;
   cursor: pointer;
-  font-weight: 600;
-  transition: 0.3s;
-  width: fit-content;
 }
-
-.btn-submit:hover {
-  background: #1a4b3a;
+.apply-form button:hover {
+  background: var(--color-green-accent);
 }
-
-.apply-image-side img {
-  width: 100%;
-  border-radius: 12px;
-  object-fit: cover;
-}
-
-/* Mobil */
 @media (max-width: 768px) {
   .apply-grid {
     grid-template-columns: 1fr;
   }
-
-  .apply-image-side img {
-    width: 100%;
+  .apply-image-side {
+    order: -1; /* Bild överst i mobil (kan tas bort om du inte vill) */
   }
+}
+.image-wrap img {
+  width: 50%;
+  height: 50%;
+  aspect-ratio: 4 / 5;        
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
 }

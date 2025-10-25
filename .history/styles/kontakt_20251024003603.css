@@ -22,7 +22,6 @@
   align-items: center;
   padding: 20px;
   background: transparent;
-  background-color: #C8E0E8;
 }
 
 .contact-card {
@@ -38,16 +37,6 @@
   border: 1px solid rgba(0,0,0,0.04);
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   transition: transform 0.2s ease;
-
-  flex: 1;
-  padding: 12px;
-  transition: 0.2s ease;
-
-
-  background: #fff; /* färg för varje liten box */
-
- 
-
 }
 
 .contact-card:hover {
@@ -125,10 +114,6 @@
 
 .contact-form button:hover {
   background: #3a4a46;
-}
-.contact-section {
-  padding: 60px 20px;
-  background-color: #C8E0E8;
 }
 .gdpr-label {
   font-size: 0.9rem;
