@@ -88,29 +88,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.food{
-  background-color: var(--color-blue-light);
-  letter-spacing: 0.9px;
-}
-
-.lunch {
-display: block;
-text-align: center;
-}
-
-.alacarte{
-display: block;
-text-align: center;
-}
-
 .öppettider{
 display: block;
 text-align: center;
 
-}
-
-.lunch li{
-  list-style-type: none;
 }
 
 .boka h3{
@@ -133,8 +114,10 @@ text-align: center;
 }
 /*Bokningsknappen stylas här*/
 .boka .subknapp:hover{
-background-color: var(--color-green-mid);
-font-size: 1.25rem;
+background-color: var(--color-green-dark);
+color: var(--color-beige-light);
+transition: background-color 0.25s ease, transform 0.15s ease;
+
 }
 /*Här stylas bokningsformuläret*/
 form{
@@ -151,7 +134,153 @@ padding-bottom: 50px;
   letter-spacing: 0.6px;
 }
 
+/* A la carte */
 
 
+.alacarte {
+  background-color: var(--color-green-light);
+  border-radius: 16px;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-lg);
+  padding: var(--space-lg);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  align-items: center;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-block: var(--space-lg);
+  padding-inline: clamp(var(--space-md), 6vw, var(--space-xl));
+}
+
+.alacarte_content {
+  order: 1; /* Texten till vänster */
+}
+
+.alacarte_media {
+  order: 2; /* Bilden till höger */
+}
+
+.alacarte_img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.alacarte_title {
+  color: var(--color-text-black);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+}
+
+
+.alacarte_content .body {
+  margin-bottom: var(--space-md);
+  max-width: 48ch;
+}
+
+/* Responsiv layout */
+@media (max-width: 900px) {
+  .alacarte_card {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+  .alacarte_media {
+    order: -1; /* Bilden överst på mindre skärmar */
+  }
+
+  .alacarte_content .body {
+    max-width: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .alacarte_card {
+    padding: var(--space-md) var(--space-sm);
+  }
+}
+
+/* Dagens lunch */
+.dagenslunch_card {
+  background-color: var(--color-green-light);
+  border-radius: 16px;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-lg);
+  padding: var(--space-lg);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  align-items: center;
+  max-width: 1280px;              
+  margin-inline: auto;
+  padding-block: var(--space-lg);
+  padding-inline: clamp(var(--space-md), 6vw, var(--space-xl)); 
+}
+
+.blimedlem_content {
+  order: 1; /* Texten till vänster */
+}
+
+.blimedlem_media {
+  order: 2; /* Bilden till höger */
+}
+
+.dagenslunch_img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.dagenslunch_title {
+  color: var(--color-text-black);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+}
+
+.dagenslunch .overline {
+  color: var(--color-green-dark);
+  opacity: 0.9;
+  margin-bottom: var(--space-xs);
+}
+
+.dagenslunch_content .body {
+  margin-bottom: var(--space-md);
+  max-width: 44ch;
+}
+
+.dagenslunch_content .body li{
+  list-style-type: none;
+}
+.dagenslunch_cta {
+  align-self: flex-start;
+  border-radius: 999px;
+  padding: 0 1.75rem;
+}
+
+/* Responsiv layout */
+@media (max-width: 900px) {
+  .dagenslunch_card {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+   .blimedlem_media {
+    order: -1; /* Bilden överst på mindre skärmar */
+  }
+
+  .dagenslunch_content .body {
+    max-width: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .dagenslunch_card {
+    padding: var(--space-md) var(--space-sm); 
+  }
+}
 
 
