@@ -22,7 +22,6 @@
   align-items: center;
   padding: 20px;
   background: transparent;
-  background-color: #C8E0E8;
 }
 
 .contact-card {
@@ -125,10 +124,6 @@
 
 .contact-form button:hover {
   background: #3a4a46;
-}
-.contact-section {
-  padding: 60px 20px;
-  background-color: #C8E0E8;
 }
 .gdpr-label {
   font-size: 0.9rem;

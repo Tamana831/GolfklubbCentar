@@ -81,127 +81,142 @@
   color: white;
 }
 
-/* ====== MEDLEMSFÖRMÅNER ====== */
-.membership-benefits {
+/* --- MEDLEMSFÖRMÅNER --- */
+.benefits-flex {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
-  padding: 60px 20px;
-  flex-wrap: wrap; /* gör att den hoppar under på mobil */
+  gap: 40px;
+  padding: 60px 0;
 }
 
-.membership-benefits img {
-  width: 40%;
-  max-width: 380px;
-  border-radius: 10px;
-  object-fit: cover;
+.benefits-image {
+  width: 45%;
+  border-radius: 12px;
+  object-fit: vänster;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.membership-benefits .container {
-  width: 50%;
-  min-width: 300px;
+.benefits-text {
+  width: 55%;
+}
+
+.benefits-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.benefits-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.benefits-text li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.benefits-text li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #2a6b2a;
 }
 
 @media (max-width: 768px) {
-  .membership-benefits {
+  .benefits-flex {
     flex-direction: column;
+    text-align: center;
   }
 
-  .membership-benefits img,
-  .membership-benefits .container {
+  .benefits-image,
+  .benefits-text {
     width: 100%;
   }
-}
-.membership-apply {
-  padding: 60px 20px;
+
+  .benefits-text li {
+    text-align: left;
+  }
 }
 
+
+/* --- MEDLEMSANSÖKAN --- */
 .apply-grid {
   display: grid;
-  grid-template-columns: 1fr 0.8fr;
-  gap: 3rem;
-  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+  padding: 60px 0;
 }
 
-.apply-form h2 {
-  margin-bottom: 0.4rem;
-  color: var(--color-green-dark);
+.apply-box {
+  background-color: #f9f9f9;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  margin: 0 auto;
 }
 
-.apply-form p {
-  margin-bottom: 1.4rem;
+.apply-box h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.apply-box p {
+  margin-bottom: 25px;
+  color: #555;
+}
+
+.apply-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
   color: #333;
-  font-size: 0.95rem;
 }
 
-.membership-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.membership-form label {
-  font-weight: 600;
-  margin-bottom: 0.3rem;
-  color: var(--color-green-dark);
-}
-
-.membership-form input,
-.membership-form select {
-  padding: 0.8rem;
+.apply-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
   border: 1px solid #ccc;
-  border-radius: 10px;
   font-size: 1rem;
-  outline: none;
-  transition: 0.2s;
 }
 
-.membership-form input:focus,
-.membership-form select:focus {
-  border-color: var(--color-green-dark);
-}
-
-.radio-group {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.btn-submit {
-  background: var(--color-green-dark);
-  color: #ECF6E9;
-  padding: 0.9rem 1.6rem;
+.apply-button {
+  background-color: #2a6b2a;
+  color: #fff;
   border: none;
-  border-radius: 999px;
+  padding: 12px 20px;
+  border-radius: 8px;
   cursor: pointer;
-  font-weight: 600;
-  transition: 0.3s;
-  width: fit-content;
+  font-size: 1rem;
+  transition: background 0.3s;
 }
 
-.btn-submit:hover {
-  background: #1a4b3a;
+.apply-button:hover {
+  background-color: #1f4f1f;
 }
 
 .apply-image-side img {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 14px;
   object-fit: cover;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* Mobil */
 @media (max-width: 768px) {
   .apply-grid {
     grid-template-columns: 1fr;
   }
 
-  .apply-image-side img {
-    width: 100%;
+  .apply-box {
+    order: 1;
+  }
+
+  .apply-image-side {
+    order: 2;
   }
 }
