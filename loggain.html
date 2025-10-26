@@ -8,14 +8,15 @@
     <link rel="stylesheet" href="styles/variables.css" />
     <link rel="stylesheet" href="styles/base.css" />
     <link rel="stylesheet" href="styles/loggain.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/designelement/centar_favicon_c.png"
+    />
   </head>
   <body>
-    <header>
-      <!-- Nedan div för att sätta färg hela vägen ut -->
-      <div class="bg-green-mid">
-        <!-- Nedan div för att sätta maxbredd på sidan -->
-        <div class="container">
-          <nav class="container main-nav-wrapper">
+     <header class="bg-green-mid header-start">
+      <nav class="container main-nav-wrapper">
         <a href="index.html"
           ><img
             src="images/centar_logotype_primary_dark.svg"
@@ -25,12 +26,11 @@
         <input type="checkbox" id="menu-toggle" />
         <label for="menu-toggle" class="menu-button-container">
           <span class="menu-button"></span>
-          <!--inline-->
         </label>
         <div class="menu-wrapper">
           <ul>
             <li><a href="spelagolf.html">Spela Golf</a></li>
-            <li><a href="medlem.html">Medlem</a></li>
+            <li><a href="Medlem.html">Medlem</a></li>
             <li><a href="klubben.html">Klubben</a></li>
             <li><a href="tavling.html">Tävlingar</a></li>
             <li><a href="foretag.html">Företag</a></li>
@@ -41,8 +41,6 @@
           <a href="loggain.html" class="button btn-primary-outline">Logga in</a>
         </div>
       </nav>
-        </div>
-      </div>
     </header>
     <main>
       <!-- Här sätter jag en klass som sätter bakgrundsfärg på hela section. Detta element tar upp hela sidans bredd, dvs bakgrundsfärgen går hela vägen ut. -->
@@ -53,7 +51,7 @@
             <h1>Logga in</h1>
             <p>Ange ditt Golf-ID och lösenord nedan.</p><br>
               <div id="inloggruta">
-                <label for="text">Golf-ID</label><br>
+                <label for="golf-id">Golf-ID</label><br>
                 <input type="text" id="golf-id" class="input-field" name="golf-id" placeholder="******-****"><br><br>
                 <label for="password">Lösenord</label><br>
                 <input type="password" id="password" class="input-field" name="password" placeholder="Ditt lösenord här"><br><br>
@@ -88,7 +86,7 @@
       <div class="container text-white footer-wrapper">
         <nav class="foot-nav-wrapper body-sm">
           <div class="foot-nav-item foot-logo-wrapper">
-            <a href="#"
+            <a href="index.html"
               ><img
                 src="/images/centar_logo_wordmark_neg.svg"
                 alt="Centar logotype negative"
@@ -98,9 +96,9 @@
           <section class="foot-nav-item">
             <h5 class="overline">Navigera</h5>
             <ul>
-              <li><a href="#">Om klubben</a></li>
-              <li><a href="#">Banan</a></li>
-              <li><a href="#">Företag & Partners</a></li>
+              <li><a href="klubben.html">Om klubben</a></li>
+              <li><a href="spelagolf.html">Banan</a></li>
+              <li><a href="foretag.html">Företag & Partners</a></li>
               <li><a href="#">Träna Golf</a></li>
               <li><a href="#">Gäst</a></li>
             </ul>
@@ -128,8 +126,8 @@
         <div class="byline-wrapper text-center">
           <p>
             &copy; 2025 | Designad och utvecklad av Emma Golander, Josefin
-            Holgersson, Tim Hugdahl, Tamana Mohammadi  | webd25jon TUC | HTML
-            och CSS med agila utvecklingsmetoder
+            Holgersson, Tim Hugdahl, Peyman Khateri, Tamana Mohammadi  |
+            webd25jon TUC | HTML och CSS med agila utvecklingsmetoder
           </p>
         </div>
       </div>
