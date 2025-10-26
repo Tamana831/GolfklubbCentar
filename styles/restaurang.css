@@ -24,7 +24,7 @@ img {
   margin-bottom: var(--space-xl);
 }
 .hero-img {
-  background-image: url("/images/table-arrangement-luxury-restaurant.jpg");
+  background-image: url("/GolfklubbCentar/images/pexels-element5-669733.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -137,7 +137,7 @@ padding-bottom: 50px;
 /* A la carte */
 
 
-.alacarte {
+.alacarte_card {
   background-color: var(--color-green-light);
   border-radius: 16px;
   margin-top: var(--space-lg);
@@ -200,6 +200,7 @@ padding-bottom: 50px;
   .alacarte_card {
     padding: var(--space-md) var(--space-sm);
   }
+
 }
 
 /* Dagens lunch */
@@ -282,5 +283,6 @@ padding-bottom: 50px;
     padding: var(--space-md) var(--space-sm); 
   }
 }
+
 
 
