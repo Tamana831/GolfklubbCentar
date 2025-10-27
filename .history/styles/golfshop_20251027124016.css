@@ -328,76 +328,10 @@ img {
   gap: var(--space-xxs);
   row-gap: var(--space-md);
 }
-.product-card a {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-}
-.product-card:hover .product-image {
-  /* Zooma in bilden med 5% */
-  transform: scale(1.05);
-}
-.product-image-container {
-  background-color: var(--color-beige-light);
-  aspect-ratio: 3/4;
-  overflow: hidden;
-  position: relative;
-}
-.product-image {
-  height: 100%;
-  object-fit: contain;
-  object-position: center center; /* centrerar bilden både horisontellt och vertikalt */
-  transition: transform 0.3s ease-in-out;
-}
-.image-overflow {
-  object-fit: cover;
-}
-.promo-label {
-  background-color: var(--color-green-mid);
-  color: var(--color-green-dark);
-  /* padding: 0.25rem var(--space-xxs); */
-  padding: 0.125rem 0.375rem;
-  border-radius: 2px;
-  font-size: 0.625rem;
-  position: absolute;
-  top: var(--space-xxs);
-  left: var(--space-xxs);
-}
-.promo-bg-accent {
-  background-color: var(--color-green-accent);
-}
-.favorite-icon {
-  width: 1.5rem;
-  position: absolute;
-  top: var(--space-xxs);
-  right: var(--space-xxs);
-}
-.product-text {
-  text-decoration: none;
-  padding-top: var(--space-xs);
-}
-.product-brand {
-  font-size: 0.875rem;
-  margin-bottom: var(--space-xxs);
-}
-.product-name {
-  color: var(--color-green-dark);
-}
-.product-price {
-  color: var(--color-green-dark);
-  margin-bottom: 0;
-}
+
 @media (min-width: 768px) {
   .product-wrapper {
     grid-template-columns: repeat(3, 1fr);
-  }
-  .promo-label {
-    top: var(--space-xs);
-    left: var(--space-xs);
-  }
-  .favorite-icon {
-    top: var(--space-xs);
-    right: var(--space-xs);
   }
 }
 @media (min-width: 1024px) {
@@ -405,68 +339,56 @@ img {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-/* ---------- FOOTER GOLFSHOP ---------- */
-.shop-footer-wrapper {
-  padding-top: var(--space-xl);
-  padding-bottom: var(--space-md);
-}
-.shop-foot-nav-wrapper {
-  display: grid; /* Grid aktiverad från start */
-  grid-template-columns: 1fr;
-  gap: var(--space-md); /* Mellanrum mellan sektioner */
-  margin-bottom: var(--space-md);
-}
-.shop-logo-wordmark {
-  width: 100px;
-  margin-bottom: var(--space-md);
-}
-.shop-foot-logo-wrapper a {
-  color: var(--color-text-white);
-}
-.shop-footer-wrapper .overline {
-  margin-bottom: var(--space-xxs);
-}
-.shop-foot-nav-item a,
-.shop-foot-nav-item p {
-  margin-bottom: var(--space-xxs);
-  font-style: normal;
-}
-.shop-foot-nav-item li {
-  list-style: none;
-}
-.shop-foot-nav-item a {
-  display: block;
+
+.product-card a {
   text-decoration: none;
-  color: var(--color-text-white);
+  color: inherit;
+  cursor: pointer;
 }
-.shop-foot-nav-item a:hover {
-  text-decoration: underline;
+
+.product-card:hover .product-image {
+  /* Zooma in bilden med 5% */
+  transform: scale(1.05);
 }
-.shop-byline-wrapper {
-  border-top: 0.5px solid var(--color-beige-light);
+
+.product-image-container {
+  background-color: var(--color-beige-light);
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  overflow: hidden;
+  position: relative;
 }
-.shop-byline-wrapper p {
-  font-size: 0.75rem;
-  padding-top: var(--space-sm);
+
+.product-image {
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
 }
-/* Tablet */
-@media (min-width: 768px) {
-  .shop-foot-nav-wrapper {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .shop-foot-logo-wrapper {
-    grid-column: span 3;
-    padding-right: var(--space-sm);
-  }
+
+.favorite-icon {
+  width: 1.5rem;
+  position: absolute;
+  top: var(--space-xxs);
+  right: var(--space-xxs);
 }
-/* Desktop */
-@media (min-width: 1200px) {
-  .shop-foot-nav-wrapper {
-    grid-template-columns: repeat(5, 1fr);
-  }
-  .shop-foot-logo-wrapper {
-    grid-column: span 2;
-  }
+
+.product-text {
+  text-decoration: none;
+  padding-top: var(--space-xs);
+}
+
+.product-brand {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: var(--space-xxs);
+}
+
+.product-name {
+  color: var(--color-green-dark);
+}
+
+.product-price {
+  color: var(--color-green-dark);
+  margin-bottom: 0;
 }
 
 
@@ -487,7 +409,7 @@ img {
 .hero {
     background: #cfe8ef;
     text-align: center;
-    padding: 3rem; /* justera storleken på hero-bilden */
+    padding: 300px ; /* justera storleken på hero-bilden */
     background-image: url('../images/golfshop/hero-golfshop.jpg');
     margin-top: 140px;
     border-radius: 12px;
