@@ -328,76 +328,10 @@ img {
   gap: var(--space-xxs);
   row-gap: var(--space-md);
 }
-.product-card a {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-}
-.product-card:hover .product-image {
-  /* Zooma in bilden med 5% */
-  transform: scale(1.05);
-}
-.product-image-container {
-  background-color: var(--color-beige-light);
-  aspect-ratio: 3/4;
-  overflow: hidden;
-  position: relative;
-}
-.product-image {
-  height: 100%;
-  object-fit: contain;
-  object-position: center center; /* centrerar bilden både horisontellt och vertikalt */
-  transition: transform 0.3s ease-in-out;
-}
-.image-overflow {
-  object-fit: cover;
-}
-.promo-label {
-  background-color: var(--color-green-mid);
-  color: var(--color-green-dark);
-  /* padding: 0.25rem var(--space-xxs); */
-  padding: 0.125rem 0.375rem;
-  border-radius: 2px;
-  font-size: 0.625rem;
-  position: absolute;
-  top: var(--space-xxs);
-  left: var(--space-xxs);
-}
-.promo-bg-accent {
-  background-color: var(--color-green-accent);
-}
-.favorite-icon {
-  width: 1.5rem;
-  position: absolute;
-  top: var(--space-xxs);
-  right: var(--space-xxs);
-}
-.product-text {
-  text-decoration: none;
-  padding-top: var(--space-xs);
-}
-.product-brand {
-  font-size: 0.875rem;
-  margin-bottom: var(--space-xxs);
-}
-.product-name {
-  color: var(--color-green-dark);
-}
-.product-price {
-  color: var(--color-green-dark);
-  margin-bottom: 0;
-}
+
 @media (min-width: 768px) {
   .product-wrapper {
     grid-template-columns: repeat(3, 1fr);
-  }
-  .promo-label {
-    top: var(--space-xs);
-    left: var(--space-xs);
-  }
-  .favorite-icon {
-    top: var(--space-xs);
-    right: var(--space-xs);
   }
 }
 @media (min-width: 1024px) {
@@ -405,203 +339,54 @@ img {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-/* ---------- FOOTER GOLFSHOP ---------- */
-.shop-footer-wrapper {
-  padding-top: var(--space-xl);
-  padding-bottom: var(--space-md);
-}
-.shop-foot-nav-wrapper {
-  display: grid; /* Grid aktiverad från start */
-  grid-template-columns: 1fr;
-  gap: var(--space-md); /* Mellanrum mellan sektioner */
-  margin-bottom: var(--space-md);
-}
-.shop-logo-wordmark {
-  width: 100px;
-  margin-bottom: var(--space-md);
-}
-.shop-foot-logo-wrapper a {
-  color: var(--color-text-white);
-}
-.shop-footer-wrapper .overline {
-  margin-bottom: var(--space-xxs);
-}
-.shop-foot-nav-item a,
-.shop-foot-nav-item p {
-  margin-bottom: var(--space-xxs);
-  font-style: normal;
-}
-.shop-foot-nav-item li {
-  list-style: none;
-}
-.shop-foot-nav-item a {
-  display: block;
+
+.product-card a {
   text-decoration: none;
-  color: var(--color-text-white);
-}
-.shop-foot-nav-item a:hover {
-  text-decoration: underline;
-}
-.shop-byline-wrapper {
-  border-top: 0.5px solid var(--color-beige-light);
-}
-.shop-byline-wrapper p {
-  font-size: 0.75rem;
-  padding-top: var(--space-sm);
-}
-/* Tablet */
-@media (min-width: 768px) {
-  .shop-foot-nav-wrapper {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .shop-foot-logo-wrapper {
-    grid-column: span 3;
-    padding-right: var(--space-sm);
-  }
-}
-/* Desktop */
-@media (min-width: 1200px) {
-  .shop-foot-nav-wrapper {
-    grid-template-columns: repeat(5, 1fr);
-  }
-  .shop-foot-logo-wrapper {
-    grid-column: span 2;
-  }
+  color: inherit;
+  cursor: pointer;
 }
 
-
-
-
-/*---- endast hero, rea och medlemssektioner ----*/
-.hero, .rea-section, .member-section {
-  max-width: 1200px;
-  margin: 4rem auto;
-  padding: 0% 1rem;     /* luft på sidorna */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
+.product-card:hover .product-image {
+  /* Zooma in bilden med 5% */
+  transform: scale(1.05);
 }
 
-/* HERO section */
-.hero {
-    background: #cfe8ef;
-    text-align: center;
-    padding: 3rem; /* justera storleken på hero-bilden */
-    background-image: url('../images/golfshop/hero-golfshop.jpg');
-    margin-top: 140px;
-    border-radius: 12px;
-    width: 100%;
-    
-}
-
-.hero h1 {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 16px;
-    margin-bottom: 25px;
-}
-
-.hero-btn {
-    background: #2f8f53;
-    color: white;
-    padding: 12px 28px;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 15px;
-}
-
-/* REA SECTION */
-.rea-section {
-    margin: 80px auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-    padding:  20px;
-}
-
-.rea-image img {
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    object-fit: cover;
-}
-
-.rea-box {
-    background: #f3f1e7;
-    padding: 50px 40px;
-    border-radius: 12px;
-}
-
-.rea-box h2 {
-    font-size: 28px;
-    margin-bottom: 12px;
-}
-
-.green-btn {
-    background: #2f8f53;
-    color: white;
-    padding: 12px 26px;
-    border-radius: 30px;
-    border: none;
-    margin-top: 20px;
-    cursor: pointer;
-    display: inline-block;
-}
-
-.outline-btn {
-    background: transparent;
-    border: 2px solid #2f8f53;
-    color: #2f8f53;
-    padding: 12px 26px;
-    border-radius: 30px;
-    margin-top: 15px;
-    cursor: pointer;
-}
-
-/* MEMBER SECTION */
-.member-section {
-    display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  background: var(--color-green-light, #f5fff7);
-  border-radius: 1rem;
+.product-image-container {
+  background-color: var(--color-beige-light);
+  aspect-ratio: 3/4;
+  object-fit: cover;
   overflow: hidden;
-  padding: 2rem;
-  gap: 2rem;
-}
-.member-img img {
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    object-fit: cover;
+  position: relative;
 }
 
-.member-text h3 {
-    font-size: 1.8rem;
-    line-height: 1.4;
-    margin-bottom: 18px;
+.product-image {
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
 }
 
-.member-text p {
-    margin-bottom: 20px;
+.favorite-icon {
+  width: 1.5rem;
+  position: absolute;
+  top: var(--space-xxs);
+  right: var(--space-xxs);
 }
 
-/* ✅ RESPONSIVE (MOBILE) */
-@media(max-width: 768px) {
+.product-text {
+  text-decoration: none;
+  padding-top: var(--space-xs);
+}
 
-    .rea-section,
-    .member-section {
-        grid-template-columns: 1fr;
-    }
+.product-brand {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: var(--space-xxs);
+}
 
-    .hero {
-        margin-top: 60px;
-        padding: 80px 20px;
-    }
+.product-name {
+  color: var(--color-green-dark);
+}
+
+.product-price {
+  color: var(--color-green-dark);
+  margin-bottom: 0;
 }
