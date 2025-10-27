@@ -19,6 +19,7 @@ img {
 /* Bakgrundsfärg på navigering i mobil */
 .header-start .menu-wrapper {
   background-color: var(--color-green-light);
+  border-top: none;
 }
 /* Tar bort bakgrundsfärg */
 @media (min-width: 1024px) {
