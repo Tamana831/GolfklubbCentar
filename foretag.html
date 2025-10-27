@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="sv">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Företag</title>
     <!-- variables.css och base.css måste ligga överst då vi vill att den ska läsas in först -->
-    <link rel="stylesheet" href="styles/variables.css" />
-    <link rel="stylesheet" href="styles/base.css" />
-    <link rel="stylesheet" href="styles/foretag.css" />
+    <link rel="stylesheet" href="styles/variables.css"/>
+    <link rel="stylesheet" href="styles/base.css"/>
+    <link rel="stylesheet" href="styles/foretag.css"/>
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/designelement/centar_favicon_c.png"/>
   </head>
   <body>
-    <header>
-      <!-- Nedan div för att sätta färg hela vägen ut -->
-      <div class="bg-green-mid">
-        <!-- Nedan div för att sätta maxbredd på sidan -->
-        <div class="container">
-          <nav class="container main-nav-wrapper">
+    <header class="bg-green-mid header-start">
+      <nav class="container main-nav-wrapper">
         <a href="index.html"
           ><img
             src="images/centar_logotype_primary_dark.svg"
@@ -25,15 +25,14 @@
         <input type="checkbox" id="menu-toggle" />
         <label for="menu-toggle" class="menu-button-container">
           <span class="menu-button"></span>
-          <!--inline-->
         </label>
         <div class="menu-wrapper">
           <ul>
             <li><a href="spelagolf.html">Spela Golf</a></li>
-            <li><a href="medlem.html">Medlem</a></li>
+            <li><a href="Medlem.html">Medlem</a></li>
             <li><a href="klubben.html">Klubben</a></li>
             <li><a href="tavling.html">Tävlingar</a></li>
-            <li><a href="foretag.html">Företag</a></li>
+            <li><a href="foretag.html" class="current">Företag</a></li>
             <li><a href="restaurang.html">Restaurang</a></li>
             <li><a href="golfshop.html">Golfshop</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
@@ -41,22 +40,20 @@
           <a href="loggain.html" class="button btn-primary-outline">Logga in</a>
         </div>
       </nav>
-        </div>
-      </div>
     </header>
     <main>
       <section class="container sponsorer-section">
         <div class="our-sponsors">
-          <h2 class="text-lg text-center top-header">Våra Sponsorer</h2>
+          <h1 class="text-lg text-center top-header">Våra Sponsorer</h1>
           <div class="upper-div">
-            <div class="sponsor-img"><a href="#"><img src="https://placehold.co/300" alt="sponsorbild1"></a></div>
-            <div class="sponsor-img"><a href="#"><img src="https://placehold.co/300" alt="sponsorbild2"></a></div>
+            <div class="sponsor-img-upper"><a href="#"><img src="https://placehold.co/300" alt="sponsorbild1"></a></div>
+            <div class="sponsor-img-upper"><a href="#"><img src="https://placehold.co/300" alt="sponsorbild2"></a></div>
           </div>
           <div class="lower-div">
-            <div class="sponsor-img"><a href="#"><img src="https://placehold.co/200" alt="sponsorbild3"></a></div>
-            <div class="sponsor-img"><a href="#"><img src="https://placehold.co/200" alt="sponsorbild4"></a></div>
-            <div class="sponsor-img"><a href="#"><img src="https://placehold.co/200" alt="sponsorbild5"></a></div>
-            <div class="sponsor-img"><a href="#"><img src="https://placehold.co/200" alt="sponsorbild6"></a></div>
+            <div class="sponsor-img-lower"><a href="#"><img src="https://placehold.co/200" alt="sponsorbild3"></a></div>
+            <div class="sponsor-img-lower"><a href="#"><img src="https://placehold.co/200" alt="sponsorbild4"></a></div>
+            <div class="sponsor-img-lower"><a href="#"><img src="https://placehold.co/200" alt="sponsorbild5"></a></div>
+            <div class="sponsor-img-lower"><a href="#"><img src="https://placehold.co/200" alt="sponsorbild6"></a></div>
           </div>
         </div>
       </section>
@@ -105,7 +102,7 @@
       <div class="container text-white footer-wrapper">
         <nav class="foot-nav-wrapper body-sm">
           <div class="foot-nav-item foot-logo-wrapper">
-            <a href="#"
+            <a href="index.html"
               ><img
                 src="/images/centar_logo_wordmark_neg.svg"
                 alt="Centar logotype negative"
@@ -115,9 +112,9 @@
           <section class="foot-nav-item">
             <h5 class="overline">Navigera</h5>
             <ul>
-              <li><a href="#">Om klubben</a></li>
-              <li><a href="#">Banan</a></li>
-              <li><a href="#">Företag & Partners</a></li>
+              <li><a href="klubben.html">Om klubben</a></li>
+              <li><a href="spelagolf.html">Banan</a></li>
+              <li><a href="foretag.html">Företag & Partners</a></li>
               <li><a href="#">Träna Golf</a></li>
               <li><a href="#">Gäst</a></li>
             </ul>
@@ -145,8 +142,8 @@
         <div class="byline-wrapper text-center">
           <p>
             &copy; 2025 | Designad och utvecklad av Emma Golander, Josefin
-            Holgersson, Tim Hugdahl, Tamana Mohammadi  | webd25jon TUC | HTML
-            och CSS med agila utvecklingsmetoder
+            Holgersson, Tim Hugdahl, Peyman Khateri, Tamana Mohammadi  |
+            webd25jon TUC | HTML och CSS med agila utvecklingsmetoder
           </p>
         </div>
       </div>
