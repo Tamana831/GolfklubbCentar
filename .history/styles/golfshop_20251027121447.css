@@ -409,8 +409,7 @@ img {
 .hero {
     background: #cfe8ef;
     text-align: center;
-    padding: 3rem; /* justera storleken på hero-bilden */
-    background-image: url('../images/golfshop/hero-golfshop.jpg');
+    padding: 120px 20px;
     margin-top: 140px;
     border-radius: 12px;
     width: 100%;
@@ -505,7 +504,7 @@ img {
 }
 
 .member-text h3 {
-    font-size: 1.8rem;
+    font-size: 26px;
     line-height: 1.4;
     margin-bottom: 18px;
 }

@@ -394,27 +394,30 @@ img {
 
 
 
-/*---- endast hero, rea och medlemssektioner ----*/
-.hero, .rea-section, .member-section {
-  max-width: 1200px;
-  margin: 4rem auto;
-  padding: 0% 1rem;     /* luft på sidorna */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
 }
 
-/* HERO section */
+body {
+    background: #ffffff;
+    color: #222;
+    padding-top: 60px;
+}
+
+/* HERO */
 .hero {
     background: #cfe8ef;
     text-align: center;
-    padding: 3rem; /* justera storleken på hero-bilden */
-    background-image: url('../images/golfshop/hero-golfshop.jpg');
+    padding: 120px 20px;
     margin-top: 140px;
     border-radius: 12px;
+    max-width: 1200px;
     width: 100%;
-    
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero h1 {
@@ -440,11 +443,12 @@ img {
 
 /* REA SECTION */
 .rea-section {
+    max-width: 1200px;
     margin: 80px auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 25px;
-    padding:  20px;
+    padding: 0 20px;
 }
 
 .rea-image img {
@@ -488,15 +492,16 @@ img {
 
 /* MEMBER SECTION */
 .member-section {
+    max-width: 1200px;
+    margin: 80px auto 120px;
     display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  background: var(--color-green-light, #f5fff7);
-  border-radius: 1rem;
-  overflow: hidden;
-  padding: 2rem;
-  gap: 2rem;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    background: #cfe8ef;
+    border-radius: 12px;
+    padding: 50px;
 }
+
 .member-img img {
     width: 100%;
     height: 100%;
@@ -505,9 +510,8 @@ img {
 }
 
 .member-text h3 {
-    font-size: 1.8rem;
-    line-height: 1.4;
-    margin-bottom: 18px;
+    font-size: 24px;
+    margin-bottom: 12px;
 }
 
 .member-text p {
