@@ -7,7 +7,7 @@
     <!-- variables.css och base.css måste ligga överst då vi vill att den ska läsas in först -->
     <link rel="stylesheet" href="styles/variables.css" />
     <link rel="stylesheet" href="styles/base.css" />
-    <link rel="stylesheet" href="styles/loggain.css" />
+    <link rel="stylesheet" href="styles/produktkategori.css" />
     <link
       rel="icon"
       type="image/png"
@@ -46,41 +46,20 @@
       <!-- Här sätter jag en klass som sätter bakgrundsfärg på hela section. Detta element tar upp hela sidans bredd, dvs bakgrundsfärgen går hela vägen ut. -->
       <section class="bg-blue-light">
         <!-- Klassen container styr innehållets maxbredd -->
-        <div class="container" id="main-container">
-          <form action="/action_page.php" id="inloggform">
-            <h1>Logga in</h1>
-            <p>Ange ditt Golf-ID och lösenord nedan.</p><br>
-              <div id="inloggruta">
-                <label for="golf-id">Golf-ID</label><br>
-                <input type="text" id="golf-id" class="input-field" name="golf-id" placeholder="******-****"><br><br>
-                <label for="password">Lösenord</label><br>
-                <input type="password" id="password" class="input-field" name="password" placeholder="Ditt lösenord här"><br><br>
-                <button type="submit" class="btn-cta button" id="loginbtn">Logga In</button>
-              </div>
-              <div id="password-reset">
-                <p>Glömt ditt lösenord? Klicka <a href="#">här</a> för att återställa.</p>
-              </div>  
-          </form>
+        <div class="container">
+            <div class="produktkategori-parent">
+                <div class="produktkategori">
+                    <button class="btn-cta button">Säsongens golfskor</button>
+                </div>
+                <div class="produktkategori">
+                    <button class="btn-cta button">Säsongens golfskor</button>
+                </div>
+                <div class="produktkategori">
+                    <button class="btn-cta button">Säsongens golfskor</button>
+                </div>
+            </div>    
         </div>
       </section>
-      <!-- bli medlem -->
-        <section class="container">
-
-          <div class="blimedlem_card">
-            <div class="blimedlem_media">
-              <img src="/images/klubben-bli-medlem.jpg"
-                alt="Golfare som slår ut på fairway"
-                class="blimedlem_img">
-            </div>
-
-            <div class="blimedlem_content">
-              <p class="overline">Bli medlem?</p>
-              <h2 class="blimedlem_title">Allt du behöver veta</h2>
-              <p class="body">Här hittar du allt du behöver veta om våra medlemskap. Upptäck förmåner, evenemang och exklusiva erbjudanden – oavsett om du är nybörjare eller proffs på banan.</p>
-              <a href="#" class="button btn-primary blimedlem_cta">Se våra medlemskap</a>
-            </div>
-          </div>
-        </section>
     </main>
     <footer class="bg-green-dark">
       <div class="container text-white footer-wrapper">
