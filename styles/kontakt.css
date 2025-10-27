@@ -8,11 +8,22 @@
   margin: 60px auto;
   border: 2px solid #fff;
   border-radius: 12px;
+  background: #fff; /* bakgrundsfärg för hela kontaktboxen */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   background: #fff;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   overflow: hidden;
   padding: 24px;
   flex-wrap: wrap;
+
+.background {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: transparent;
+  background-color: #C8E0E8;
 
  
   background: #fff; /* bakgrundsfärg för hela kontaktboxen */
@@ -21,13 +32,13 @@
   padding: 24px;
   flex-wrap: nowrap;
   overflow: hidden;
-
 }
 
 .contact-card {
   flex: 1;
   min-width: 260px;
   text-align: center;
+  background: #fff; /* färg för varje liten box */
 
   background: #fff;
   border-radius: 12px;
@@ -39,14 +50,15 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   transition: transform 0.2s ease;
 
+
   flex: 1;
-  padding: 12px;
   transition: 0.2s ease;
 
 
   background: #fff; /* färg för varje liten box */
 
-  background: #fff; /* färg för varje liten box */
+
+ 
 
 }
 
@@ -67,6 +79,14 @@
 }
 
 /*--- FORMULÄR ---*/
+
+/* Responsiv design – staplas på mobil */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+/* --- FORMULÄR --- */
 .contact-container {
   max-width: 700px;
   margin: 60px auto;
@@ -152,7 +172,7 @@
   text-decoration: none;
 }
 
- 
+ }
 /* --- RESPONSIVT --- */
 @media (max-width: 768px) {
   .contact-wrapper {
