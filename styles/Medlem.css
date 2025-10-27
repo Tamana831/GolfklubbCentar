@@ -1,207 +1,232 @@
-/* ---- Sektion Bakgrund + Centrering ---- */
-.memberships {
-  background: var(--color-blue-light);
-  padding: 4rem 0;
+/* styles.css */
+:root{
+  --green-100: #eaf3e9;
+  --green-200: #cfe6cf;
+  --green-500: #91b67f;
+  --accent: #4a7a53;
+  --muted: #6b6b6b;
+  --card-bg: #ffffff;
+  --radius: 12px;
+  --container-max: 1100px;
+  font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
-.page-header,
-.subtitle {
-  text-align: center;
-  text-wrap: none;
-  margin-bottom: 3rem;
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  color:#222;
+  background: linear-gradient(180deg, #f7fbfb 0%, #f0f6f3 100%);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
 }
 
-.subtitle {
-  font-size: 1.1rem;
-  color: var(--color-green-dark);
+/* container */
+.container{
+  width:90%;
+  max-width:var(--container-max);
+  margin:0 auto;
 }
 
-/* ---- GRID ---- */
-.cards-grid {
-  display: grid;
-  gap: 2rem;
-  margin-bottom: 3rem;
+/* Hero */
+.hero{
+  padding:30px 0 10px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.85), rgba(248,252,249,0.9));
+}
+.page-title{
+  margin:0 0 6px;
+  font-size:36px;
+  text-align:center;
+  font-weight:500;
+}
+.subtitle{
+  text-align:center;
+  color:var(--muted);
+  margin-top:6px;
 }
 
-.cards-grid-top {
+/* Memberships */
+.memberships{
+  padding:30px 0;
+  background:var(--green-100);
+}
+.cards-grid{
+  display:grid;
+  gap:18px;
+  margin:14px 0;
+}
+.cards-grid-top{
   grid-template-columns: repeat(3, 1fr);
 }
-
-.cards-grid-bottom {
+.cards-grid-bottom{
   grid-template-columns: repeat(4, 1fr);
 }
 
-@media (max-width: 900px) {
-  .cards-grid-top { grid-template-columns: 1fr; }
-  .cards-grid-bottom { grid-template-columns: 1fr; }
+/* Card */
+.card{
+  background:var(--card-bg);
+  border-radius:var(--radius);
+  padding:18px;
+  box-shadow: 0 6px 18px rgba(20,20,20,0.05);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+.card h3, .card h4{
+  margin:0 0 8px;
+  font-size:18px;
+}
+.card .card-text{
+  color:var(--muted);
+  font-size:14px;
+  margin-bottom:12px;
+}
+.price{
+  font-weight:700;
+  color:var(--accent);
+  font-size:16px;
 }
 
-/* ---- CARD DESIGN ---- */
-.card {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 14px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-  text-align: center;
+/* small cards slightly different padding */
+.card.small{padding:14px}
+
+/* CTA center */
+.center-cta{
+  display:flex;
+  justify-content:center;
+  margin-top:18px;
+}
+.btn-outline{
+  display:inline-block;
+  padding:10px 18px;
+  border-radius:999px;
+  border:2px solid var(--accent);
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:600;
 }
 
-.card h3,
-.card h4 {
-  margin-bottom: .5rem;
+/* Benefits (bilder + text) */
+.benefits{
+  padding:36px 0 80px;
+}
+.benefits-inner{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:28px;
+  align-items:center;
+  background:transparent;
+}
+.image-wrap img{
+  width:100%;
+  height:auto;
+  border-radius:16px;
+  display:block;
+  box-shadow: 0 10px 30px rgba(10,10,10,0.06);
+}
+.benefits-text h2{
+  margin-top:0;
+  font-size:26px;
+}
+.benefits-text ul{
+  padding-left:18px;
+  color:var(--muted);
+  margin-top:12px;
+}
+.benefits-text li{
+  margin-bottom:10px;
 }
 
-.card-text {
-  font-size: .95rem;
-  margin-bottom: 1.5rem;
-  color: #444;
-}
-
-.price {
-  font-weight: 700;
-  font-size: 1.4rem;
-  color: var(--color-green-dark);
-}
-
-/* ---- CTA KNAPP ---- */
-.center-cta {
-  text-align: center;
-}
-
-.center-cta .btn-outline {
-  display: inline-block;
-  padding: .8rem 2rem;
-  border: 2px solid var(--color-green-dark);
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 600;
-  color: var(--color-green-dark);
-}
-.center-cta .btn-outline:hover {
-  background: var(--color-green-dark);
-  color: white;
-}
-
-/* ====== MEDLEMSFÖRMÅNER ====== */
-.membership-benefits {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  padding: 60px 20px;
-  flex-wrap: wrap; /* gör att den hoppar under på mobil */
-}
-
-.membership-benefits img {
-  width: 40%;
-  max-width: 380px;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-.membership-benefits .container {
-  width: 50%;
-  min-width: 300px;
-}
-
-@media (max-width: 768px) {
-  .membership-benefits {
-    flex-direction: column;
-  }
-
-  .membership-benefits img,
-  .membership-benefits .container {
-    width: 100%;
-  }
-}
+/* -- Medlemsansökan box -- */
 .membership-apply {
+  background: #C8E0E8;
   padding: 60px 20px;
+  display: flex;
+  justify-content: center;
 }
 
-.apply-grid {
-  display: grid;
-  grid-template-columns: 1fr 0.8fr;
-  gap: 3rem;
-  align-items: center;
+.apply-box {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
 }
 
-.apply-form h2 {
-  margin-bottom: 0.4rem;
-  color: var(--color-green-dark);
+.apply-box h2 {
+  color: #1f2b28;
+  margin-bottom: 10px;
 }
 
-.apply-form p {
-  margin-bottom: 1.4rem;
+.apply-box p {
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.apply-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+}
+
+.apply-form label {
+  font-weight: 500;
+  font-size: 0.95rem;
   color: #333;
+}
+
+
+.apply-form input,
+.apply-form select {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
   font-size: 0.95rem;
 }
 
-.membership-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.membership-form label {
-  font-weight: 600;
-  margin-bottom: 0.3rem;
-  color: var(--color-green-dark);
-}
-
-.membership-form input,
-.membership-form select {
-  padding: 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 1rem;
-  outline: none;
-  transition: 0.2s;
-}
-
-.membership-form input:focus,
-.membership-form select:focus {
-  border-color: var(--color-green-dark);
-}
-
-.radio-group {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.btn-submit {
-  background: var(--color-green-dark);
-  color: #ECF6E9;
-  padding: 0.9rem 1.6rem;
+.apply-form button {
+  margin-top: 10px;
+  background: #4a7a53;
+  color: white;
   border: none;
   border-radius: 999px;
-  cursor: pointer;
+  padding: 12px 20px;
+  font-size: 1rem;
   font-weight: 600;
-  transition: 0.3s;
-  width: fit-content;
+  cursor: pointer;
+  transition: background 0.25s ease;
 }
 
-.btn-submit:hover {
-  background: #1a4b3a;
+.apply-form button:hover {
+  background: #3d6848;
 }
 
-.apply-image-side img {
-  width: 100%;
-  border-radius: 12px;
-  object-fit: cover;
+/* Footer */
+.site-footer{
+  padding:20px 0;
+  border-top:1px solid rgba(0,0,0,0.04);
+  background:transparent;
+}
+.footer-inner{display:flex;justify-content:center;color:var(--muted);font-size:14px}
+
+/* Responsive */
+@media (max-width: 992px){
+  .cards-grid-top{grid-template-columns: repeat(2, 1fr);}
+  .cards-grid-bottom{grid-template-columns: repeat(2, 1fr);}
+  .benefits-inner{grid-template-columns:1fr;}
+  .page-title{font-size:30px}
 }
 
-/* Mobil */
-@media (max-width: 768px) {
-  .apply-grid {
-    grid-template-columns: 1fr;
-  }
+@media (max-width: 640px){
+  .main-nav{display:none}
+  .header-inner{padding:0 4px}
+  .cards-grid-top{grid-template-columns:1fr;}
+  .cards-grid-bottom{grid-template-columns:1fr;}
+  .page-title{font-size:24px}
+  .hero{padding:26px 0}
+  .logo-mark{width:40px;height:40px}
+  .benefits{padding:20px 0}
 
-  .apply-image-side img {
-    width: 100%;
-  }
 }

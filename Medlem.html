@@ -1,31 +1,30 @@
+
 <!DOCTYPE html>
- <html lang="sv">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Medlem</title>
-    <!-- variables.css och base.css måste ligga överst då vi vill att den ska läsas in först -->
+    <title>Medlemskap – Centar GK</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/variables.css" />
     <link rel="stylesheet" href="styles/base.css" />
-    <link rel="stylesheet" href="styles/medlem.css" />
+    <link rel="stylesheet" href="styles/medlem.css" /
   </head>
+
   <body>
-    <!-- Sätter färg hela vägen ut -->
+    <!-- HEADER -->
     <header class="bg-green-mid">
-      <!-- Nedan div för att sätta maxbredd på sidan -->
       <nav class="container main-nav-wrapper">
         <a href="#">
-        <img
-            src="images/centar_logotype_primary_dark.svg"
-            alt="Centar logotype"
-            class="logotype"
-          />
+          <img src="images/centar_logotype_primary_dark.svg" alt="Centar logotype" class="logotype" />
         </a>
+
         <input type="checkbox" id="menu-toggle" />
         <label for="menu-toggle" class="menu-button-container">
           <span class="menu-button"></span>
-          <!--inline-->
         </label>
+
         <div class="menu-wrapper">
             <ul>
             <li><a href="spelagolf.html">Spela Golf</a></li>
@@ -37,10 +36,11 @@
             <li><a href="golfshop.html">Golfshop</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
           </ul>
-          <a href="#" class="button btn-primary-outline">Logga in</a>
+          <a href="loggain.html" class="button btn-primary-outline">Logga in</a>
         </div>
       </nav>
     </header>
+
     
   <!-- RUBRIK -->
     <section class="container">
@@ -50,9 +50,11 @@
     </section>
 
     <!-- MEDLEMSKORT -->
-   
+    <section class="container">
+        
+        <p class="subtitle">Bli medlem — flera olika medlemskap och förmåner för 2025</p>
+      </section>
     <section class="memberships">
-    <p class="subtitle">Bli medlem — flera olika medlemskap och förmåner för 2025</p>
       <div class="container">
         <div class="cards-grid cards-grid-top">
           <article class="card">
@@ -105,84 +107,59 @@
           <a class="btn-outline" href="#">Se medlemsvillkor och priser för alla medlemskap</a>
         </div>
       </div>
-    </section> 
-<!--- medlemsförmåner -->
-<div class="membership-benefits bg-beige-light">
-  <div class="container benefits-flex">
-    <img src="images/pexels-mikhail-nilov-9207176.jpg" alt="Golf klubba ikon">
-    <div class="benefits-text">
-      <h2>Som medlem i Centar GK får du</h2>
-      <ul>
-        <li>Ett Range-kort som laddat med 1000kr/år </li>
-        <li>var tionde lunch gratis i vår restaurang</li>
-        <li>15% rabatt på privatlektioner med vår pro</li>
-        <li>Månadsbrev med Nyheter och Erbjudanden</li>
-      </ul>
-    </div>
-  </div>
-</div>
+    </section>
+   <!-- Medlemsansökan -->
 <section class="membership-apply">
-  <div class="apply-grid">
+  <div class="apply-box">
+    <h2>Bli medlem idag</h2>
+    <p>Fyll i dina uppgifter så kontaktar vi dig med mer information om medlemskap.</p>
+    
+    <form class="apply-form">
+      <label for="name">Namn*</label>
+      <input type="text" id="name" placeholder="Ditt namn" required>
 
-    <!-- FORMULÄR -->
-    <div class="apply-form">
-      <h2>Medlemsansökan</h2>
-      <p>Här kan du fylla i din medlemsansökan. Vi återkommer så snart ditt medlemskap är upprättat.</p>
+      <label for="email">E-post*</label>
+      <input type="email" id="email" placeholder="namn@exempel.se" required>
 
-      <form class="membership-form">
-        <div class="form-group">
-          <label for="name">Fullständigt namn*</label>
-          <input type="text" id="name" placeholder="Ditt namn" required>
-        </div>
+      <label for="phone">Telefonnummer</label>
+      <input type="tel" id="phone" placeholder="070-123 45 67">
 
-        <div class="form-group">
-          <label for="golf-id">Golf-ID*</label>
-          <input type="text" id="golf-id" placeholder="Ditt Golf-ID" required>
-        </div>
+      <label for="membership">Välj medlemskap</label>
+      <select id="membership">
+        <option value="">Välj...</option>
+        <option value="guld">Guld</option>
+        <option value="silver">Silver</option>
+        <option value="senior">Senior</option>
+        <option value="junior">Junior</option>
+        <option value="student">Student</option>
+      </select>
 
-        <div class="form-group">
-          <label for="email">E-post*</label>
-          <input type="email" id="email" placeholder="namn@exempel.se" required>
-        </div>
-
-        <div class="form-group">
-          <label for="phone">Mobiltelefon</label>
-          <input type="tel" id="phone" placeholder="070-123 45 67">
-        </div>
-
-        <div class="form-group">
-          <label for="membership">Medlemsform*</label>
-          <select id="membership" required>
-            <option value="">Välj...</option>
-            <option value="guld">Guld</option>
-            <option value="silver">Silver</option>
-            <option value="senior">Senior</option>
-            <option value="junior">Junior</option>
-            <option value="student">Student</option>
-          </select>
-        </div>
-
-        <label>Vill du ha Centar GK som hemmaklubb?</label>
-        <div class="radio-group">
-          <label><input type="radio" name="homeclub" value="ja"> Ja</label>
-          <label><input type="radio" name="homeclub" value="nej"> Nej</label>
-          <label><input type="radio" name="homeclub" value="vetint"> Vet ej</label>
-        </div>
-
-        <button type="submit" class="btn-submit">Skicka iväg ansökan</button>
-      </form>
-    </div>
-
-    <!-- BILD -->
-    <div class="apply-image-side">
-      <img src="images/pexels-jopwell-1325751.jpg" alt="Golfspelare">
-    </div>
-
+      <button type="submit">Skicka ansökan</button>
+    </form>
   </div>
-</section>
+</section> 
+ <!-- Image + benefits -->
+    <section class="benefits">
+      <div class="container benefits-inner">
+        <div class="image-wrap">
+          <!-- ersätt sökvägen med din bild -->
+          <img src="assets/golf.jpg" alt="Golf green with ball">
+        </div>
 
-<!-- FOOTER -->
-    <footer class="bg-green-dark">
+        <div class="benefits-text">
+          <h2>Som medlem i Centar GK får du</h2>
+          <ul>
+            <li>Fri Rangekort i klubben (enligt medlemsvillkor)</li>
+            <li>Vår årliga klubbträff och medlemsrabatter</li>
+            <li>10% rabatt på privatlektioner med våra pro</li>
+            <li>Förmånsrätt vid tävlingar och klubbaktiviteter</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+<!-- Footer -->
+ <footer class="bg-green-dark">
       <div class="container text-white footer-wrapper">
         <nav class="foot-nav-wrapper body-sm">
           <div class="foot-nav-item foot-logo-wrapper">
@@ -194,6 +171,7 @@
             /></a>
           </div>
           <section class="foot-nav-item">
+
             <h5 class="overline">Navigera</h5>
             <ul>
               <li><a href="#">Om klubben</a></li>
@@ -204,17 +182,22 @@
             </ul>
           </section>
           <section class="foot-nav-item">
+          <section class="nav-item">
+
             <h5 class="overline">Öppettider</h5>
             <p>Måndag – Lördag: 7.30-17.00</p>
             <p>Söndag: 7.30–16.00</p>
           </section>
           <section class="foot-nav-item">
+          <section class="nav">
             <h5 class="overline">Kontakt</h5>
             <a href="mailto:centar@info.se">info@centargolfklubb.se</a>
             <a href="tel:+123456789">012-345 678</a>
-            <address>Bergkvarn<br/>700 88 Örebro</address>
+            <address>Bergkvarn<br />700 88 Örebro</address>
           </section>
           <section class="foot-nav-item">
+          <section class="nav-item">
+
             <h5 class="overline">Följ oss</h5>
             <ul>
               <li><a href="#">Instagram</a></li>
@@ -224,14 +207,19 @@
           </section>
         </nav>
         <div class="byline-wrapper text-center">
+        <div class="byline-wrapper">
           <p>
             &copy; 2025 | Designad och utvecklad av Emma Golander, Josefin
             Holgersson, Tim Hugdahl, Tamana Mohammadi  | webd25jon TUC | HTML
             och CSS med agila utvecklingsmetoder
           </p>
+
+
+        <div class="byline-wrapper text-center">
+          <p>&copy; 2025 | Designad och utvecklad av webd25jon TUC | HTML och CSS</p>
+
         </div>
       </div>
     </footer>
-  </body>
+ </body>
 </html>
- 

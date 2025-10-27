@@ -19,7 +19,6 @@ img {
 /* Bakgrundsfärg på navigering i mobil */
 .header-start .menu-wrapper {
   background-color: var(--color-green-light);
-  border-top: none;
 }
 /* Tar bort bakgrundsfärg */
 @media (min-width: 1024px) {
@@ -29,12 +28,16 @@ img {
 }
 /* ---------- HERO SECTION ---------- */
 .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 480px;
   padding-top: var(--space-xl);
   margin-bottom: var(--space-xl);
 }
 .hero-img {
-  background-image: url("/images/golf-green.webp");
+  background-image: url("/images/golf-green.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -56,14 +59,7 @@ img {
 .hero-img > * {
   z-index: 100;
 }
-.hero-text-cta {
-  max-width: 800px;
-  padding: 0 var(--space-sm);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.hero-text-cta .text-xxl {
+.hero .text-xxl {
   margin-bottom: var(--space-md);
 }
 .btn-wrapper {
@@ -110,7 +106,7 @@ img {
 }
 @media (min-width: 768px) {
   .news-wrapper {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-sm);
   }
   .btn-wrapper a {
@@ -118,12 +114,6 @@ img {
   }
   .news-section .text-lg {
     margin-bottom: var(--space-md);
-  }
-}
-@media (min-width: 1024px) {
-  .news-wrapper {
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-sm);
   }
 }
 .news-card {
@@ -209,26 +199,16 @@ img {
 
 @media (min-width: 786px) {
   .membership_cards {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     margin-block: var(--space-lg);
   }
   .membership_card {
     padding: var(--space-md);
   }
-  .membership_card:last-child {
-    grid-column: span 2;
-  }
 }
 @media (min-width: 1200px) {
-  .membership_cards {
-    grid-template-columns: repeat(3, 1fr);
-    margin-block: var(--space-lg);
-  }
   .membership_card {
     padding: var(--space-lg);
-  }
-  .membership_card:last-child {
-    grid-column: span 1;
   }
 }
 /* ---------- BLI MEDLEM SLUTAR ---------- */
@@ -509,7 +489,7 @@ img {
     padding: var(--space-lg) var(--space-sm) var(--space-lg) var(--space-sm);
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .link-section {
     grid-template-columns: repeat(4, 1fr);
   }
