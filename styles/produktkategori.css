@@ -1,16 +1,28 @@
 .produktkategori-parent{
     display: grid;
     grid-template-columns: auto auto auto;
-    justify-content: space-between;
     padding: var(--space-md);
+    justify-content: center;
 }
 .produktkategori{
-    background-image:url("/images/Rectangle\ 81.png");
     height: 300px;
     width: 300px;
     border-radius: 12px;
     display: flex;
     align-items: end;
+    margin: var(--space-md)
+}
+#produktkategori1{
+    background-image:url("/images/Rectangle\ 81.png");
+    background-size: cover;
+}
+#produktkategori2{
+    background-image: url("/images/Golfklubbor.jpg");
+    background-size: cover;
+}
+#produktkategori3{
+    background-image: url("/images/Golfklubbor.jpg");
+    background-size: cover;
 }
 #btn-prdkat{
     margin: 8px;
@@ -18,7 +30,19 @@
 @media (max-width: 1100px) {
   .produktkategori-parent {
     grid-template-columns: repeat(2, 1fr);
-    margin-block: var(--space-lg);
+  }
+  .produktkategori-parent{
+    padding: var(--space-md);
+  }
+}
+@media (min-width: 1200px) {
+  .produktkategori-parent{
+    padding: var(--space-lg);
+  }
+}
+@media (max-width: 775px) {
+  .produktkategori-parent {
+    grid-template-columns: repeat(1, 1fr);
   }
   .produktkategori-parent{
     padding: var(--space-md);
