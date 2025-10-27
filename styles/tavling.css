@@ -48,8 +48,12 @@ img {
 .text-mb {
   margin-bottom: var(--space-xs);
 }
-
 @media (min-width: 768px) {
+  .winner-text {
+    padding: var(--space-md);
+  }
+}
+@media (min-width: 1024px) {
   .winner-block {
     grid-template-columns: 1fr 1fr;
   }
@@ -174,6 +178,12 @@ td {
     width: 60%;
     /* margin-bottom: var(--space-md); */
   }
+  .sign-up-form {
+    padding: var(--space-lg);
+    width: 70%;
+  }
+}
+@media (min-width: 1024px) {
   .sign-up-form {
     padding: var(--space-lg);
     width: 50%;
