@@ -1,0 +1,159 @@
+/* ---- Sektion Bakgrund + Centrering ---- */
+.memberships {
+  background: var(--color-blue-light);
+  padding: 4rem 0;
+}
+
+.page-header,
+.subtitle {
+  text-align: center;
+  text-wrap: none;
+  margin-bottom: 3rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--color-green-dark);
+}
+
+/* ---- GRID ---- */
+.cards-grid {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.cards-grid-top {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cards-grid-bottom {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 900px) {
+  .cards-grid-top { grid-template-columns: 1fr; }
+  .cards-grid-bottom { grid-template-columns: 1fr; }
+}
+
+/* ---- CARD DESIGN ---- */
+.card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  text-align: center;
+}
+
+.card h3,
+.card h4 {
+  margin-bottom: .5rem;
+}
+
+.card-text {
+  font-size: .95rem;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--color-green-dark);
+}
+
+/* ---- CTA KNAPP ---- */
+.center-cta {
+  text-align: center;
+}
+
+.center-cta .btn-outline {
+  display: inline-block;
+  padding: .8rem 2rem;
+  border: 2px solid var(--color-green-dark);
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--color-green-dark);
+}
+.center-cta .btn-outline:hover {
+  background: var(--color-green-dark);
+  color: white;
+}
+/* ---- ANSÖKAN FORMULÄR ---- */
+.membership-apply {
+  background:  #ECF6E9;
+  padding: 100px 0;
+}
+
+.apply-box {
+  max-width: 600px;
+  margin: 70 auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.apply-form label {
+  font-weight: 600;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.form-input {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+}
+
+.apply-form input,
+.apply-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fff;
+  font-family: inherit;
+}
+
+.apply-form select {
+  cursor: pointer;
+}
+.apply-image-side img {
+  width: 30px;
+  border-radius: 14px;
+  display: block;
+}
+
+.radio-group {
+  display: flex;
+  gap: 20px;
+  padding: 6px 0;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.apply-form button {
+  margin-top: 10px;
+  background: var(--color-green-dark);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.apply-form button:hover {
+  background: var(--color-green-accent);
+}
+
