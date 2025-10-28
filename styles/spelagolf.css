@@ -223,28 +223,26 @@
   }
 }
 
-/* Bli medlem */
+/* ---------- BLI MEDLEM ---------- */
 .membership {
   background-color: var(--color-blue-light);
-  width: 100vw;
-  margin-left: calc(-50vw + 50%); /* gör bakgrunden fullbredd om jag ska ha kvar container*/
   padding: var(--space-xl) 0;
+  margin-bottom: var(--space-xl);
 }
 
-/* Behåll .container för inre breddlinjering */
-.membership .container { text-align: center; }
-
 .membership_cards {
+  /* Utgår från mobil, flyttar gap till media queries. */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-md);
-  margin-block: var(--space-lg);
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
+  margin-block: var(--space-md);
 }
 
 .membership_card {
   background-color: color-mix(in srgb, var(--color-blue-light) 60%, white);
-  border-radius: var(--radius, 12px);
-  padding: var(--space-lg);
+  border-radius: 12px;
+  /* Mindre padding i mobil, störra padding i media queries */
+  padding: var(--space-sm);
   text-align: left;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
   transition: transform 0.2s, box-shadow 0.2s;
@@ -254,19 +252,42 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.membership_title { font-size: 1.25rem; font-weight: 700; margin-bottom: var(--space-xs); }
-.membership_card p { opacity: 0.9; margin-bottom: var(--space-xs); }
-.membership_price { font-weight: 700; margin-top: var(--space-sm); }
-
-.membership_cta { display: flex; justify-content: center; }
-
-
-
-/* Litet mellanrum mellan blå och grön sektion på små skärmar */
-@media (max-width: 700px) {
-  .membership { margin-top: var(--space-md); }
-  .membership_cards { grid-template-columns: 1fr; }
+.membership_card .body {
+  color: var(--color-text-grey);
+  margin-bottom: var(--space-md);
 }
+
+.membership_cta {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 786px) {
+  .membership_cards {
+    grid-template-columns: repeat(2, 1fr);
+    margin-block: var(--space-lg);
+  }
+  .membership_card {
+    padding: var(--space-md);
+  }
+  .membership_card:last-child {
+    grid-column: span 2;
+  }
+}
+@media (min-width: 1200px) {
+  .membership_cards {
+    grid-template-columns: repeat(3, 1fr);
+    margin-block: var(--space-lg);
+  }
+  .membership_card {
+    padding: var(--space-lg);
+  }
+  .membership_card:last-child {
+    grid-column: span 1;
+  }
+}
+/* ---------- BLI MEDLEM SLUTAR ---------- */
+
 
 /* banguid */
 .banguiden_card {
