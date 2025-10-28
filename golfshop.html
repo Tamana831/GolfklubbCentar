@@ -1,67 +1,411 @@
 <!DOCTYPE html>
 <html lang="sv">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Centar Golfshop</title>
     <!-- variables.css och base.css måste ligga överst då vi vill att den ska läsas in först -->
-    <link rel="stylesheet" href="styles/variables.css">
-    <link rel="stylesheet" href="/styles/base.css">
-    <link rel="stylesheet" href="/styles/golfshop.css">
-
+    <link rel="stylesheet" href="styles/variables.css" />
+    <link rel="stylesheet" href="/styles/base.css" />
+    <link rel="stylesheet" href="/styles/golfshop.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/designelement/centar_favicon_c.png"
+    />
   </head>
   <body>
+    <header class="shop-header">
+      <!-- Promo-bar ( den blåa randen) -->
+      <div class="shop-promo">
+        <div class="container shop-promo__inner">
+          <span>FRAKTFRITT ÖVER 500 KR</span>
+          <span>BONUS PÅ ALLA KÖP</span>
+          <span>SNABB LEVERANS</span>
+        </div>
+      </div>
 
-   <header class="shop-header">
-  <!-- Promo-bar ( den blåa randen) -->
-  <div class="shop-promo">
-    <div class="container shop-promo__inner">
-      <span>FRAKTFRITT ÖVER 500 KR</span>
-      <span>BONUS PÅ ALLA KÖP</span>
-      <span>SNABB LEVERANS</span>
-    </div>
-  </div>
+      <!-- Toppnav: logga + sök + ikoner -->
+      <div class="container shop-topnav">
+        <a href="/golfshop.html" class="shop-logo">
+          <img
+            src="images/centar_logotype_primary_dark.svg"
+            alt="Centar logotype"
+          />
+        </a>
 
-  <!-- Toppnav: logga + sök + ikoner -->
-  <div class="container shop-topnav">
-    <a href="index.html" class="shop-logo">
-      <img src="images/centar_logotype_primary_dark.svg" alt="Centar logotype">
-    </a>
+        <form class="shop-search" action="#" method="get" role="search">
+          <label for="q" class="sr-only">Sök produkter</label>
+          <input id="q" name="q" type="search" placeholder="Sök" />
+          <button type="submit" aria-label="Sök">
+            <img
+              src="/images/Designelement/search-interface-symbol.png"
+              alt="Sök"
+            />
+          </button>
+        </form>
 
-    <form class="shop-search" action="#" method="get" role="search">
-      <label for="q" class="sr-only">Sök produkter</label>
-      <input id="q" name="q" type="search" placeholder="Sök">
-      <button type="submit" aria-label="Sök">
-        <img src="/images/Designelement/search-interface-symbol.png" 
-         alt="Sök">
-      </button>
-    </form>
+        <ul class="shop-utilities" aria-label="Snabbval">
+          <li>
+            <a href="#"
+              ><img
+                src="/images/Designelement/user.png"
+                alt="logga in"
+                class="shop-icon"
+              />
+              <span> Logga in </span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="/images/Designelement/heart.png"
+                alt="favoriter"
+                class="shop-icon"
+              />
+              <span> Favoriter</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="/images/Designelement/shopping-cart.png"
+                alt="varukorg"
+                class="shop-icon"
+              />
+              <span> Varukorg</span></a
+            >
+          </li>
+        </ul>
+      </div>
 
-    <ul class="shop-utilities" aria-label="Snabbval">
-      <li><a href="#"><img src="/images/Designelement/user.png" alt="logga in" class="shop-icon"> <span> Logga in </span></a></li>
-      <li><a href="#"><img src="/images/Designelement/heart.png" alt="favoriter" class="shop-icon"> <span> Favoriter</span></a></li>
-      <li><a href="#"><img src="/images/Designelement/shopping-cart.png" alt="varukorg" class="shop-icon"> <span> Varukorg</span></a></li>
-    </ul>
-  </div>
+      <nav class="shop-categories" aria-label="Kategorier">
+        <input
+          type="checkbox"
+          id="shop-menu-toggle"
+          class="shop-menu-toggle"
+          hidden
+        />
+        <div class="container shop-categories__bar">
+          <span class="shop-categories__label">Kategorier</span>
+          <label
+            for="shop-menu-toggle"
+            class="shop-menu-button-container"
+            aria-label="Öppna/stäng kategorier"
+          >
+            <span class="shop-menu-button"></span>
+          </label>
+        </div>
 
-<nav class="shop-categories" aria-label="Kategorier">
-  <input type="checkbox" id="shop-menu-toggle" class="shop-menu-toggle" hidden>
-  <div class="container shop-categories__bar">
-    <span class="shop-categories__label">Kategorier</span>
-    <label for="shop-menu-toggle" class="shop-menu-button-container" aria-label="Öppna/stäng kategorier">
-      <span class="shop-menu-button"></span>
-    </label>
-  </div>
-
-  <div class="container shop-categories__inner">
-    <a href="#">Golfklubbor</a>
-    <a href="#">Golfbollar</a>
-    <a href="#">Kläder &amp; Skor</a>
-    <a href="#">Vagnar &amp; Bagar</a>
-    <a href="#">Tillbehör</a>
-    <a href="#">Custom Fitting</a>
-    <a href="#">Varumärken</a>
-    <a href="#" class="is-cta">REA</a>
-  </div>
-</nav>
-</header>
+        <div class="container shop-categories__inner">
+          <a href="#">Golfklubbor</a>
+          <a href="#">Golfbollar</a>
+          <a href="#">Kläder &amp; Skor</a>
+          <a href="#">Vagnar &amp; Bagar</a>
+          <a href="#">Tillbehör</a>
+          <a href="#">Custom Fitting</a>
+          <a href="#">Varumärken</a>
+          <a href="#" class="is-cta">REA</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Produkter -->
+      <section class="container product-container">
+        <h2 class="text-lg text-center">Produktnyheter</h2>
+        <div class="product-wrapper">
+          <div class="product-card">
+            <a href="#">
+              <div class="product-image-container">
+                <img
+                  src="images/golfklubba.avif"
+                  alt="Cobra golfklubba"
+                  class="product-image"
+                />
+                <span class="overline text-center promo-label">Nyhet</span>
+                <span class="favorite-icon"
+                  ><img
+                    src="images/designelement/icon-heart.svg"
+                    alt="like icon"
+                /></span>
+              </div>
+              <div class="product-text">
+                <div class="product-brand overline">Cobra</div>
+                <h3 class="product-name text-sm">Snakebite Versitile Rh</h3>
+                <div class="product-price text-sm">1 699 kr</div>
+              </div>
+            </a>
+          </div>
+          <div class="product-card">
+            <a href="#">
+              <div class="product-image-container">
+                <img
+                  src="images/golfbag.avif"
+                  alt="Wilson golfbag"
+                  class="product-image"
+                />
+                <span class="overline text-center promo-label">Nyhet</span>
+                <span class="favorite-icon"
+                  ><img
+                    src="images/designelement/icon-heart.svg"
+                    alt="like icon"
+                /></span>
+              </div>
+              <div class="product-text">
+                <div class="product-brand overline">Wilsom</div>
+                <h3 class="product-name text-sm">M Ultra Hl Complete Set Rh</h3>
+                <div class="product-price text-sm">4 999 kr</div>
+              </div>
+            </a>
+          </div>
+          <div class="product-card">
+            <a href="#">
+              <div class="product-image-container">
+                <img
+                  src="images/golfpants.avif"
+                  alt="Nike golfbyxa dam"
+                  class="product-image image-overflow"
+                />
+                <span class="overline text-center promo-label">Nyhet</span>
+                <span class="favorite-icon"
+                  ><img
+                    src="images/designelement/icon-heart.svg"
+                    alt="like icon"
+                /></span>
+              </div>
+              <div class="product-text">
+                <div class="product-brand overline">Nike</div>
+                <h3 class="product-name text-sm">
+                  Nike tour women's dri-fit golf pant
+                </h3>
+                <div class="product-price text-sm">699 kr</div>
+              </div>
+            </a>
+          </div>
+          <div class="product-card">
+            <a href="#">
+              <div class="product-image-container">
+                <img
+                  src="images/golfcap.avif"
+                  alt="Titleist golfkeps"
+                  class="product-image"
+                />
+                <span class="overline text-center promo-label promo-bg-accent"
+                  >Kampanj 25%</span
+                >
+                <span class="favorite-icon"
+                  ><img
+                    src="images/designelement/icon-heart.svg"
+                    alt="like icon"
+                /></span>
+              </div>
+              <div class="product-text">
+                <div class="product-brand overline">Titleist</div>
+                <h3 class="product-name text-sm">Tour performance cap</h3>
+                <div class="product-price text-sm">399 kr</div>
+              </div>
+            </a>
+          </div>
+          <div class="product-card">
+            <a href="#">
+              <div class="product-image-container">
+                <img
+                  src="images/golfpants.avif"
+                  alt="Nike golfbyxa dam"
+                  class="product-image image-overflow"
+                />
+                <span class="overline text-center promo-label">Nyhet</span>
+                <span class="favorite-icon"
+                  ><img
+                    src="images/designelement/icon-heart.svg"
+                    alt="like icon"
+                /></span>
+              </div>
+              <div class="product-text">
+                <div class="product-brand overline">Nike</div>
+                <h3 class="product-name text-sm">
+                  Nike tour women's dri-fit golf pant
+                </h3>
+                <div class="product-price text-sm">699 kr</div>
+              </div>
+            </a>
+          </div>
+          <div class="product-card">
+            <a href="#">
+              <div class="product-image-container">
+                <img
+                  src="images/golfcap.avif"
+                  alt="Titleist golfkeps"
+                  class="product-image"
+                />
+                <span class="overline text-center promo-label promo-bg-accent"
+                  >Kampanj 25%</span
+                >
+                <span class="favorite-icon"
+                  ><img
+                    src="images/designelement/icon-heart.svg"
+                    alt="like icon"
+                /></span>
+              </div>
+              <div class="product-text">
+                <div class="product-brand overline">Titleist</div>
+                <h3 class="product-name text-sm">Tour performance cap</h3>
+                <div class="product-price text-sm">399 kr</div>
+              </div>
+            </a>
+          </div>
+          <div class="product-card">
+            <a href="#">
+              <div class="product-image-container">
+                <img
+                  src="images/golfbag.avif"
+                  alt="Wilson golfbag"
+                  class="product-image"
+                />
+                <span class="overline text-center promo-label">Nyhet</span>
+                <span class="favorite-icon"
+                  ><img
+                    src="images/designelement/icon-heart.svg"
+                    alt="like icon"
+                /></span>
+              </div>
+              <div class="product-text">
+                <div class="product-brand overline">Wilsom</div>
+                <h3 class="product-name text-sm">M Ultra Hl Complete Set Rh</h3>
+                <div class="product-price text-sm">4 999 kr</div>
+              </div>
+            </a>
+          </div>
+          <div class="product-card">
+            <a href="#">
+              <div class="product-image-container">
+                <img
+                  src="images/golfklubba.avif"
+                  alt="Cobra golfklubba"
+                  class="product-image"
+                />
+                <span class="overline text-center promo-label">Nyhet</span>
+                <span class="favorite-icon"
+                  ><img
+                    src="images/designelement/icon-heart.svg"
+                    alt="like icon"
+                /></span>
+              </div>
+              <div class="product-text">
+                <div class="product-brand overline">Cobra</div>
+                <h3 class="product-name text-sm">Snakebite Versitile Rh</h3>
+                <div class="product-price text-sm">1 699 kr</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div>
+          <div class="produktkategori-parent">
+            <div class="produktkategori" id="produktkategori1">
+              <button class="btn-cta button" id="btn-prdkat">
+                Säsongens golfskor
+              </button>
+            </div>
+            <div class="produktkategori" id="produktkategori2">
+              <button class="btn-cta button" id="btn-prdkat">
+                Alla våra golfklubbor
+              </button>
+            </div>
+            <div class="produktkategori" id="produktkategori3">
+              <button class="btn-cta button" id="btn-prdkat">
+                Alla våra golfkläder
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- hero section -->
+      <section class="hero">
+        <h1>Costum Fitting</h1>
+        <p>Helt gratis när du köper Klubborna oss oss.</p>
+        <button class="hero-btn">Boka tid</button>
+      </section>
+      <!-- REA SECTION -->
+      <section class="rea-section">
+        <div class="rea-image">
+          <img src="images/Shop-bild.jpg" alt="golfshop bild" />
+        </div>
+        <div class="rea-box">
+          <h2>REA</h2>
+          <p>Fynda kvalité till riktigt bra priser</p>
+          <button class="green-btn">50% på Kläder</button>
+          <button class="outline-btn">20% på Tailor Made</button>
+        </div>
+      </section>
+      <!-- MEMBER SECTION -->
+      <section class="member-section">
+        <div class="member-img">
+          <img src="images/klubben-bli-medlem.jpg" alt="spela golf bild" />
+        </div>
+        <div class="member-text">
+          <h3>Som medlem på Centar GK får du alltid 15% i shoppen</h3>
+          <p>Här har vi samlat allt du behöver veta om våra olika medlemskap</p>
+          <button class="green-btn">Bli medlem</button>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-green-dark">
+      <div class="container text-white shop-footer-wrapper">
+        <nav class="shop-foot-nav-wrapper body-sm">
+          <div class="shop-foot-logo-wrapper">
+            <a href="index.html"
+              ><img
+                src="/images/designelement/centar-golfshop_logo_wordmark_neg.svg"
+                alt="Centar logotype negative"
+                class="shop-logo-wordmark"
+            /></a>
+            <p>
+              Vi har ett noga kurerat urval av utrustning, kläder och tillbehör
+              för alla golfare, från nybörjare till proffs. Centar Golfshop ägs
+              och drivs av
+              <a href="index.html">Centar Golfklubb</a>
+            </p>
+          </div>
+          <section class="shop-foot-nav-item">
+            <h5 class="overline">Kundtjänst</h5>
+            <ul>
+              <li><a href="#">Kontakt</a></li>
+              <li><a href="#">Leverans</a></li>
+              <li><a href="#">Returer</a></li>
+              <li><a href="#">Medlemsförmåner</a></li>
+              <li><a href="#">Varumärken</a></li>
+              <li><a href="#">Presentkort</a></li>
+            </ul>
+          </section>
+          <section class="shop-foot-nav-item">
+            <h5 class="overline">Om oss</h5>
+            <ul>
+              <li><a href="#">Hållbarhet</a></li>
+              <li><a href="#">Om Centar Golfshop</a></li>
+              <li><a href="#">Karriär</a></li>
+              <li>
+                <a href="index.html">Centar Golfklubb</a>
+              </li>
+            </ul>
+          </section>
+          <section class="shop-foot-nav-item">
+            <h5 class="overline">Följ oss</h5>
+            <ul>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">YouTube</a></li>
+              <li><a href="#">TikTok</a></li>
+            </ul>
+          </section>
+        </nav>
+        <div class="shop-byline-wrapper text-center">
+          <p>
+            &copy; 2025 | Designad och utvecklad av Emma Golander, Josefin
+            Holgersson, Tim Hugdahl, Peyman Khateri, Tamana Mohammadi  |
+            webd25jon TUC | HTML och CSS med agila utvecklingsmetoder
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
