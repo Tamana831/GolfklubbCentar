@@ -3,6 +3,11 @@ img {
   width: 100%;
   display: block;
 }
+
+.container {
+  padding-left: var(--space-xs);
+  padding-right: var(--space-xs);
+}
 /* Skärmläsardold text - VIKTIG ATT HA MED!!*/
 .sr-only {
   position: absolute !important;
@@ -274,7 +279,7 @@ img {
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    padding-inline: var(--space-sm);
+    padding-inline: var(--space-xs);
     transition: max-height 700ms cubic-bezier(0.23, 1, 0.32, 1),
       opacity 400ms ease;
   }
@@ -320,11 +325,16 @@ img {
   margin-top: var(--space-xl);
   margin-bottom: var(--space-xl);
 }
+
+.promo-products {
+  padding: var(--space-xl) 0;
+}
+
 .product-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
-  gap: var(--space-xxs);
+  gap: var(--space-xs);
   row-gap: var(--space-md);
 }
 .product-card a {
@@ -358,6 +368,7 @@ img {
   padding: 0.125rem 0.375rem;
   border-radius: 2px;
   font-size: 0.625rem;
+  font-weight: 600;
   position: absolute;
   top: var(--space-xxs);
   left: var(--space-xxs);
