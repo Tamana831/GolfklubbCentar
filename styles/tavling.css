@@ -6,9 +6,6 @@ img {
 }
 
 /* ---------- ÅRETS KLUBBBMÄSTARE ---------- */
-.main-heading {
-  margin: var(--space-md) 0;
-}
 .winner-block {
   display: grid;
   gap: var(--space-sm);
@@ -59,9 +56,6 @@ img {
   }
   .winner-text {
     padding: var(--space-lg);
-  }
-  .main-heading {
-    margin: var(--space-lg) 0;
   }
 }
 

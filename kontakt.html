@@ -14,7 +14,7 @@
     <header class="bg-green-mid">
       <!-- Nedan div för att sätta maxbredd på sidan -->
       <nav class="container main-nav-wrapper">
-        <a href="#"
+        <a href="index.html"
           ><img
             src="images/centar_logotype_primary_dark.svg"
             alt="Centar logotype"
@@ -28,69 +28,123 @@
         <div class="menu-wrapper">
           <ul>
             <li><a href="spelagolf.html">Spela Golf</a></li>
-            <li><a href="medlem.html">Medlem</a></li>
+            <li><a href="Medlem.html">Medlem</a></li>
             <li><a href="klubben.html">Klubben</a></li>
             <li><a href="tavling.html">Tävlingar</a></li>
             <li><a href="foretag.html">Företag</a></li>
             <li><a href="restaurang.html">Restaurang</a></li>
             <li><a href="golfshop.html">Golfshop</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="kontakt.html" class="current">Kontakt</a></li>
           </ul>
-          <a href="login.html" class="button btn-primary-outline">Logga in</a>
+          <a href="loggain.html" class="button btn-primary-outline">Logga in</a>
         </div>
       </nav>
     </header>
-      <!-- HELA KONTAKTSEKTIONEN MED BAKGRUND -->
+    <!-- HELA KONTAKTSEKTIONEN MED BAKGRUND -->
     <section class="contact-section" aria-labelledby="kontakt-h1">
       <div class="container">
-
         <!-- KONTAKT-BOXAR -->
         <div class="contact-wrapper" aria-labelledby="kontakt-info-heading">
-          <div class="contact-card" role="region" aria-labelledby="adress-heading">
+          <div
+            class="contact-card"
+            role="region"
+            aria-labelledby="adress-heading"
+          >
             <h3 id="adress-heading">Adress</h3>
             <p>Centar Golfklubb<br />700 88 Örebro</p>
           </div>
 
-          <div class="contact-card" role="region" aria-labelledby="oppettider-heading">
+          <div
+            class="contact-card"
+            role="region"
+            aria-labelledby="oppettider-heading"
+          >
             <h3 id="oppettider-heading">Öppettider</h3>
-            <p>Måndag – Fredag: 07:30–17:00<br />Lördag – Söndag: 07:30–16:00</p>
+            <p>
+              Måndag – Fredag: 07:30–17:00<br />Lördag – Söndag: 07:30–16:00
+            </p>
           </div>
 
-          <div class="contact-card" role="region" aria-labelledby="kontakt-heading">
+          <div
+            class="contact-card"
+            role="region"
+            aria-labelledby="kontakt-heading"
+          >
             <h3 id="kontakt-heading">Kontakt</h3>
-            <p>Telefon: 012-345 678<br />E-post: <a href="mailto:info@centargolfklubb.se">info@centargolfklubb.se</a></p>
+            <p>
+              Telefon: 012-345 678<br />E-post:
+              <a href="mailto:info@centargolfklubb.se"
+                >info@centargolfklubb.se</a
+              >
+            </p>
           </div>
         </div>
 
         <!-- FORMULÄR -->
-        <div class="contact-container" role="region" aria-labelledby="kontakt-h1">
+        <div
+          class="contact-container"
+          role="region"
+          aria-labelledby="kontakt-h1"
+        >
           <header class="contact-header">
             <h1 id="kontakt-h1">Kontakta oss</h1>
-            <p>Har du frågor om medlemskap, banan eller något annat? Hör gärna av dig!</p>
+            <p>
+              Har du frågor om medlemskap, banan eller något annat? Hör gärna av
+              dig!
+            </p>
           </header>
 
           <form class="contact-form" action="#" method="post" novalidate>
             <label for="name">Namn*</label>
-            <input type="text" id="name" name="name" required placeholder="Ditt namn" />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Ditt namn"
+            />
 
             <label for="email">E-post*</label>
-            <input type="email" id="email" name="email" required placeholder="namn@exempel.se" />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="namn@exempel.se"
+            />
 
             <label for="subject">Ämne</label>
-            <input type="text" id="subject" name="subject" placeholder="Vad gäller ditt meddelande?" />
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="Vad gäller ditt meddelande?"
+            />
 
             <label for="message">Meddelande*</label>
-            <textarea id="message" name="message" rows="5" required placeholder="Skriv ditt meddelande här..."></textarea>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              placeholder="Skriv ditt meddelande här..."
+            ></textarea>
 
             <!-- GDPR / samtycke -->
             <label class="gdpr-label" for="consent">
               <input type="checkbox" id="consent" name="consent" required />
               Jag godkänner att mina uppgifter behandlas enligt
-              <a href="#" target="_blank" rel="noopener noreferrer">personuppgiftspolicy</a>.
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                >personuppgiftspolicy</a
+              >.
             </label>
 
             <!-- Valfritt: ett litet felmeddelande-element (kan visas via JS/CSS vid behov) -->
-            <p class="form-error" aria-live="polite" style="display:none; color:#c0392b; margin-top:8px;">
+            <p
+              class="form-error"
+              aria-live="polite"
+              style="display: none; color: #c0392b; margin-top: 8px"
+            >
               Du måste godkänna personuppgiftspolicyn för att skicka formuläret.
             </p>
 
@@ -102,12 +156,15 @@
 
     <!-- FOOTER -->
     <footer class="bg-green-dark" role="contentinfo">
-
       <div class="container text-white footer-wrapper">
         <nav class="foot-nav-wrapper body-sm" aria-label="Sidfot navigation">
           <div class="foot-nav-item foot-logo-wrapper">
             <a href="index.html">
-              <img src="images/centar_logo_wordmark_neg.svg" alt="Centar logotype negative" class="logo-wordmark" />
+              <img
+                src="images/centar_logo_wordmark_neg.svg"
+                alt="Centar logotype negative"
+                class="logo-wordmark"
+              />
             </a>
           </div>
 
@@ -148,8 +205,8 @@
         <div class="byline-wrapper text-center">
           <p>
             &copy; 2025 | Designad och utvecklad av Emma Golander, Josefin
-            Holgersson, Tim Hugdahl, Tamana Mohammadi | webd25jon TUC |
-            HTML och CSS med agila utvecklingsmetoder
+            Holgersson, Tim Hugdahl, Tamana Mohammadi | webd25jon TUC | HTML och
+            CSS med agila utvecklingsmetoder
           </p>
         </div>
       </div>

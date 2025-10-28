@@ -14,9 +14,6 @@
   margin-bottom: 3rem;
 }
 
-.page-title {
-  margin-top: var(--space-lg);
-}
 .subtitle {
   font-size: 1.1rem;
   color: var(--color-green-dark);

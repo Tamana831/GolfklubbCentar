@@ -59,7 +59,8 @@ body {
 .text-xl,
 .text-lg,
 .text-md,
-.text-sm {
+.text-sm,
+.page-heading {
   font-weight: 600;
   letter-spacing: normal; /* nollställer letter-spacing som är satt i body */
   line-height: 1.25;
@@ -82,6 +83,18 @@ body {
 .text-sm {
   font-size: 1rem; /* 16px */
   margin-bottom: var(--space-xs);
+}
+/* Heading undersida med margin */
+.page-heading {
+  font-size: 1.75rem; /* 28px mobil */
+  text-align: center;
+  margin: var(--space-md) 0;
+}
+@media (min-width: 768px) {
+  .page-heading {
+    font-size: 2rem; /* 32px */
+    margin: var(--space-lg) 0;
+  }
 }
 /* body- för brödtext och ingress */
 .body-sm {
@@ -162,11 +175,12 @@ body {
 }
 .btn-cta {
   background-color: var(--color-green-accent);
-  color: var(--color-text-white);
+  color: var(--color-text-black);
 }
 .btn-primary:hover,
 .btn-cta:hover {
   background-color: color-mix(in srgb, var(--color-green-accent) 85%, black);
+  color: var(--color-text-black);
 }
 .btn-primary-outline {
   /* Mörkgrön outline */
