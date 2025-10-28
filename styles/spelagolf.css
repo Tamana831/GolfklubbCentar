@@ -259,12 +259,8 @@
 .membership_price { font-weight: 700; margin-top: var(--space-sm); }
 
 .membership_cta { display: flex; justify-content: center; }
-.membership_cta .button {
-  background-color: var(--color-green-accent);
-  color: var(--color-text-white);
-  border-radius: 999px;
-  padding: 0 var(--space-lg);
-}
+
+
 
 /* Litet mellanrum mellan blå och grön sektion på små skärmar */
 @media (max-width: 700px) {
@@ -458,14 +454,6 @@
   text-wrap: balance;
 }
 
-.btn-accent {
-  background-color: var(--color-green-accent);
-  color: var(--color-text-white);
-}
-
-.btn-accent:hover {
-  filter: brightness(0.95);
-}
 
 .promo-card_cta {
   border-radius: 999px;
