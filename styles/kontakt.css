@@ -10,10 +10,11 @@
   border-radius: 12px;
   background: #fff; /* bakgrundsfärg för hela kontaktboxen */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   overflow: hidden;
   padding: 24px;
   flex-wrap: wrap;
-}
 
 .background {
   flex: 1;
@@ -23,6 +24,14 @@
   padding: 20px;
   background: transparent;
   background-color: #C8E0E8;
+
+ 
+  background: #fff; /* bakgrundsfärg för hela kontaktboxen */
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  flex-wrap: nowrap;
+  overflow: hidden;
 }
 
 .contact-card {
@@ -30,8 +39,10 @@
   min-width: 260px;
   text-align: center;
   background: #fff; /* färg för varje liten box */
+
+  background: #fff;
   border-radius: 12px;
-  padding: 12px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,12 +50,13 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   transition: transform 0.2s ease;
 
+
   flex: 1;
-  padding: 12px;
   transition: 0.2s ease;
 
 
   background: #fff; /* färg för varje liten box */
+
 
  
 
@@ -67,6 +79,14 @@
 }
 
 /*--- FORMULÄR ---*/
+
+/* Responsiv design – staplas på mobil */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+/* --- FORMULÄR --- */
 .contact-container {
   max-width: 700px;
   margin: 60px auto;
@@ -126,10 +146,6 @@
 .contact-form button:hover {
   background: #3a4a46;
 }
-.contact-section {
-  padding: 60px 20px;
-  background-color: #C8E0E8;
-}
 .gdpr-label {
   font-size: 0.9rem;
   color: #333;
@@ -156,12 +172,78 @@
   text-decoration: none;
 }
 
+ }
 /* --- RESPONSIVT --- */
 @media (max-width: 768px) {
   .contact-wrapper {
     flex-direction: column;
+    flex-wrap: wrap;
+
+/* Responsiv design – staplas på mobil */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+
     padding: 20px;
-    flex-wrap: nowrap;
+  }
+
+  .contact-card {
+    width: 100%;
+  }
+
+/* KONTAKT-SEKTION – samma stil som medlemssidan */
+.contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 24px;
+  max-width: 944px;
+  margin: 60px auto;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  padding: 24px;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  flex: 1;
+  min-width: 260px;
+  text-align: center;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-3px);
+}
+
+.contact-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #1f2b28;
+}
+
+.contact-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+}
+/* Responsiv design – staplas på mobil */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+    padding: 20px;
   }
 
   .contact-card {
