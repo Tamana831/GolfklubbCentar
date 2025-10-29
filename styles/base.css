@@ -432,3 +432,38 @@ footer .overline {
     grid-column: span 1;
   }
 }
+
+/* “Till toppen”-knapp */
+.back-to-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 999;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--color-green-accent);
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  transition: background 0.2s ease, transform 0.1s ease, opacity 0.3s ease;
+  opacity: 0.9;
+}
+.back-to-top:hover,
+.back-to-top:focus {
+  background: color-mix(in srgb, var(--color-green-accent) 80%, black 15%);
+  transform: translateY(-3px);
+  opacity: 1;
+  outline: none;
+}
+.back-to-top:active { transform: translateY(0) }
+@media (max-width: 1377px) {
+  .back-to-top {
+    display: none;
+  }
+}

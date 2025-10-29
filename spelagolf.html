@@ -19,7 +19,7 @@
   </head>
   <body>
     <!-- Sätter färg hela vägen ut -->
-    <header class="bg-green-mid">
+    <header id="top" class="bg-green-mid">
       <!-- Nedan div för att sätta maxbredd på sidan -->
       <nav class="container main-nav-wrapper">
         <a href="/index.html"
@@ -58,20 +58,43 @@
       <h2 class="text-md">Boka Starttid på Centar Golfklubb</h2>
       <p class="body-lg">Här bokar du enkelt din starttid.</p>
     </div>
-
+    
+ <!--Tillägg - välja datum-->
     <form class="booking_form" action="#" method="get">
-      <div class="booking_controls">
-        <label for="players" class="booking_label">Antal spelare</label>
-        <div class="booking_select">
-          <select id="players" name="players">
-            <option value="1">1 Spelare</option>
-            <option value="2">2 Spelare</option>
-            <option value="3">3 Spelare</option>
-            <option value="4">4 Spelare</option>
-          </select>
-        </div>
+     <div class="booking_row booking_row-inline">
+    <div class="booking_controls">
+      <label for="players" class="booking_label">Antal spelare</label>
+      <div class="booking_select">
+        <select id="players" name="players">
+          <option value="1">1 Spelare</option>
+          <option value="2">2 Spelare</option>
+          <option value="3">3 Spelare</option>
+          <option value="4">4 Spelare</option>
+        </select>
       </div>
+    </div>
+     
+     <div class="booking_controls">
+      <label for="chose-date" class="booking_label">Välj datum</label>
+      <div class="booking_select booking_date">
+        <input type="date" id="chose-date" name="chose-date">
+      </div>
+    </div>
+  </div>
+      
+   <div class="booking_row datum-sektion" aria-live="polite">
+    <button type="button" class="arrow arrow--left" aria-label="Föregående dag">
+      <img src="/images/Designelement/icon-left.svg" alt="">
+    </button>
 
+    <p class="datum">Torsdag 30 oktober</p>
+
+    <button type="button" class="arrow arrow--right" aria-label="Nästa dag">
+      <img src="/images/Designelement/icon-right.svg" alt="">
+    </button>
+  </div>
+
+ <!--Tillägg - välja datum SLUT-->
       <fieldset class="booking_grid">
         <legend class="sr-only">Tillgängliga starttider</legend>
 
@@ -289,7 +312,9 @@
 </div>
  
  </main>
-
+<a href="#top" class="back-to-top" aria-label="Till toppen av sidan">
+  ↑
+</a>
 <!-- Footer -->
   <footer class="bg-green-dark">
       <div class="container text-white footer-wrapper">
