@@ -133,7 +133,6 @@ margin-bottom: var(--space-lg);
 
 }
 
-
 /*Lite style till inputsfältet vid hover*/
 .boka input:hover{
   cursor: pointer;
@@ -141,6 +140,26 @@ margin-bottom: var(--space-lg);
 
 }
 
+/*Bokningsknappen stylas här*/
+.boka .btn-cta button{
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 300px;
+  padding: 2px;
+  margin: 2px;
+
+}
+
+/*Här stylas bokningsformuläret*/
+form{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding-bottom: 50px;
+}
 
 .footer{
   color: var(--color-text-black); /* Textfärg för hela sidan */
