@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/variables.css" />
   <link rel="stylesheet" href="styles/base.css" />
-  <link rel="stylesheet" href="styles/restaurang.css">
+  <link rel="stylesheet" href="styles/restaurang.css" />
   
 
   <title>Restaurang</title>
@@ -42,12 +42,47 @@
       <h1 class="text-xxl text-center text-white">
         Välkommen till Centar Restaurang
       </h1>
-    </div>   
-    <section class="food">
-      <div class="lunch">
-      <h3>Dagens Lunch 119:- <br> Barn 79:- <br> (11:00-15:00)</h3>
-      <h4>inkl. sallad, smör, bröd, dryck, kaffe/te & kaka </h4>
-      <ul>
+    </div>  
+      <section class="container">
+  <div class="alacarte_card">
+    <div class="alacarte_content">
+      <h2 class="alacarte_title">A la carte (17-22)</h2>
+      <dl class="body">
+        <dt>Grillad entrecote med rödvinssås oxh pommes</dt>
+        <dd>245kr</dd>
+        <dt>Torskrygg med skirat smör och ärtpure</dt>
+        <dd>225kr</dd>
+        <dt>svamprisotto med tryffelolja (vegetarisk)</dt>
+        <dd>195kr</dd>
+      </dl>
+    </div>
+    <div class="alacarte_media">
+      <img
+        src="/GolfklubbCentar/images/hybrid-storytellers-ZIVhgpw_82M-unsplash.jpg"
+        alt="Bild på mat"
+        class="alacarte_img"
+      >
+    </div>
+  </div>
+</section>
+      <section class="container">
+  <div class="dagenslunch_card">
+    <div class="dagenslunch_media">
+      <img src="images\details-set-table-with-focus-goblets.jpg"
+        alt="Bild på dagenslunch"
+        class="dagenslunch_img">
+        <br>
+        <img src="images\golden-cutlery-with-textile-plate-dark-background-top-view.jpg"
+        alt="Bild på dagenslunch"
+        class="dagenslunch_img">
+
+    </div>
+    <div class="dagenslunch_content">
+      <h2 class="dagenslunch_title">Dagens lunch</h2>
+      <p class="overline">Dagens Lunch 119:- <br> Barn 79:- <br> (11:00-15:00)</p>
+      <p class="body">inkl. sallad, smör, bröd, dryck, kaffe/te & kaka</p>
+      <div class="body">
+        <ul>
         <li>
           <h4>Måndag</h4>
           <li>Ångad kolja med currysås samt confiterad tomat.</li>
@@ -81,24 +116,11 @@
           <li>Valfri hel toastad sub.</li>
         </li>
       </ul>
-      </div> 
-      <br>
-      <hr> 
-      <br>
-      <div class="alacarte">
-      <h3>A la carte (17;00-00:00)</h3>
-      <dl>
-        <dt>Grillad entrecote med rödvinssås oxh pommes</dt>
-        <dd>245kr</dd>
-        <dt>Torskrygg med skirat smör och ärtpure</dt>
-        <dd>225kr</dd>
-        <dt>svamprisotto med tryffelolja (vegetarisk)</dt>
-        <dd>195kr</dd>
-      </dl>
-      </div>
-      <br>
-      <hr>
-      <br>
+    </div>
+    </div>
+  </div>
+</section>
+
       <div class="öppettider">
           <h4>Öppet tider:</h4><br>
           <p>Måndag-Fredag: 11:00-22:00</p><br>          
@@ -108,9 +130,14 @@
         <br>
         
         <br>
-        <div class="boka">
+
+        <section>
+
+        <div class="container boka">
           <h3>Vill du boka ett bord?</h3>
-          <form action="bokabord">
+          <form class="bokabord">
+
+            <div class="input-wrapper">
             <label for="namn"></label>
             <input type="text" id="namn" placeholder="Namn">
 
@@ -126,9 +153,11 @@
             <label for="datum"></label>
             <input type="date" id="datum">
 
-            <input type="submit" class="subknapp" value="Boka">
-
+            <button type="submit" class="btn-cta button">Boka bord</button>
+            </div>
           </form>
+
+         
 
         </div>
     </section>
