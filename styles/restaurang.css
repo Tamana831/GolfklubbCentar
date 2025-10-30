@@ -13,15 +13,6 @@ img {
   display: block;
 }
 
-/* ---------- HEADER  ---------- */
-.header-start {
-  position: absolute; /* Ligger ovanpå hero-bilden */
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 200; /* Högre än hero-overlay */
-}
-
 /* ---------- HERO SECTION ---------- */
 .hero {
   display: flex;
@@ -33,7 +24,7 @@ img {
   margin-bottom: var(--space-xl);
 }
 .hero-img {
-  background-image: url("/GolfklubbCentar/images/pexels-element5-669733.jpg");
+  background-image: url("/images/pexels-element5-669733.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -77,8 +68,6 @@ img {
 }
 /* ---------- HERO SLUT ---------- */
 
-
-
 body {
   color: var(--color-text-black); /* Textfärg för hela sidan */
   font-family: "Raleway", sans-serif;
@@ -88,41 +77,38 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.öppettider{
-display: block;
-text-align: center;
-}
-
-.boka h3{
+.öppettider {
+  display: block;
   text-align: center;
 }
 
-
-.boka{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-margin-bottom: var(--space-lg);
+.boka h3 {
+  text-align: center;
 }
 
-.boka form{
+.boka {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--space-lg);
+}
+
+.boka form {
   max-width: 500px;
 }
 
-.input-wrapper{
-
- width: 100%;
+.input-wrapper {
+  width: 100%;
 }
 
-
-.input-wrapper button{
+.input-wrapper button {
   width: 100%;
   margin-top: var(--space-sm);
 }
 
 /*Lite style till inputsfältet*/
-.boka input{
+.boka input {
   display: block;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -130,18 +116,16 @@ margin-bottom: var(--space-lg);
   width: 100%;
   padding: 2px;
   margin: 2px;
-
 }
 
 /*Lite style till inputsfältet vid hover*/
-.boka input:hover{
+.boka input:hover {
   cursor: pointer;
   border-color: aqua;
-
 }
 
 /*Bokningsknappen stylas här*/
-.boka .btn-cta button{
+.boka .btn-cta button {
   display: block;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -149,26 +133,24 @@ margin-bottom: var(--space-lg);
   width: 300px;
   padding: 2px;
   margin: 2px;
-
 }
 
 /*Här stylas bokningsformuläret*/
-form{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-padding-bottom: 50px;
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
 }
 
-.footer{
+.footer {
   color: var(--color-text-black); /* Textfärg för hela sidan */
   font-family: "Raleway", sans-serif;
   letter-spacing: 0.6px;
 }
 
 /* A la carte */
-
 
 .alacarte_card {
   background-color: var(--color-green-light);
@@ -208,7 +190,6 @@ padding-bottom: 50px;
   margin-bottom: var(--space-sm);
 }
 
-
 .alacarte_content .body {
   margin-bottom: var(--space-md);
   max-width: 48ch;
@@ -233,7 +214,6 @@ padding-bottom: 50px;
   .alacarte_card {
     padding: var(--space-md) var(--space-sm);
   }
-
 }
 
 /* Dagens lunch */
@@ -247,10 +227,10 @@ padding-bottom: 50px;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-lg);
   align-items: center;
-  max-width: 1280px;              
+  max-width: 1280px;
   margin-inline: auto;
   padding-block: var(--space-lg);
-  padding-inline: clamp(var(--space-md), 6vw, var(--space-xl)); 
+  padding-inline: clamp(var(--space-md), 6vw, var(--space-xl));
 }
 
 .blimedlem_content {
@@ -286,7 +266,7 @@ padding-bottom: 50px;
   max-width: 44ch;
 }
 
-.dagenslunch_content .body li{
+.dagenslunch_content .body li {
   list-style-type: none;
 }
 .dagenslunch_cta {
@@ -302,7 +282,7 @@ padding-bottom: 50px;
     gap: var(--space-md);
   }
 
-   .blimedlem_media {
+  .blimedlem_media {
     order: -1; /* Bilden överst på mindre skärmar */
   }
 
@@ -313,9 +293,6 @@ padding-bottom: 50px;
 
 @media (max-width: 700px) {
   .dagenslunch_card {
-    padding: var(--space-md) var(--space-sm); 
+    padding: var(--space-md) var(--space-sm);
   }
 }
-
-
-
