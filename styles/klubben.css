@@ -25,11 +25,20 @@ img {
 }
 @media (min-width: 768px) {
   .news-wrapper {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-sm);
   }
   .btn-wrapper a {
     width: auto;
+  }
+  .news-section .text-lg {
+    margin-bottom: var(--space-md);
+  }
+}
+@media (min-width: 1024px) {
+  .news-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-sm);
   }
 }
 .news-card {
@@ -240,18 +249,11 @@ img {
 
 /* feciliteter */
 
-
-.faciliteter {
-  background-color: #fff; 
-  padding: var(--space-md) 0;
-  margin-bottom: var(--space-lg);
-}
-
 .faciliteter-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--space-sm);
-  margin-top: var(--space-lg);
+  margin-bottom: var(--space-lg);
 }
 
 .facility-card {
