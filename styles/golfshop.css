@@ -496,7 +496,7 @@ img {
 
 /* HERO section */
 .hero {
-    background: #cfe8ef;
+    background:var(--color-green-mid);
     text-align: center;
     padding: 3rem; /* justera storleken på hero-bilden */
     background-image: url('../images/golfshop/hero-golfshop.jpg');
@@ -504,6 +504,11 @@ img {
     border-radius: 12px;
     width: 100%;
     
+}
+
+.erb-image{
+  height: 550px;
+  width: 450px;
 }
 
 .hero h1 {

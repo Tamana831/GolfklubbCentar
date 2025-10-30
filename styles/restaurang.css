@@ -1,4 +1,4 @@
-* {
+/* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -11,6 +11,15 @@ img {
   width: 100%;
   height: auto;
   display: block;
+}
+
+/* ---------- HEADER  ---------- */
+.header-start {
+  position: absolute; /* Ligger ovanpå hero-bilden */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 200; /* Högre än hero-overlay */
 }
 
 /* ---------- HERO SECTION ---------- */
@@ -82,23 +91,48 @@ body {
 .öppettider{
 display: block;
 text-align: center;
-
 }
 
 .boka h3{
   text-align: center;
 }
+
+
+.boka{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-bottom: var(--space-lg);
+}
+
+.boka form{
+  max-width: 500px;
+}
+
+.input-wrapper{
+
+ width: 100%;
+}
+
+
+.input-wrapper button{
+  width: 100%;
+  margin-top: var(--space-sm);
+}
+
 /*Lite style till inputsfältet*/
 .boka input{
   display: block;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
-  width: 300px;
+  width: 100%;
   padding: 2px;
   margin: 2px;
 
 }
+
 
 /*Lite style till inputsfältet vid hover*/
 .boka input:hover{
@@ -107,26 +141,6 @@ text-align: center;
 
 }
 
-/*Bokningsknappen stylas här*/
-.boka .btn-cta button{
-  display: block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-  width: 300px;
-  padding: 2px;
-  margin: 2px;
-
-}
-
-/*Här stylas bokningsformuläret*/
-form{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-padding-bottom: 50px;
-}
 
 .footer{
   color: var(--color-text-black); /* Textfärg för hela sidan */
