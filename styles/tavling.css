@@ -12,7 +12,6 @@ img {
   margin-bottom: var(--space-xl);
 }
 .winner-img {
-  background-color: aqua;
   border-radius: 12px;
   overflow: hidden;
 }
